@@ -1,0 +1,221 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deedy - One Page Two Column Resume
+% LaTeX Template
+% Version 1.2 (16/9/2014)
+%
+% Original author:
+% Debarghya Das (http://debarghyadas.com)
+%
+% Original repository:
+% https://github.com/deedydas/Deedy-Resume
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% This template uses several fonts not included with Windows/Linux by
+% default. If you get compilation errors saying a font is missing, find the line
+% on which the font is used and either change it to a font included with your
+% operating system or comment the line out to use the default font.
+% 
+
+\documentclass[]{deedy-resume}
+\usepackage{fancyhdr}
+ 
+\pagestyle{fancy}
+\fancyhf{}
+ 
+\rfoot{Page \thepage \hspace{1pt}}
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     LAST UPDATED DATE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\lastupdated
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     TITLE NAME
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\namesection{Lukas}{Schäfer}{ \urlstyle{same}\href{https://lukaschaefer.de/profile}{lukaschaefer.de/profile}\\
+\href{mailto:luki.schaefer96@gmail.com}{luki.schaefer96@gmail.com} | +49 175 2778299 |  \href{https://www.linkedin.com/in/lukas-schaefer}{www.linkedin.com/in/lukas-schaefer}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN ONE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{minipage}[t]{0.33\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EDUCATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Education} 
+
+\subsection{University of Edinburgh}
+\descript{MSc Informatics}
+\location{Present | Edinburgh, UK}
+\location{Expected Graduation Aug 2019}
+Specialisation in \textbf{Machine Learning} and \textbf{Autonomous Robotics} \\
+DAAD graduate scholarship
+\sectionsep
+
+\subsection{Saarland University}
+\descript{BSc Computer Science}
+\location{Aug 2018 | Saarbrücken, Germany}
+\location{Grade \textbf{1.2} (\href{https://en.wikipedia.org/wiki/Academic_grading_in_Germany}{German scale}) - UK 1\textsuperscript{st}}
+Dissertation: \href{https://www.lukaschaefer.de/assets/files/thesis.pdf}{Domain-Dependent Policy Learning using Neural Networks in Classical Planning}
+\sectionsep
+
+\subsection{Warndtgymnasium}
+\descript{Abitur | 1.0}
+\location{Jul 2015 |  Geislautern, Germany}
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     COURSEWORK
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Coursework}
+\subsection{Graduate}
+Reinforcement Learning \\
+Algorithmic Game Theory and its Applications \\
+Machine Learning and Pattern Recognition \\
+Robotics: Science and Systems \\
+Decision Making in Robots and Autonomous Agents \\
+\sectionsep
+
+\subsection{Undergraduate}
+Automated Planning \\
+Admissible Search Enhancements \\
+Neural Networks: Implementation and Application \\
+Information Retrieval and Data Mining \\
+Software Engineering \\
+Modern Imperative Programming Languages \\
+\sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SKILLS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Skills}
+\subsection{Programming}
+\descript{Competent}
+Python \textbullet{} C++ \textbullet{} C \textbullet{} Java \textbullet{} SML \\
+\sectionsep
+\descript{Familiar}
+Rust \textbullet{} HTML \textbullet{} CSS \textbullet{} Matlab \textbullet{} Bash \\
+\sectionsep
+
+\subsection{Technologies and Tools}
+TensorFlow \textbullet{} Keras \textbullet{} NumPy \textbullet{} UNIX \textbullet{} Git \textbullet{} Vim \textbullet{} \LaTeX
+% \sectionsep
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN TWO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{minipage} 
+\hfill
+\begin{minipage}[t]{0.66\textwidth} 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     RESEARCH
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Research}
+\runsubsection{BSc Dissertation}
+\descript{| Foundations of Artificial Intelligence Group}
+\location{Apr – Jul 2018 | Saarland University}
+%\descript{\href{https://www.lukaschaefer.de/assets/files/thesis.pdf}{``Domain-Dependent Policy Learning using Neural Networks in Classical Planning''}}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+    \item Transferred domain-dependent policy learning neural network architecture of Action-Schema Networks to
+    classical automated planning
+    \item Implemented the network using Keras, slightly adjusted its training for classical planning and extended 
+    the FastDownward planning framework
+    \item Extensive evaluation and analysis was conducted on IPC domains of varying complexity identifying
+    limitations in generalisation and scalability
+\end{tightemize}
+\sectionsep
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     WORK EXPERIENCE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Work Experience}
+\runsubsection{Programming 1 Teaching Assistant}
+\descript{| Dependable Systems and Software Group}
+\location{Oct 2016 - Mar 2017 | Saarland University}
+\begin{tightemize}
+    \item Held weekly tutorials and office hours teaching fundamental concepts of functional programming, complexity theory and correctness proofs
+    \item Corrected weekly tests as well as mid- and endterm exams
+    \item Collectively created learning materials and discussed student progress as part of the whole teaching team
+\end{tightemize}
+\sectionsep
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     VOLUNTEERING
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Volunteering}
+\runsubsection{Navigation Team Member}
+\descript{| University of Edinburgh Hyperloop Team}
+\location{Sep 2018 – Present | Edinburgh, UK}
+\begin{tightemize}
+    \item Working on navigation of Poddy III Hyperloop prototype including sensor filtering and processing to estimate
+    location, orientation and speed
+    \item Preliminary Design Briefing of Poddy III was approved by SpaceX for their 2019 Hyperloop competition
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Lecturer and Coach}
+\descript{| Mathematics Preparation Course}
+\location{Sep – Oct 2017 | Saarland University}
+\begin{tightemize}
+    \item Assisted organisation of preparation course introducing upcoming computer science students to student life and mathematical concepts %covered in their first year
+    \item Explained importance of mathematics for CS, formal languages and predicate logic to $\mathbf{\sim 250}$ participants in daily lectures of the first week
+    \item Supervised two groups to provide feedback in daily coaching-sessions
+    \item The course received \textbf{BESTE-award} for special student commitment 2017 of Saarland University
+\end{tightemize}
+\sectionsep
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     PROJECT EXPERIENCE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Project Experience}
+\runsubsection{Plagiarism Detection Tool}
+\descript{| Software Engineering Project}
+\location{Apr - Jul 2017 | Saarland University}
+\begin{tightemize}
+    \item Researched, planned and built a reliable similarity detection for text \& code with language-specific analysis for
+    Python and C
+    \item Designed and implemented a web-based output creation, highlighting similar submissions and plagiarism cases
+    \item Our software is now successfully used in our customer's lectures to detect plagiarism cases on Python code
+\end{tightemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     PUBLICATIONS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \section{Publications} 
+% \renewcommand\refname{\vskip -1.5cm} % Couldn't get this working from the .cls file
+% \bibliographystyle{abbrv}
+% \bibliography{publications}
+% \nocite{*}
+
+\end{minipage} 
+\hfill \small \textit{[References available on request]}
+\end{document}  \documentclass[]{article}

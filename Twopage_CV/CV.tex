@@ -1,15 +1,13 @@
 % inspiration: https://github.com/sebastianruder/cv
 
-\documentclass[10pt,letterpaper]{article}
-\usepackage[letterpaper,margin=0.75in]{geometry}
+\documentclass[]{deedy-resume}
 \usepackage[utf8]{inputenc}
-\usepackage{mdwlist}
-\usepackage[T1]{fontenc}
 \usepackage{textcomp}
 \usepackage{tgpagella}
 \usepackage{latexsym}
 \usepackage{amssymb}
-\usepackage{hyperref}
+\usepackage{multicol}
+\usepackage{ragged2e}
 \pagestyle{empty}
 \setlength{\tabcolsep}{0em}
 
@@ -33,79 +31,92 @@
 % format two pieces of text, one left aligned and one right aligned
 \newcommand{\headerrow}[2]
 {\begin{tabular*}{\linewidth}{l@{\extracolsep{\fill}}r}
-	#1 &
-	#2 \\
+	\fontspec{Helvetica}\fontsize{12pt}{12pt}\selectfont\bfseries{\color{subheadings}#1} &
+	\fontspec{Helvetica}\fontsize{12pt}{12pt}\selectfont\bfseries{\color{subheadings}#2} \\
 \end{tabular*}}
+
+\newcommand{\locationrow}[2]
+{\begin{tabular*}{\linewidth}{l@{\extracolsep{\fill}}r}
+        \color{headings}\scshape\fontspec{Heiti TC Medium}\fontsize{10pt}{12pt}\selectfont{#1}  &
+        \color{headings}\scshape\fontspec{Heiti TC Medium}\fontsize{10pt}{12pt}\selectfont{#2}  \\
+\end{tabular*}}
+
+
 
 \begin{document}
 
-\begin{center}
-{\Huge \textbf{Lukas Schäfer}}
-\vspace{0.2cm}\\
-29 Montgomery Street; \ \ EH7 5BH Edinburgh, United Kingdom
-\\
-{\texttt{\href{mailto:luki.schaefer96@gmail.com}{luki.schaefer96@gmail.com}} \ \textbullet \ \ \texttt{+49 175 2778299} \ \textbullet \ \ \texttt{\href{https://www.linkedin.com/in/lukas-schaefer}{www.linkedin.com/in/lukas-schaefer}}  \ \textbullet \ \ \texttt{\href{https://lukaschaefer.de/profile}{lukaschaefer.de/profile}}}
-\end{center}
+\namesectionnorule{Lukas}{Schäfer}{ \urlstyle{same}
+    \href{mailto:luki.schaefer96@gmail.com}{luki.schaefer96@gmail.com} | +49 175 2778299 |  \href{https://www.linkedin.com/in/lukas-schaefer}{www.linkedin.com/in/lukas-schaefer}\\
+    \Large \href{https://lukaschaefer.de/profile}{\textbf{lukaschaefer.de/profile}}\\
+}
 
-\subsection*{Education}
+\section*{Education}
 \hrule
 \vspace{0.4em}
 
 \noindent
-\headerrow{\textbf{M.Sc. Informatics}}{\textbf{09/2018 -- Present}}
+\headerrow{M.Sc. Informatics}{09/2018 -- Present}
 \\
-\headerrow{\emph{University of Edinburgh}}{\emph{Edinburgh, United Kingdom}}
-\vspace{-1.6em}
-\begin{itemize*}
+\locationrow{University of Edinburgh}{Edinburgh, United Kingdom}
+\begin{tightitemize}{1.7em}
     \item Expected graduation in August 2019
     \item Specialisation in \textbf{Machine Learning} and \textbf{Autonomous Robotics}
     \item \textbf{DAAD} (German Academic Exchange Service) \textbf{graduate scholarship}
     \item Modules include: Reinforcement Learning, Algorithmic Game Theory and its Applications, Machine Learning and Pattern Recognition, Robotics: Science and Systems, Decision Making in Robots and Autonomous Agents
-\end{itemize*}
-
-\vspace{0.4em}
+\end{tightitemize}
+\largesectionsep
 
 \noindent
-\headerrow{\textbf{B.Sc. Computer Science, minor subject Japanese}}{\textbf{10/2015 -- 08/2018}}
+\headerrow{B.Sc. Computer Science, minor subject Japanese}{10/2015 -- 08/2018}
 \\
-\headerrow{\emph{Saarland University}}{\emph{Saarbrücken, Germany}}
-\vspace{-1.6em}
-\begin{itemize*}
+\locationrow{Saarland University}{Saarbrücken, Germany}
+\begin{tightitemize}{1.7em}
     \item Degree classification: grade of \textbf{1.2} (\href{https://en.wikipedia.org/wiki/Academic_grading_in_Germany}{German scale}) equivalent to UK \textbf{1\textsuperscript{st} class honours}
     \item BSc thesis: \href{https://www.lukaschaefer.de/assets/files/thesis.pdf}{Domain-Dependent Policy Learning using Neural Networks in Classical Planning}
     \item Modules include: Automated Planning, Admissible Search Enhancements, Neural Networks: Implementation and Application, Information Retrieval and Data Mining, Software Engineering, Modern Imperative Programming Languages
-\end{itemize*}
-
-\vspace{0.4em}
+\end{tightitemize}
+\largesectionsep
 
 \noindent
-\headerrow{\textbf{Abitur - Secondary School}}{\textbf{08/2008 -- 07/2015}}
+\headerrow{Abitur - Secondary School}{08/2008 -- 07/2015}
 \\
-\headerrow{\emph{Warndtgymnasium Geislautern, Völklingen}}{\emph{Geislautern, Germany}}
-\vspace{-1.6em}
-\begin{itemize*}
+\locationrow{Warndtgymnasium Geislautern, Völklingen}{Geislautern, Germany}
+\begin{tightitemize}{1.7em}
 	\item Graduated \textbf{Abitur 1.0} with examination subjects:\\
        Mathematics - 15, English - 12, Computer Science - 14, German - 15, History - 15
     \item Prices received:
-    \vspace{-0.3em}
-    \begin{itemize}
-        \setlength\itemsep{0em}
+    \begin{tightitemize}{0.5em}
         \item Year's best student award of the Warndtgymnasiums Geislautern
         \item Computer science and mathematics award 2015 of Saarland University
-        \item History award 2015 of historic society for the Saar-Region (\href{https://www.hvsaargegend.de/}{Historischer Verein für die Saargegend e.V.})
-    \end{itemize}
-\end{itemize*}
+        %\item History award 2015 of historic society for the Saar-Region (\href{https://www.hvsaargegend.de/}{Historischer Verein für die Saargegend e.V.})
+    \end{tightitemize}
+\end{tightitemize}
+\largesectionsep
 
-\subsection*{Research}
+
+\section*{Research}
 \hrule
 \vspace{0.4em}
 
 \noindent
-\headerrow{\textbf{B.Sc. Dissertation, Saarland University}}{\textbf{04/2018 -- 07/2018}}
+\headerrow{Reinforcement Learning for Video Game Playing, University of Edinburgh}{09/2018 -- Present}
 \\
-\headerrow{\emph{Foundations of Artificial Intelligence (FAI) Group}}{}
-\vspace{-1.6em}
-\begin{itemize*}
+\locationrow{Informatics Research Review}{}
+\begin{tightitemize}{1.7em}
+    \item Reviewed the development of reinforcement learning research for game playing from board games
+    Backgammon, Chess and Go to video games focusing on Atari and StarCraft and the relevance of video games
+    for research
+    \item Outlined reinforcement learning approaches for game playing including temporal difference learning,
+    Sarsa, Q-learning as well as deep reinforcement learning algorithms just as deep Q-networks and asynchronous 
+    advantage actor-critic
+\end{tightitemize}
+\largesectionsep
+
+\noindent
+\headerrow{B.Sc. Dissertation, Saarland University}{04/2018 -- 07/2018}
+\\
+\locationrow{Foundations of Artificial Intelligence (FAI) Group}{}
+\begin{tightitemize}{1.7em}
     \item Transferred domain-dependent policy learning neural network architecture of Action-Schema Networks to
     classical automated planning
     \item Implemented the network using Keras, slightly adjusted its training for classical planning and extended 
@@ -113,154 +124,135 @@
     \item Extensive evaluation and analysis was conducted on IPC domains of varying complexity identifying
     limitations in generalisation and scalability
     \item Received best grade 1.0 twice of both reviewers
-\end{itemize*}
+\end{tightitemize}
+\largesectionsep
 
 
-\subsection*{Work Experience}
+\section*{Work Experience}
 \hrule
 \vspace{0.4em}
 
 \noindent
-\headerrow{\textbf{Programming 1 Teaching Assistant, Saarland University}}{\textbf{10/2016 -- 03/2017}}
+\headerrow{Programming 1 Teaching Assistant, Saarland University}{10/2016 -- 03/2017}
 \\
-\headerrow{\emph{Dependable Systems and Software Group}}{}
-\vspace{-1.6em}
-\begin{itemize*}
-    \parskip=0.1em
+\locationrow{Dependable Systems and Software Group}{}
+\begin{tightitemize}{1.7em}
     \item Taught first-year students fundamental concepts of functional programming, basic complexity theory and inductive correctness proofs in weekly tutorials and office hours
     \item Corrected weekly tests as well as mid- and endterm exams
     \item Collectively created learning materials and discussed student progress as part of the whole teaching team
-\end{itemize*}
+\end{tightitemize}
+\largesectionsep
 
 
-\subsection*{Volunteering}
+\section*{Volunteering}
 \hrule
 \vspace{0.4em}
 
 \noindent
-\headerrow{\textbf{Navigation Team Member, University of Edinburgh}}{\textbf{09/2018 -- Present}}
+\headerrow{Navigation Team Member, University of Edinburgh}{09/2018 -- Present}
 \\
-\headerrow{\emph{HYPED -- University of Edinburgh Hyperloop Society}}{}
-\vspace{-1.6em}
-\begin{itemize*}
+\locationrow{HYPED -- University of Edinburgh Hyperloop Society}{}
+\begin{tightitemize}{1.7em}
     \item Working on navigation of Poddy III Hyperloop prototype including filtering data of IMUs and proximity sensors 
     using Kalman filters to estimate location, orientation and speed of the pod
     \item Preliminary Design Briefing of Poddy III was approved by SpaceX for their 2019 Hyperloop competition
-\end{itemize*}
-
-\vspace{0.4em}
+\end{tightitemize}
+\largesectionsep
 
 \noindent
-\headerrow{\textbf{Lecturer and Coach, Saarland University}}{}
+\headerrow{Lecturer and Coach, Saarland University}{}
 \\
-\headerrow{\emph{Mathematics Preparation Course}}{\emph{09/2017 -- 10/2017}}
-\vspace{-1.6em}
-\begin{itemize*}
+\locationrow{Mathematics Preparation Course}{09/2017 -- 10/2017}
+\begin{tightitemize}{1.7em}
     \item Assisted the organization of the mathematics preparation course for upcoming computer science students% to student life and mathematical concepts covered in their first year
     \item Explained importance of mathematics for CS, formal languages and predicate logic to $\sim250$ participants in daily lectures of the first week
     \item Supervised two groups to provide feedback and further assistance in daily coaching-sessions
     \item The course received \textbf{BESTE-award} for special student commitment 2017 of Saarland University
-\end{itemize*}
-
-\vspace{0.4em}
+\end{tightitemize}
+\largesectionsep
 
 \noindent
-\headerrow{\textbf{School Year Representative, Warndtgymnasium}}{\emph{08/2013 -- 07/2015}}
-\vspace{-1.6em}
-\begin{itemize*}
-    \item Elected committee member representing the school year
-    \item Planned, organised school events up to graduation ceremony and negotiated with sponsors
-\end{itemize*}
+\headerrow{School Year Representative, Warndtgymnasium}{08/2013 -- 07/2015}
+\begin{tightitemize}{1.7em}
+    \item Elected committee member representing school year; involved in organisation of school events and sponsor
+    negotiations
+\end{tightitemize}
+\largesectionsep
 
-
-\subsection*{Project Experience}
+\section*{Project Experience}
 \hrule
 \vspace{0.4em}
 
 \noindent
-\headerrow{\textbf{Autonomous Robot Localisation, University of Edinburgh}}{\textbf{09/2018 -- 12/2018}}
+\headerrow{Autonomous Robot Localisation, University of Edinburgh}{09/2018 -- 12/2018}
 \\
-\headerrow{\emph{Group Project for Robotics: Science and Systems Lecture}}{}
-\vspace{-1.6em}
-\begin{itemize}
-    \setlength\itemsep{0em}
+\locationrow{Group Project for Robotics: Science and Systems Lecture}{}
+\begin{tightitemize}{1.7em}
     \item Constructed a four-wheel differential steering mobile robot as group of three for autonomous localisation in a 
     known environment using LEGO aside of technical components including a Raspberry Pi computer
     \item Implemented particle-filter localisation and obstacle avoidance based on IR and sonar sensors
     \item Robot successfully managed to navigate through the constructed arena, detect and communicate points of
     interest using light sensors and return back to its deployment location
-\end{itemize}
-
-\vspace{0.4em}
+\end{tightitemize}
+\largesectionsep
 
 \noindent
-\headerrow{\textbf{Galaxy-based Search, University of Edinburgh}}{\textbf{09/2018 -- 12/2018}}
+\headerrow{Galaxy-based Search, University of Edinburgh}{09/2018 -- 12/2018}
 \\
-\headerrow{\emph{Group Project for Natural Computing Lecture}}{}
-\vspace{-1.6em}
-\begin{itemize}
-    \setlength\itemsep{0em}
+\locationrow{Group Project for Natural Computing Lecture}{}
+\begin{tightitemize}{1.7em}
     \item Implemented the Galaxy-based Search Algorithm (GbSA) and Particle Swarm Optimisation (PSO) baseline 
     for PCA approximation as metaheuristic optimisation algorithms
     \item Evaluated and analysed GbSA and its foundational research paper, showing limitations, proposing adjustments to 
     the algorithm and proofing their positive impact on performance in an evaluation
-\end{itemize}
-
-\vspace{0.4em}
+\end{tightitemize}
+\largesectionsep
 
 \noindent
-\headerrow{\textbf{Plagiarism Detection Tool, Saarland University}}{\textbf{04/2017 -- 07/2017}}
+\headerrow{Plagiarism Detection Tool, Saarland University}{04/2017 -- 07/2017}
 \\
-\headerrow{\emph{Group Project for Software Engineering Lecture}}{}
-\vspace{-1.6em}
-\begin{itemize}
-    \setlength\itemsep{0em}
+\locationrow{Group Project for Software Engineering Lecture}{}
+\begin{tightitemize}{1.7em}
     %\item Implemented a plagiarism detection tool in Python for Prof. Rossow at Saarland University
     \item Researched, planned and built a reliable similarity detection for text \& code in Python with language-specific analysis for Python and C as a group of five
     \item Designed and implemented a web-based output creation, highlighting similar submissions and plagiarism
     \item Our software is now successfully used in our customer's lectures to detect plagiarism cases on Python code
-\end{itemize}
-
-\vspace{0.4em}
+\end{tightitemize}
+\largesectionsep
 
 \noindent
-\headerrow{\textbf{Concurrent CDCL SAT-Solver, Saarland University}}{\textbf{07/2017 -- 09/2017}}
+\headerrow{Concurrent CDCL SAT-Solver, Saarland University}{07/2017 -- 09/2017}
 \\
-\headerrow{\emph{Group Project for Modern Imperative Programming Languages Seminar}}{}
-\vspace{-1.6em}
-\begin{itemize}
-    \setlength\itemsep{0em}
+\locationrow{Group Project for Modern Imperative Programming Languages Seminar}{}
+\begin{tightitemize}{1.7em}
     \item Planned and implemented a concurrent Conflict-Driven Clause Learning SAT-Solver using Rust
     \item Optimised literal assignment using multiple heuristic strategies, pure variable detection and handling
-\end{itemize}
+\end{tightitemize}
+\largesectionsep
 
 
-\subsection*{Skills}
+\section*{Skills}
 \hrule
-\vspace{0.4em}
-\begin{description*}
-	\item[Programming:]
-	Python \textbullet{} C++ \textbullet{} C \textbullet{} Java \textbullet{} SML \textbullet{} Rust \textbullet{} Matlab \textbullet{} Bash
-    \item[Markup:]
-    HTML  \textbullet{} CSS  \textbullet{} \LaTeX  \textbullet{} Markdown
-	\item[Technologies/ Tools:]
-	TensorFlow  \textbullet{} Keras  \textbullet{} NumPy  \textbullet{} UNIX  \textbullet{} Git  \textbullet{} Vim
-	\item[Languages:]
-	Fluent in German and English  \textbullet{} advanced in French  \textbullet{} beginner in Japanese
-\end{description*}
+\ \vspace{-1em}
+\begin{multicols}{2}
+    \raggedright
+    \setlength{\columnsep}{1.5cm}
+    \setlength{\columnseprule}{0.2pt}
+    \noindent
+    \fontspec{Helvetica}\fontsize{12pt}{12pt}\selectfont\bfseries{\color{subheadings}Programming} \vspace{0.3em} \\
+    \color{headings}\scshape\fontspec{Heiti TC Medium}\fontsize{10pt}{10pt}\selectfont{Competent}\\
+    \fontspec{Heiti TC Medium}\fontsize{10pt}{8pt}\selectfont \color{primary}Python \textbullet{} C++ \textbullet{} C \textbullet{} Java \textbullet{} SML
+    \ \vspace{0.3em} \\
+    \color{headings}\scshape\fontspec{Heiti TC Medium}\fontsize{10pt}{10pt}\selectfont{Familiar}\\
+    \fontspec{Heiti TC Medium}\fontsize{10pt}{8pt}\selectfont\color{primary}Rust \textbullet{}  HTML \textbullet{} CSS \textbullet{} Matlab \textbullet{} Bash\\
+    \ \\
+    \raggedleft
+    \fontspec{Helvetica}\fontsize{12pt}{12pt}\selectfont\bfseries{\color{subheadings}Technologies and Tools}\\
+    \fontspec{Heiti TC Medium}\fontsize{10pt}{8pt}\selectfont \color{primary}TensorFlow  \textbullet{} Keras  \textbullet{} NumPy  \textbullet{} UNIX  \textbullet{} Git  \textbullet{} Vim\\
+    \ \\
+    \fontspec{Helvetica}\fontsize{12pt}{12pt}\selectfont\bfseries{\color{subheadings}Languages}\\
+    \fontspec{Heiti TC Medium}\fontsize{10pt}{8pt}\selectfont \color{primary}Native in German \textbullet{} Fluent in English \textbullet{} advanced in French \textbullet{} beginner in Japanese
+\end{multicols}
 
-% \vspace{0.4em}
-% 
-% \subsection*{References}
-% \hrule
-% \vspace{0.8em}
-% \noindent
-% \textbf{Prof. Dr. Gert Smolka} \hfill \textbf{Chair of Programming Systems}\\
-% Personal Mentor \hfill \emph{smolka@ps.uni-saarland.de} \\
-% 
-% \noindent
-% \textbf{Prof. Dr. Joerg Hoffmann} \hfill \textbf{Chair of Foundations of Artificial Intelligence}\\ 
-% Thesis Supervisor \hfill \emph{hoffmann@cs.uni-saarland.de}
-
-\hfill \small \textit{[References available on request - Last updated on \today]}
+[\scshape\fontspec{Heiti TC Medium}\fontsize{10pt}{8pt}\selectfont References available on request - Last updated on \today]
 \end{document}

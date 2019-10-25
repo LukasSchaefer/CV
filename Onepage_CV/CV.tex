@@ -59,9 +59,9 @@
 
 \subsection{University of Edinburgh}
 \descript{MSc Informatics}
-\location{Present | Edinburgh, UK}
-\location{Expected Graduation Aug 2019}
-Specialisation in \textbf{Machine Learning} and \textbf{Reinforcement Learning} \\
+\location{Aug 2019 | Edinburgh, UK}
+\location{\textbf{Distinction} (77.28\%)}
+Dissertation: Curiosity in Multi-Agent Reinforcement Learning (74\%)\\
 DAAD graduate scholarship
 \sectionsep
 
@@ -69,7 +69,7 @@ DAAD graduate scholarship
 \descript{BSc Computer Science}
 \location{Sep 2018 | Saarbrücken, Germany}
 \location{Grade \textbf{1.2} (\href{https://en.wikipedia.org/wiki/Academic_grading_in_Germany}{German scale}) - UK 1\textsuperscript{st}}
-Dissertation: \href{https://www.lukaschaefer.de/assets/files/thesis.pdf}{Domain-Dependent Policy Learning using Neural Networks in Classical Planning}
+Dissertation: \href{https://www.lukaschaefer.de/assets/files/thesis.pdf}{Domain-Dependent Policy Learning using Neural Networks in Classical Planning} (1.0)
 \sectionsep
 
 \subsection{Warndtgymnasium}
@@ -113,7 +113,7 @@ Rust \textbullet{} HTML \textbullet{} CSS \textbullet{} Matlab \textbullet{} Bas
 \sectionsep
 
 \subsection{Technologies and Tools}
-TensorFlow \textbullet{} Keras \textbullet{} NumPy \textbullet{} UNIX \textbullet{} Git \textbullet{} Vim \textbullet{} \LaTeX
+PyTorch \textbullet{} TensorFlow \textbullet{} Keras \textbullet{} NumPy \textbullet{} UNIX \textbullet{} Git \textbullet{} Vim \textbullet{} \LaTeX
 % \sectionsep
 
 \ \\
@@ -135,20 +135,33 @@ TensorFlow \textbullet{} Keras \textbullet{} NumPy \textbullet{} UNIX \textbulle
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Research}
-\runsubsection{BSc Dissertation}
-\descript{| Foundations of Artificial Intelligence Group}
-\location{Apr – Jul 2018 | Saarland University}
+\runsubsection{MSc Dissertation}
+\descript{| Autonomous Agents Research Group}
+\location{May – Aug 2019 | University of Edinburgh}
 %\descript{\href{https://www.lukaschaefer.de/assets/files/thesis.pdf}{``Domain-Dependent Policy Learning using Neural Networks in Classical Planning''}}
-\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\vspace{\topsep}
 \begin{tightemize}
-    \item Transferred domain-dependent policy learning neural network architecture of Action-Schema Networks to
-    classical automated planning
-    \item Implemented the network using Keras, slightly adjusted its training for classical planning and extended 
-    the FastDownward planning framework
-    \item Extensive evaluation and analysis was conducted on IPC domains of varying complexity identifying
-    limitations in generalisation and scalability
+    \item Applied curiosity as intrinsically computed exploration bonuses for multi-agent reinforcement learning (MARL)
+    \item Implemented count- and prediction-based curiosities to evaluate for value-based and policy-gradient MARL methods using PyTorch
+    \item Evaluated and analysed the influence of curiosity on cooperative and competitive MARL involving partial observability and sparse rewards
+    \item Applied curiosity led to considerably improved stability and convergence applied to policy-gradient MARL trained with sparse reward signals
 \end{tightemize}
 \sectionsep
+
+% \runsubsection{BSc Dissertation}
+% \descript{| Foundations of Artificial Intelligence Group}
+% \location{Apr – Jul 2018 | Saarland University}
+% %\descript{\href{https://www.lukaschaefer.de/assets/files/thesis.pdf}{``Domain-Dependent Policy Learning using Neural Networks in Classical Planning''}}
+% \vspace{\topsep} % Hacky fix for awkward extra vertical space
+% \begin{tightemize}
+%     \item Transferred domain-dependent policy learning neural network architecture of Action-Schema Networks to
+%     classical automated planning
+%     \item Implemented the network using Keras, slightly adjusted its training for classical planning and extended 
+%     the FastDownward planning framework
+%     \item Extensive evaluation and analysis was conducted on IPC domains of varying complexity identifying
+%     limitations in generalisation and scalability
+% \end{tightemize}
+% \sectionsep
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -156,32 +169,21 @@ TensorFlow \textbullet{} Keras \textbullet{} NumPy \textbullet{} UNIX \textbulle
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{Work Experience}
-\runsubsection{Programming 1 Teaching Assistant}
-\descript{| Dependable Systems and Software Group}
-\location{Oct 2016 - Mar 2017 | Saarland University}
-\begin{tightemize}
-    \item Held weekly tutorials and office hours teaching fundamental concepts of functional programming, complexity theory and correctness proofs
-    \item Marked weekly tests as well as mid- and endterm exams
-    \item Collectively created learning materials and discussed student progress as part of the whole teaching team
-\end{tightemize}
-\sectionsep
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     VOLUNTEERING
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section{Volunteering}
 \runsubsection{Navigation Team Member}
 \descript{| University of Edinburgh Hyperloop Team}
-\location{Sep 2018 – Present | Edinburgh, UK}
+\location{Sep 2018 – Aug 2019 | Edinburgh, UK}
 \begin{tightemize}
-    \item Working on navigation of Poddy III Hyperloop prototype including sensor filtering and processing to estimate
-    location, orientation and speed
-    \item Preliminary Design Briefing of Poddy III was approved by SpaceX for their 2019 Hyperloop competition
+    \item Developing navigation system of "The Flying Podsman" Hyperloop prototype using sensor filtering, processing and control techniques to estimate location, orientation and speed of the pod
+    \item Finalist for the SpaceX 2019 Hyperloop competition in California
 \end{tightemize}
 \sectionsep
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     Teaching Experience
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Teaching Experience}
 \runsubsection{Lecturer and Coach}
 \descript{| Mathematics Preparation Course}
 \location{Sep – Oct 2017 | Saarland University}
@@ -190,6 +192,16 @@ TensorFlow \textbullet{} Keras \textbullet{} NumPy \textbullet{} UNIX \textbulle
     \item Explained importance of mathematics for CS, formal languages and predicate logic to $\mathbf{\sim 250}$ participants in daily lectures of the first week
     \item Supervised two groups to provide feedback in daily coaching-sessions
     \item The course received \textbf{BESTE-award} for special student commitment 2017 of Saarland University
+\end{tightemize}
+\sectionsep
+
+\runsubsection{Programming 1 Teaching Assistant}
+\descript{| Dependable Systems and Software Group}
+\location{Oct 2016 - Mar 2017 | Saarland University}
+\begin{tightemize}
+    \item Held weekly tutorials and office hours teaching fundamental concepts of functional programming, complexity theory and correctness proofs
+    \item Marked weekly tests as well as mid- and endterm exams
+    \item Created learning materials and discussed student progress
 \end{tightemize}
 \sectionsep
 

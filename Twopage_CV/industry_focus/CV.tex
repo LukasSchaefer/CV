@@ -68,7 +68,7 @@
     \ \\
     \raggedleft
     \fontspec{Helvetica}\fontsize{12pt}{12pt}\selectfont\bfseries{\color{subheadings}Technologies and Tools}\\
-    \fontspec{Heiti TC Medium}\fontsize{10pt}{8pt}\selectfont \color{primary}TensorFlow  \textbullet{} Keras  \textbullet{} NumPy  \textbullet{} UNIX  \textbullet{} Git  \textbullet{} Vim\\
+    \fontspec{Heiti TC Medium}\fontsize{10pt}{8pt}\selectfont \color{primary}PyTorch \textbullet{} TensorFlow \textbullet{} Keras \textbullet{} NumPy \textbullet{} UNIX \textbullet{} Git\\
     \ \\
     \fontspec{Helvetica}\fontsize{12pt}{12pt}\selectfont\bfseries{\color{subheadings}Languages}\\
     \fontspec{Heiti TC Medium}\fontsize{10pt}{8pt}\selectfont \color{primary}Native in German \textbullet{} Fluent in English \textbullet{} Intermediate in French \textbullet{} Beginner in Japanese
@@ -80,13 +80,12 @@
 \vspace{0.4em}
 
 \noindent
-\headerrow{M.Sc. Informatics}{09/2018 -- Present}
+\headerrow{M.Sc. Informatics}{09/2018 -- 08/2019}
 \\
 \locationrow{University of Edinburgh}{Edinburgh, United Kingdom}
 \begin{tightitemize}{1.7em}
-    \item Expected graduation in August 2019
-    \item Average grade of \textbf{77.2\%} working towards Distinction
-    \item Specialisation in \textbf{Machine Learning} and \textbf{Reinforcement Learning}
+    \item Degree classification: \textbf{Distinction} (77.28\%)
+    \item MSc thesis: Dissertation: Curiosity in Multi-Agent Reinforcement Learning (74\%)
     \item \textbf{DAAD} (German Academic Exchange Service) \textbf{graduate scholarship}
     \item Modules include: Reinforcement Learning, Algorithmic Game Theory and its Applications, Machine Learning and 
     Pattern Recognition, Probabilistic Modelling and Reasoning, Decision Making in Robots and Autonomous Agents
@@ -99,7 +98,7 @@
 \locationrow{Saarland University}{Saarbrücken, Germany}
 \begin{tightitemize}{1.7em}
     \item Degree classification: grade of \textbf{1.2} (\href{https://en.wikipedia.org/wiki/Academic_grading_in_Germany}{German scale}) equivalent to UK \textbf{1\textsuperscript{st} class honours}
-    \item BSc thesis: \href{https://www.lukaschaefer.de/assets/files/thesis.pdf}{Domain-Dependent Policy Learning using Neural Networks in Classical Planning}
+    \item BSc thesis: \href{https://www.lukaschaefer.de/assets/files/thesis.pdf}{Domain-Dependent Policy Learning using Neural Networks in Classical Planning} (1.0)
     \item Modules include: Automated Planning, Admissible Search Enhancements, Neural Networks: Implementation and Application, Information Retrieval and Data Mining, Software Engineering, Modern Imperative Programming Languages
 \end{tightitemize}
 \largesectionsep
@@ -122,12 +121,21 @@
 \vspace{0.4em}
 
 \noindent
-\headerrow{Navigation Software Engineer, University of Edinburgh}{09/2018 -- Present}
+\headerrow{Team Advisor, University of Edinburgh}{09/2019 -- Present}
+\\
+\locationrow{HYPED -- University of Edinburgh Hyperloop Team}{}
+\begin{tightitemize}{1.7em}
+    \item Consulting the HYPED software team especially regarding navigation and sensor filtering to achieve a reliable prototype design competing at the 5th SpaceX Hyperloop Competition
+\end{tightitemize}
+\largesectionsep
+
+\noindent
+\headerrow{Navigation Software Engineer, University of Edinburgh}{09/2018 -- 08/2019}
 \\
 \locationrow{HYPED -- University of Edinburgh Hyperloop Team}{}
 \begin{tightitemize}{1.7em}
     \item Developing navigation system of "The Flying Podsman" Hyperloop prototype using sensor filtering, processing and control techniques to estimate location, orientation and speed of the pod
-    \item Confirmed finalist for the SpaceX 2019 Hyperloop competition in California
+    \item Finalist for the SpaceX 2019 Hyperloop competition in California in Summer 2019
 \end{tightitemize}
 \largesectionsep
 
@@ -193,6 +201,49 @@
 \largesectionsep
 
 
+\section*{Research Experience}
+\hrule
+\vspace{0.4em}
+
+\noindent
+\headerrow{M.Sc. Dissertation, University of Edinburgh}{05/2019 -- 08/2019}
+\\
+\locationrow{Autonomous Agents Research Group}{}
+\begin{tightitemize}{1.7em}
+    \item Applied curiosity as intrinsically computed exploration bonuses for multi-agent reinforcement learning (MARL)
+    \item Implemented count- and prediction-based curiosities for value-based and policy-gradient MARL methods using PyTorch
+    \item Evaluated the influence of curiosity on cooperative and competitive MARL under partial observability and sparse rewards in a multi-agent particle environment
+    \item Applied curiosity led to improved stability and convergence of policy-gradient MARL trained with sparse reward signals
+\end{tightitemize}
+\largesectionsep
+
+% \noindent
+% \headerrow{Reinforcement Learning for Video Game Playing, University of Edinburgh}{09/2018 -- 01/2019}
+% \\
+% \locationrow{Informatics Research Review}{}
+% \begin{tightitemize}{1.7em}
+%     \item Reviewed the development of reinforcement learning research for game playing and the challenge from board games
+%     Backgammon, Chess and Go to video games focusing on Atari and StarCraft
+%     \item Outlined the development of common reinforcement learning approaches and highlighted the challenge of
+%     multi-agent tasks, particular in partially-observable environments and proposed recent, promising ideas
+% \end{tightitemize}
+% \largesectionsep
+
+\noindent
+\headerrow{B.Sc. Dissertation, Saarland University}{04/2018 -- 07/2018}
+\\
+\locationrow{Foundations of Artificial Intelligence (FAI) Group}{}
+\begin{tightitemize}{1.7em}
+    \item Transferred domain-dependent policy learning Action-Schema Networks to
+    classical automated planning
+    \item Implemented the network using Keras, slightly adjusted its training for classical planning and extended 
+    the FastDownward planning framework
+    \item Extensive evaluation and analysis was conducted on IPC domains of varying complexity identifying
+    limitations in generalisation and scalability
+\end{tightitemize}
+\largesectionsep
+
+
 \section*{Teaching Experience}
 \hrule
 \vspace{0.4em}
@@ -217,37 +268,6 @@
     \item Taught first-year students fundamental concepts of functional programming, basic complexity theory and inductive correctness proofs in weekly tutorials and office hours
     \item Marked weekly tests as well as mid- and endterm exams
     \item Collectively created learning materials and discussed student progress as part of the whole teaching team
-\end{tightitemize}
-\largesectionsep
-
-
-\section*{Research Experience}
-\hrule
-\vspace{0.4em}
-
-\noindent
-\headerrow{Reinforcement Learning for Video Game Playing, University of Edinburgh}{09/2018 -- 01/2019}
-\\
-\locationrow{Informatics Research Review}{}
-\begin{tightitemize}{1.7em}
-    \item Reviewed the development of reinforcement learning research for game playing and the challenge from board games
-    Backgammon, Chess and Go to video games focusing on Atari and StarCraft
-    \item Outlined the development of common reinforcement learning approaches and highlighted the challenge of
-    multi-agent tasks, particular in partially-observable environments and proposed recent, promising ideas
-\end{tightitemize}
-\largesectionsep
-
-\noindent
-\headerrow{B.Sc. Dissertation, Saarland University}{04/2018 -- 07/2018}
-\\
-\locationrow{Foundations of Artificial Intelligence (FAI) Group}{}
-\begin{tightitemize}{1.7em}
-    \item Transferred domain-dependent policy learning neural network architecture of Action-Schema Networks to
-    classical automated planning
-    \item Implemented the network using Keras, slightly adjusted its training for classical planning and extended 
-    the FastDownward planning framework
-    \item Extensive evaluation and analysis was conducted on IPC domains of varying complexity identifying
-    limitations in generalisation and scalability
 \end{tightitemize}
 \largesectionsep
 

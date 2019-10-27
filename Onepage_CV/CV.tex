@@ -17,7 +17,7 @@
 % operating system or comment the line out to use the default font.
 % 
 
-\documentclass[]{deedy-resume}
+\documentclass[]{lukas-cv}
 \usepackage{fancyhdr}
  
 \pagestyle{fancy}
@@ -38,9 +38,14 @@
 %     TITLE NAME
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\namesection{Lukas}{Schäfer}{ \urlstyle{same}
-\href{mailto:luki.schaefer96@gmail.com}{luki.schaefer96@gmail.com} | +49 175 2778299 |  \href{https://www.linkedin.com/in/lukas-schaefer}{www.linkedin.com/in/lukas-schaefer}\\
-\Large \href{https://lukaschaefer.de/profile}{\textbf{lukaschaefer.de/profile}}\\
+\namesection{Lukas}{Schäfer}{
+    \linkedin{lukas-schaefer}
+    \github{LukasSchaefer}\\
+    \homepage{lukaschaefer.de/profile}
+    %\smartphone{+44 7925 103212}
+    \email{luki.schaefer96@gmail.com}\\
+    %\address{}\\
+    %\infos{}
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -55,7 +60,7 @@
 %     EDUCATION
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Education} 
+\sectionTitle{Education}{graduation-cap}
 
 \subsection{University of Edinburgh}
 \descript{MSc Informatics}
@@ -103,7 +108,7 @@ Software Engineering \\
 %     SKILLS
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Skills}
+\sectionTitle{Skills}{poll}
 \subsection{Programming}
 \descript{Competent}
 Python \textbullet{} C++ \textbullet{} C \textbullet{} Java \textbullet{} SML
@@ -134,7 +139,7 @@ PyTorch \textbullet{} TensorFlow \textbullet{} Keras \textbullet{} NumPy \textbu
 %     RESEARCH
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Research}
+\sectionTitle{Research Experience}{dna}
 \runsubsection{MSc Dissertation}
 \descript{| Autonomous Agents Research Group}
 \location{May – Aug 2019 | University of Edinburgh}
@@ -168,7 +173,7 @@ PyTorch \textbullet{} TensorFlow \textbullet{} Keras \textbullet{} NumPy \textbu
 %     WORK EXPERIENCE
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Work Experience}
+\sectionTitle{Work Experience}{briefcase}
 \runsubsection{Navigation Team Member}
 \descript{| University of Edinburgh Hyperloop Team}
 \location{Sep 2018 – Aug 2019 | Edinburgh, UK}
@@ -183,7 +188,7 @@ PyTorch \textbullet{} TensorFlow \textbullet{} Keras \textbullet{} NumPy \textbu
 %     Teaching Experience
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Teaching Experience}
+\sectionTitle{Teaching Experience}{chalkboard-teacher}
 \runsubsection{Lecturer and Coach}
 \descript{| Mathematics Preparation Course}
 \location{Sep – Oct 2017 | Saarland University}
@@ -210,7 +215,7 @@ PyTorch \textbullet{} TensorFlow \textbullet{} Keras \textbullet{} NumPy \textbu
 %     PROJECT EXPERIENCE
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\section{Project Experience}
+\sectionTitle{Project Experience}{code}
 \runsubsection{Plagiarism Detection Tool}
 \descript{| Software Engineering Project}
 \location{Apr - Jul 2017 | Saarland University}

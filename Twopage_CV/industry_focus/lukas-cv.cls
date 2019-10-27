@@ -1,5 +1,6 @@
 % Intro Options
-\ProvidesClass{deedy-resume}[2014/04/30 CV class]
+% largely based on https://github.com/deedy/Deedy-Resume
+\ProvidesClass{lukas-cv}
 \NeedsTeXFormat{LaTeX2e}
 \DeclareOption{print}{\def\@cv@print{}}
 \DeclareOption*{
@@ -16,7 +17,8 @@
 \usepackage[absolute]{textpos}
 \usepackage[UKenglish]{babel}
 \usepackage[UKenglish]{isodate}
-\usepackage{fontspec,xltxtra,xunicode}
+\usepackage{fontspec,xltxtra,xunicode,fontawesome5}
+\usepackage{enumitem}
 
 % Cite publications
 \usepackage{cite}
@@ -32,6 +34,10 @@
 \defaultfontfeatures{Mapping=tex-text}
 \setmainfont[Color=primary]{Helvetica Light}
 \setsansfont[Scale=MatchLowercase,Mapping=tex-text]{Helvetica Neue UltraLight}
+
+% Configure list symbols
+\setlist[itemize,1]{label=\faicon{angle-right}, leftmargin=2em} 
+\setlist[itemize,2]{label=\faicon{angle-right}, leftmargin=1.5em} 
 
 % Date command
 \setlength{\TPHorizModule}{1mm}
@@ -59,7 +65,7 @@ Last Updated on
 	\vspace{5pt}
 	\centering{ \color{headings}\fontspec{Heiti TC Medium}\fontsize{11pt}{14pt}\selectfont #3}
 	\noindent\makebox[\linewidth]{\rule{\paperwidth}{0.4pt}}
-	\vspace{-15pt}
+	\vspace{-10pt}
 }
 
 \newcommand{\namesectionnorule}[3]{
@@ -70,13 +76,60 @@ Last Updated on
     } \\
     \vspace{5pt}
     \centering{ \color{headings}\fontspec{Heiti TC Medium}\fontsize{11pt}{14pt}\selectfont #3}
-    \vspace{-5pt}
 }
 \titlespacing{\section}{0pt}{0pt}{0pt}
 
+% Font Awesome icons aliases, many more could be added here
+\newcommand{\mailSymbol}{\faicon{paper-plane}}
+\newcommand{\locationSymbol}{\faicon{map-marker-alt}}
+\newcommand{\infoSymbol}{\faicon{info}}
+\newcommand{\linkedinSymbol}{\faicon{linkedin}}
+\newcommand{\homepageSymbol}{\faicon{user-circle}}
+\newcommand{\mobileSymbol}{\faicon{mobile-alt}}
+\newcommand{\githubSymbol}{\faicon{github}}
+
+% Command to create a nice looking link
+\newcommand\link[2]{\color{primary}\href{#1}{#2}\color{Black} }
+
+% Render a text with its symbol
+% Usage; \socialtext{<icon>}{<label>}
+\newcommand{\socialtext}[2]{\mbox{\textcolor{headings}{#1}\hspace{0.5em}#2\hspace{1em}}}
+
+% Render a link with its symbol
+% Usage; \sociallink{<icon>}{<label>}
+\newcommand{\sociallink}[3]{\mbox{\textcolor{headings}{#1}\hspace{0.5em}\link{#2}{#3}\hspace{1em}}}
+
+% Render author's address
+% Usage: \address{<address>}
+\newcommand*{\address}[1]{\socialtext{\locationSymbol}{#1}}
+
+% Render author's infos
+% Usage: \infos{<infos>}
+\newcommand*{\infos}[1]{\socialtext{\infoSymbol}{#1}}
+
+% Render author's linked-in
+% Usage: \linkedin{<linked-in-nick>}
+\newcommand*{\linkedin}[1]{\sociallink{\linkedinSymbol}{http://www.linkedin.com/in/#1/fr}{linkedin.com/in/#1}}
+
+% Render author's github
+% Usage: \github{<github-nick>}
+\newcommand*{\github}[1]{\sociallink{\githubSymbol}{https://www.github.com/#1}{github.com/#1}}           % Github icon + URL
+
+% Render author's homepage
+% Usage: \homepage{<web-URL>}
+\newcommand*{\homepage}[1]{\sociallink{\homepageSymbol}{https://#1}{#1}}
+
+% Render author's email
+% Usage: \email{<email adress>}
+\newcommand*{\email}[1]{\sociallink{\mailSymbol}{mailto:#1}{#1}}
+
+% Render author's mobile phone 
+% Usage: \smartphone{<mobile phone number>}
+\newcommand*\smartphone[1]{\socialtext{\mobileSymbol}{#1}}    
+
 % Headings command
 \titleformat{\section}{\color{headings}
-\scshape\fontspec{Helvetica Light}\fontsize{16pt}{24pt}\selectfont \raggedright\uppercase}{} {0em}{}
+\scshape\fontspec{Helvetica Light}\fontsize{16pt}{24pt}\selectfont \raggedright}{} {0em}{}
 
 % Subeadings command
 \titleformat{\subsection}{\color{subheadings}
@@ -95,6 +148,9 @@ Last Updated on
 % Section seperators command
 \newcommand{\sectionsep}[0]{\vspace{8pt}}
 \newcommand{\largesectionsep}[0]{\vspace{12pt}}
+
+% Title definition with fontawesome symbol
+\newcommand\sectionTitle[2]{\section*{\texorpdfstring{\faicon{#2}\enspace \uppercase{#1}}{\uppercase{#1}}}}
 
 % Bullet Lists with fewer gaps command
 \newenvironment{tightemize}{\vspace{-\topsep}\begin{itemize}\itemsep1pt \parskip0pt \parsep0pt}{\end{itemize}\vspace{-\topsep}}

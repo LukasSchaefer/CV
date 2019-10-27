@@ -1,6 +1,6 @@
-% inspiration: https://github.com/sebastianruder/cv
+% inspiration: https://github.com/sebastianruder/cv, https://github.com/deedy/Deedy-Resume
 
-\documentclass[]{deedy-resume}
+\documentclass[]{lukas-cv}
 \usepackage[utf8]{inputenc}
 \usepackage{textcomp}
 \usepackage{tgpagella}
@@ -45,13 +45,18 @@
 
 \begin{document}
 
-\namesectionnorule{Lukas}{Schäfer}{ \urlstyle{same}
-    \href{mailto:luki.schaefer96@gmail.com}{luki.schaefer96@gmail.com} | +49 175 2778299 |  \href{https://www.linkedin.com/in/lukas-schaefer}{www.linkedin.com/in/lukas-schaefer}\\
-    \Large \href{https://lukaschaefer.de/profile}{\textbf{lukaschaefer.de/profile}}\\
+\namesectionnorule{Lukas}{Schäfer}{
+    \linkedin{lukas-schaefer}
+    \github{LukasSchaefer}\\
+    \homepage{lukaschaefer.de/profile}
+    %\smartphone{+44 7925 103212}
+    \email{luki.schaefer96@gmail.com}\\
+    %\address{}\\
+    %\infos{}
 }
 
 
-\section*{Skills}
+\sectionTitle{Skills}{poll}
 \hrule
 \ \vspace{-1em}
 \begin{multicols}{2}
@@ -75,7 +80,7 @@
 \end{multicols}
 
 
-\section*{Education}
+\sectionTitle{Education}{graduation-cap}
 \hrule
 \vspace{0.4em}
 
@@ -116,7 +121,7 @@
 \largesectionsep
 
 
-\section*{Work Experience}
+\sectionTitle{Work Experience}{briefcase}
 \hrule
 \vspace{0.4em}
 
@@ -149,7 +154,7 @@
 % \largesectionsep
 
 
-\section*{Project Experience}
+\sectionTitle{Project Experience}{code}
 \hrule
 \vspace{0.4em}
 
@@ -201,7 +206,7 @@
 \largesectionsep
 
 
-\section*{Research Experience}
+\sectionTitle{Research Experience}{dna}
 \hrule
 \vspace{0.4em}
 
@@ -244,7 +249,7 @@
 \largesectionsep
 
 
-\section*{Teaching Experience}
+\sectionTitle{Teaching Experience}{chalkboard-teacher}
 \hrule
 \vspace{0.4em}
 

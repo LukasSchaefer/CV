@@ -87,13 +87,14 @@ Last Updated on
 \newcommand{\homepageSymbol}{\faicon{user-circle}}
 \newcommand{\mobileSymbol}{\faicon{mobile-alt}}
 \newcommand{\githubSymbol}{\faicon{github}}
+\newcommand{\researchgateSymbol}{\faicon{researchgate}}
 
 % Command to create a nice looking link
 \newcommand\link[2]{\color{primary}\href{#1}{#2}\color{Black} }
 
 % Render a text with its symbol
 % Usage; \socialtext{<icon>}{<label>}
-\newcommand{\socialtext}[2]{\mbox{\textcolor{headings}{#1}\hspace{0.5em}#2\hspace{1em}}}
+\newcommand{\socialtext}[2]{\mbox{\textcolor{headings}{#1}\hspace{0.5em}\textcolor{primary}{#2}\hspace{1em}}}
 
 % Render a link with its symbol
 % Usage; \sociallink{<icon>}{<label>}
@@ -109,11 +110,15 @@ Last Updated on
 
 % Render author's linked-in
 % Usage: \linkedin{<linked-in-nick>}
-\newcommand*{\linkedin}[1]{\sociallink{\linkedinSymbol}{http://www.linkedin.com/in/#1/fr}{linkedin.com/in/#1}}
+\newcommand*{\linkedin}[1]{\sociallink{\linkedinSymbol}{http://www.linkedin.com/in/#1/fr}{#1}}
 
 % Render author's github
 % Usage: \github{<github-nick>}
-\newcommand*{\github}[1]{\sociallink{\githubSymbol}{https://www.github.com/#1}{github.com/#1}}           % Github icon + URL
+\newcommand*{\github}[1]{\sociallink{\githubSymbol}{https://www.github.com/#1}{#1}}           % Github icon + URL
+
+% Render author's researchgate
+% Usage: \researchgate{<resarchgate-nick>}
+\newcommand*{\researchgate}[1]{\sociallink{\researchgateSymbol}{https://www.researchgate.net/profile/#1}{#1}}           % ResearchGate icon + URL
 
 % Render author's homepage
 % Usage: \homepage{<web-URL>}
@@ -125,7 +130,7 @@ Last Updated on
 
 % Render author's mobile phone 
 % Usage: \smartphone{<mobile phone number>}
-\newcommand*\smartphone[1]{\socialtext{\mobileSymbol}{#1}}    
+\newcommand*\smartphone[1]{\socialtext{\mobileSymbol}{#1}}
 
 % Headings command
 \titleformat{\section}{\color{headings}

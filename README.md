@@ -1,9 +1,10 @@
 Resume
 ==========================
 
-My personal single-page and two-page CVs.
+My personal two-page CVs.
 
-The two-column single-page CV draft is based on [Deedy's Resume](https://github.com/deedy/Deedy-Resume)
-while the standard two-page draft is largely based on [the CV draft of Sebastian Ruder](https://github.com/sebastianruder/cv) with design inspiration taken from Deedy's CV.
+These two-page resumes are largely based on [the CV draft of Sebastian Ruder](https://github.com/sebastianruder/cv) with design inspiration taken from [Deedy's CV template](https://github.com/deedy/Deedy-Resume).
 
-I also added [fontawesome](https://fontawesome.com) symbols for a nice stylistic touch.
+I further added [fontawesome](https://fontawesome.com) symbols.
+
+While the industry CV is tailored to industry jobs, the research CV is focusing on research applications.

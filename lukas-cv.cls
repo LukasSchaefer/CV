@@ -84,6 +84,7 @@ Last Updated on
 \newcommand{\locationSymbol}{\faicon{map-marker-alt}}
 \newcommand{\infoSymbol}{\faicon{info}}
 \newcommand{\linkedinSymbol}{\faicon{linkedin}}
+\newcommand{\profileSymbol}{\faicon{user}}
 \newcommand{\homepageSymbol}{\faicon{user-circle}}
 \newcommand{\mobileSymbol}{\faicon{mobile-alt}}
 \newcommand{\githubSymbol}{\faicon{github}}

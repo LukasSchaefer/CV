@@ -1,0 +1,321 @@
+% !TEX program = xelatex
+% inspiration: https://github.com/sebastianruder/cv, https://github.com/deedy/Deedy-Resume
+
+\documentclass[]{lukas-cv-openfont}
+\usepackage[utf8]{inputenc}
+\usepackage{textcomp}
+\usepackage{tgpagella}
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage{multicol}
+\usepackage{ragged2e}
+\pagestyle{empty}
+\setlength{\tabcolsep}{0em}
+
+% indentsection style, used for sections that aren't already in lists
+% that need indentation to the level of all text in the document
+\newenvironment{indentsection}[1]%
+{\begin{list}{}%
+	{\setlength{\leftmargin}{#1}}%
+	\item[]%
+}
+{\end{list}}
+
+% opposite of above; bump a section back toward the left margin
+\newenvironment{unindentsection}[1]%
+{\begin{list}{}%
+	{\setlength{\leftmargin}{-0.5#1}}%
+	\item[]%
+}
+{\end{list}}
+
+\begin{document}
+
+\namesectionnorule{Lukas}{Schäfer}{
+    \researchgate{Lukas\_Schaefer9}
+    \linkedin{lukas-schaefer}
+    \github{LukasSchaefer}\\
+    \homepage{lukaschaefer.de/profile}
+    \email{luki.schaefer96@gmail.com}
+    \smartphone{+44 7925 103212}\\
+    %\address{}\\
+    %\infos{}
+}
+
+\vspace{0.5em}
+
+
+\sectionTitle{Skills}{poll}
+\begin{multicols}{2}
+    \raggedright
+    \setlength{\columnsep}{1.5cm}
+    \setlength{\columnseprule}{0.2pt}
+    \noindent
+    \fontspec[Path = ../../fonts/Openfonts/lato/]{Lato-Bol}\fontsize{12pt}{12pt}\selectfont\bfseries{\color{subheadings}Programming} \vspace{0.3em} \\
+    \color{headings}\scshape\fontspec[Path = ../../fonts/Openfonts/raleway/]{Raleway-Medium}\fontsize{10pt}{10pt}\selectfont{Competent}\\
+    \fontspec[Path = ../../fonts/Openfonts/raleway/]{Raleway-Medium}\fontsize{10pt}{8pt}\selectfont \color{primary}Python \textbullet{} C++ \textbullet{} SML
+    \ \vspace{0.3em} \\
+    \color{headings}\scshape\fontspec[Path = ../../fonts/Openfonts/raleway/]{Raleway-Medium}\fontsize{10pt}{10pt}\selectfont{Familiar}\\
+    \fontspec[Path = ../../fonts/Openfonts/raleway/]{Raleway-Medium}\fontsize{10pt}{8pt}\selectfont\color{primary}C \textbullet{} Java \textbullet{} Rust \textbullet{} HTML \textbullet{} CSS \textbullet{} Matlab \textbullet{} Bash\\
+    \ \\
+    \raggedleft
+    \fontspec[Path = ../../fonts/Openfonts/lato/]{Lato-Bol}\fontsize{12pt}{12pt}\selectfont\bfseries{\color{subheadings}Technologies and Tools}\\
+    \fontspec[Path = ../../fonts/Openfonts/raleway/]{Raleway-Medium}\fontsize{10pt}{8pt}\selectfont \color{primary}PyTorch \textbullet{} TensorFlow \textbullet{} Keras \textbullet{} NumPy \textbullet{} UNIX \textbullet{} Git\\
+    \ \\
+    \fontspec[Path = ../../fonts/Openfonts/lato/]{Lato-Bol}\fontsize{12pt}{12pt}\selectfont\bfseries{\color{subheadings}Languages}\\
+    \fontspec[Path = ../../fonts/Openfonts/raleway/]{Raleway-Medium}\fontsize{10pt}{8pt}\selectfont \color{primary}Native in German \textbullet{} Fluent in English \textbullet{} Intermediate in French \textbullet{} Beginner in Chinese \textbullet{} Beginner in Japanese
+\end{multicols}
+
+
+\sectionTitle{Education}{graduation-cap}
+
+\noindent
+\headerrow{PhD Data Science \& Artificial Intelligence}{12/2019 -- Present}
+\\
+\locationrow{University of Edinburgh}{Edinburgh, United Kingdom}
+\begin{tightitemize}{1.7em}
+    \item Principal supervisor: Dr. Stefano V. Albrecht (\href{https://agents.inf.ed.ac.uk}{Autonomous Agents Research Group})
+    \item Project: Collaborative Exploration in Multi-Agent Reinforcement Learning using Intrinsic Curiosity
+    \item Research: Reinforcement Learning, Multi-Agent Systems, Exploration, Intrinsic Rewards
+\end{tightitemize}
+\largesectionsep
+
+\noindent
+\headerrow{M.Sc. Informatics}{09/2018 -- 08/2019}
+\\
+\locationrow{University of Edinburgh}{Edinburgh, United Kingdom}
+\begin{tightitemize}{1.7em}
+    \item Degree classification: \textbf{Distinction} (77.28\%)
+    \item MSc thesis: Dissertation: \href{https://www.lukaschaefer.de/assets/files/msc_thesis.pdf}{Curiosity in Multi-Agent Reinforcement Learning (74\%)}
+    \item \textbf{DAAD} (German Academic Exchange Service) \textbf{graduate scholarship}
+    \item Modules include: Reinforcement Learning, Algorithmic Game Theory and its Applications, Machine Learning and 
+    Pattern Recognition, Probabilistic Modelling and Reasoning, Decision Making in Robots and Autonomous Agents
+\end{tightitemize}
+\largesectionsep
+
+\noindent
+\headerrow{B.Sc. Computer Science, minor subject Japanese}{10/2015 -- 09/2018}
+\\
+\locationrow{Saarland University}{Saarbrücken, Germany}
+\begin{tightitemize}{1.7em}
+    \item Degree classification: grade of \textbf{1.2} (\href{https://en.wikipedia.org/wiki/Academic_grading_in_Germany}{German scale}) equivalent to UK \textbf{1\textsuperscript{st} class honours}
+    \item BSc thesis: \href{https://www.lukaschaefer.de/assets/files/bsc_thesis.pdf}{Domain-Dependent Policy Learning using Neural Networks in Classical Planning} (1.0)
+    \item Modules include: Automated Planning, Admissible Search Enhancements, Neural Networks: Implementation and Application, Information Retrieval and Data Mining, Software Engineering, Modern Imperative Programming Languages
+\end{tightitemize}
+\largesectionsep
+
+\noindent
+\headerrow{Abitur - Secondary School}{08/2008 -- 06/2015}
+\\
+\locationrow{Warndtgymnasium Geislautern, Völklingen}{Geislautern, Germany}
+\begin{tightitemize}{1.7em}
+    \item Graduated \textbf{Abitur 1.0}; school year's best student award, computer science and mathematics award of Saarland University
+    %\item Graduated \textbf{Abitur 1.0} with examination subjects:\\
+    %    Mathematics - 15, English - 12, Computer Science - 14, German - 15, History - 15
+    % \item Year's best student award of the Warndtgymnasiums Geislautern
+    % \item Computer science and mathematics award 2015 of Saarland University
+\end{tightitemize}
+\largesectionsep
+
+
+\sectionTitle{Work Experience}{briefcase}
+
+\noindent
+\headerrow{Team Advisor, University of Edinburgh}{09/2019 -- 08/2020}
+\\
+\locationrow{HYPED -- University of Edinburgh Hyperloop Team}{}
+\begin{tightitemize}{1.7em}
+    \item Consulting the HYPED software team especially regarding navigation and sensor filtering to achieve a reliable prototype
+\end{tightitemize}
+\largesectionsep
+
+\noindent
+\headerrow{Navigation Software Engineer, University of Edinburgh}{09/2018 -- 08/2019}
+\\
+\locationrow{HYPED -- University of Edinburgh Hyperloop Team}{}
+\begin{tightitemize}{1.7em}
+    \item Developing navigation system of "The Flying Podsman" Hyperloop prototype using sensor filtering, processing and control techniques to estimate location, orientation and speed of the pod
+    \item Finalist for the SpaceX 2019 Hyperloop competition in California in Summer 2019
+\end{tightitemize}
+\largesectionsep
+
+
+% \noindent
+% \headerrow{School Year Representative, Warndtgymnasium}{08/2013 -- 07/2015}
+% \begin{tightitemize}{1.7em}
+%     \item Elected committee member representing school year; involved in organisation of school events and sponsor
+%     negotiations
+% \end{tightitemize}
+% \largesectionsep
+
+
+\sectionTitle{Project Experience}{code}
+
+\noindent
+\headerrow{M.Sc. Dissertation, University of Edinburgh}{05/2019 -- 08/2019}
+\\
+\locationrow{Autonomous Agents Research Group}{}
+\begin{tightitemize}{1.7em}
+    \item Applied curiosity as intrinsically computed exploration bonuses for multi-agent reinforcement learning (MARL)
+    \item Implemented count- and prediction-based curiosities for value-based and policy-gradient MARL methods using PyTorch
+    \item Evaluated the influence of curiosity on cooperative and competitive MARL under partial observability and sparse rewards in a multi-agent particle environment
+    \item Applied curiosity led to improved stability and convergence of policy-gradient MARL trained with sparse reward signals
+\end{tightitemize}
+\largesectionsep
+
+\noindent
+\headerrow{Reinforcement Learning for Soccer Playing, University of Edinburgh}{02/2019 -- 03/2019}
+\\
+\locationrow{Project for Reinforcement Learning Lecture}{}
+\begin{tightitemize}{1.7em}
+    \item Implemented several foundational RL methods including value iteration, Q-learning, first-visit Monte Carlo and SARSA for simple control tasks and the \href{https://github.com/LARG/HFO}{half-field-offense (HFO) 2D environment}
+    \item Implemented asynchronous 1-step Q-learning with deep Q-networks (DQNs)
+    \item Implemented multi-agent RL methods independent Q-learning, joint action learning and WoLF-PHC controlling two cooperating agents in the HFO environment
+\end{tightitemize}
+\largesectionsep
+
+\noindent
+\headerrow{Autonomous Robot Localisation, University of Edinburgh}{09/2018 -- 12/2018}
+\\
+\locationrow{Group Project for Robotics: Science and Systems Lecture}{}
+\begin{tightitemize}{1.7em}
+    \item Constructed a four-wheel differential steering mobile robot as group of three for autonomous localisation in a 
+    known environment using LEGO aside of technical components including a Raspberry Pi computer
+    \item Implemented particle-filter localisation and obstacle avoidance based on IR and sonar sensors
+    \item Robot successfully managed to navigate through the constructed arena, detect and communicate points of
+    interest using light sensors and return back to its deployment location
+\end{tightitemize}
+\largesectionsep
+
+% \noindent
+% \headerrow{Galaxy-based Search, University of Edinburgh}{09/2018 -- 12/2018}
+% \\
+% \locationrow{Group Project for Natural Computing Lecture}{}
+% \begin{tightitemize}{1.7em}
+%     \item Implemented the Galaxy-based Search Algorithm (GbSA) and Particle Swarm Optimisation (PSO) baseline 
+%     for PCA approximation as metaheuristic optimisation algorithms
+%     \item Evaluated and analysed GbSA and its foundational research paper, outlined limitations, proposed adjustments to 
+%     the algorithm and showed their positive impact on performance in an evaluation
+% \end{tightitemize}
+% \largesectionsep
+
+\noindent
+\headerrow{B.Sc. Dissertation, Saarland University}{04/2018 -- 07/2018}
+\\
+\locationrow{Foundations of Artificial Intelligence (FAI) Group}{}
+\begin{tightitemize}{1.7em}
+    \item Transferred domain-dependent policy learning Action-Schema Networks to
+    classical automated planning
+    \item Implemented the network using Keras, slightly adjusted its training for classical planning and extended 
+    the \href{http://www.fast-downward.org}{FastDownward planning framework}
+    \item Extensive evaluation and analysis was conducted on IPC domains of varying complexity identifying
+    limitations in generalisation and scalability
+\end{tightitemize}
+\largesectionsep
+
+\noindent
+\headerrow{Plagiarism Detection Tool, Saarland University}{04/2017 -- 07/2017}
+\\
+\locationrow{Group Project for Software Engineering Lecture}{}
+\begin{tightitemize}{1.7em}
+    %\item Implemented a plagiarism detection tool in Python for Prof. Rossow at Saarland University
+    \item Researched, planned and built a reliable similarity detection for text \& code in Python with language-specific analysis for Python and C as a group of five
+    \item Designed and implemented a web-based output creation, highlighting similar submissions and plagiarism
+    \item Our software is now successfully used in our customer's lectures to detect plagiarism cases on Python code
+\end{tightitemize}
+\largesectionsep
+
+% \noindent
+% \headerrow{Concurrent CDCL SAT-Solver, Saarland University}{07/2017 -- 09/2017}
+% \\
+% \locationrow{Group Project for Modern Imperative Programming Languages Seminar}{}
+% \begin{tightitemize}{1.7em}
+%     \item Planned and implemented a concurrent Conflict-Driven Clause Learning SAT-Solver using Rust
+%     \item Optimised literal assignment using multiple heuristic strategies, pure variable detection and handling
+% \end{tightitemize}
+% \largesectionsep
+
+
+% \sectionTitle{Research Experience}{dna}
+% \hrule
+% \vspace{0.4em}
+% 
+% \noindent
+% \headerrow{M.Sc. Dissertation, University of Edinburgh}{05/2019 -- 08/2019}
+% \\
+% \locationrow{Autonomous Agents Research Group}{}
+% \begin{tightitemize}{1.7em}
+%     \item Applied curiosity as intrinsically computed exploration bonuses for multi-agent reinforcement learning (MARL)
+%     \item Implemented count- and prediction-based curiosities for value-based and policy-gradient MARL methods using PyTorch
+%     \item Evaluated the influence of curiosity on cooperative and competitive MARL under partial observability and sparse rewards in a multi-agent particle environment
+%     \item Applied curiosity led to improved stability and convergence of policy-gradient MARL trained with sparse reward signals
+% \end{tightitemize}
+% \largesectionsep
+
+% \noindent
+% \headerrow{Reinforcement Learning for Video Game Playing, University of Edinburgh}{09/2018 -- 01/2019}
+% \\
+% \locationrow{Informatics Research Review}{}
+% \begin{tightitemize}{1.7em}
+%     \item Reviewed the development of reinforcement learning research for game playing and the challenge from board games
+%     Backgammon, Chess and Go to video games focusing on Atari and StarCraft
+%     \item Outlined the development of common reinforcement learning approaches and highlighted the challenge of
+%     multi-agent tasks, particular in partially-observable environments and proposed recent, promising ideas
+% \end{tightitemize}
+% \largesectionsep
+
+% \noindent
+% \headerrow{B.Sc. Dissertation, Saarland University}{04/2018 -- 07/2018}
+% \\
+% \locationrow{Foundations of Artificial Intelligence (FAI) Group}{}
+% \begin{tightitemize}{1.7em}
+%     \item Transferred domain-dependent policy learning Action-Schema Networks to
+%     classical automated planning
+%     \item Implemented the network using Keras, slightly adjusted its training for classical planning and extended 
+%     the FastDownward planning framework
+%     \item Extensive evaluation and analysis was conducted on IPC domains of varying complexity identifying
+%     limitations in generalisation and scalability
+% \end{tightitemize}
+% \largesectionsep
+
+
+\sectionTitle{Teaching Experience}{chalkboard-teacher}
+
+\noindent
+\headerrow{Teaching Assistant, University of Edinburgh}{10/2019 -- Present}
+\\
+\locationrow{Reinforcement Learning, School of Informatics}{}
+\begin{tightitemize}{1.7em}
+    \item Designing reinforcement learning (RL) project covering wide range of topics including dynamic programming, single- and multi-agent RL as well as deep RL
+    \item Marking project and exam for reinforcement learning course
+    \item Advising students on various challenges regarding lecture material and content
+\end{tightitemize}
+\largesectionsep
+
+% \noindent
+% \headerrow{Voluntary Lecturer and Coach, Saarland University}{09/2017 -- 10/2017}
+% \\
+% \locationrow{Mathematics Preparation Course}{}
+% \begin{tightitemize}{1.7em}
+%     \item Assisted the organization of the mathematics preparation course for upcoming computer science students% to student life and mathematical concepts covered in their first year
+%     \item Explained importance of mathematics for CS, formal languages and predicate logic to $\sim250$ participants in daily lectures of the first week
+%     \item Supervised two groups to provide feedback and further assistance in daily coaching-sessions
+%     \item The course received \textbf{BESTE-award} for special student commitment 2017 of Saarland University
+% \end{tightitemize}
+% \largesectionsep
+
+\noindent
+\headerrow{Teaching Assistant, Saarland University}{10/2016 -- 03/2017}
+\\
+\locationrow{Programming 1, Dependable Systems and Software Group}{}
+\begin{tightitemize}{1.7em}
+    \item Taught first-year students fundamental concepts of functional programming, basic complexity theory and inductive correctness proofs in weekly tutorials and office hours
+    \item Marked weekly tests as well as mid- and endterm exams
+    \item Collectively created learning materials and discussed student progress as part of the whole teaching team
+\end{tightitemize}
+\largesectionsep
+
+\ \\
+
+[\scshape\fontspec[Path = ../../fonts/Openfonts/raleway/]{Raleway-Medium}\fontsize{10pt}{8pt}\selectfont References available on request - Last updated on \today]
+\end{document}

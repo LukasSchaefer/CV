@@ -1,9 +1,10 @@
+% !TEX program = xelatex
 % inspiration: https://github.com/sebastianruder/cv, https://github.com/deedy/Deedy-Resume
+\documentclass[]{lukas-cv-openfont}
 
-\documentclass[]{lukas-cv}
 \usepackage[utf8]{inputenc}
 \usepackage{textcomp}
-\usepackage{tgpagella}
+%\usepackage{tgpagella}
 \usepackage{latexsym}
 \usepackage{amssymb}
 \usepackage{multicol}
@@ -28,25 +29,13 @@
 }
 {\end{list}}
 
-% format two pieces of text, one left aligned and one right aligned
-\newcommand{\headerrow}[2]
-{\begin{tabular*}{\linewidth}{l@{\extracolsep{\fill}}r}
-	\fontspec{Helvetica}\fontsize{12pt}{12pt}\selectfont\bfseries{\color{subheadings}#1} &
-	\fontspec{Helvetica}\fontsize{12pt}{12pt}\selectfont\bfseries{\color{subheadings}#2} \\
-\end{tabular*}}
 
-\newcommand{\locationrow}[2]
-{\begin{tabular*}{\linewidth}{l@{\extracolsep{\fill}}r}
-        \color{headings}\scshape\fontspec{Heiti TC Medium}\fontsize{10pt}{12pt}\selectfont{#1}  &
-        \color{headings}\scshape\fontspec{Heiti TC Medium}\fontsize{10pt}{12pt}\selectfont{#2}  \\
-\end{tabular*}}
-
-
-
-\begin{document}`
+\begin{document}
+%\expandafter\show\the\font
 
 \namesectionnorule{Lukas}{Schäfer}{
-        \researchgate{Lukas\_Schaefer9}
+        \googlescholar{-yp0O\_IAAAAJ}
+        %\researchgate{Lukas\_Schaefer9}
         \linkedin{lukas-schaefer}
         \github{LukasSchaefer}\\
         \homepage{lukaschaefer.de/profile}
@@ -56,10 +45,9 @@
         %\infos{}
 }
 
+\vspace{1em}
 
 \sectionTitle{Education}{graduation-cap}
-\hrule
-\vspace{0.4em}
 
 \noindent
 \headerrow{PhD Data Science \& Artificial Intelligence}{12/2019 -- Present}
@@ -68,7 +56,7 @@
 \begin{tightitemize}{1.7em}
     \item Principal supervisor: Dr. Stefano V. Albrecht (\href{https://agents.inf.ed.ac.uk}{Autonomous Agents Research Group})
     \item Project: Collaborative Exploration in Multi-Agent Reinforcement Learning using Intrinsic Curiosity
-    \item Research: Reinforcement Learning, Multi-Agent Systems, Exploration, Intrinsic Rewards
+    \item Research: Reinforcement Learning, Multi-Agent Systems, Generalisation, Exploration, Intrinsic Rewards
 \end{tightitemize}
 \largesectionsep
 
@@ -78,8 +66,8 @@
 \locationrow{University of Edinburgh}{Edinburgh, United Kingdom}
 \begin{tightitemize}{1.7em}
     \item Degree classification: \textbf{Distinction} (77.28\%)
-    \item MSc thesis: Dissertation: \href{https://www.lukaschaefer.de/assets/files/msc_thesis.pdf}{Curiosity in Multi-Agent Reinforcement Learning (74\%)}
-    \item \textbf{DAAD} (German Academic Exchange Service) \textbf{graduate scholarship}
+    \item MSc thesis: \href{https://www.lukaschaefer.de/assets/files/msc_thesis.pdf}{Curiosity in Multi-Agent Reinforcement Learning (74\%)}
+    \item Received \textbf{DAAD} (German Academic Exchange Service) \textbf{graduate scholarship} and \textbf{Stevenson Exchange Scholarship} 
     \item Modules include: Reinforcement Learning, Algorithmic Game Theory and its Applications, Machine Learning and 
     Pattern Recognition, Probabilistic Modelling and Reasoning, Decision Making in Robots and Autonomous Agents
 \end{tightitemize}
@@ -92,7 +80,7 @@
 \begin{tightitemize}{1.7em}
     \item Degree classification: grade of \textbf{1.2} (\href{https://en.wikipedia.org/wiki/Academic_grading_in_Germany}{German scale}) equivalent to UK \textbf{1\textsuperscript{st} class honours}
     \item BSc thesis: \href{https://www.lukaschaefer.de/assets/files/bsc_thesis.pdf}{Domain-Dependent Policy Learning using Neural Networks in Classical Planning} (1.0)
-    \item Modules include: Automated Planning, Admissible Search Enhancements, Neural Networks: Implementation and Application, Information Retrieval and Data Mining, Software Engineering, Modern Imperative Programming Languages
+    % \item Modules include: Automated Planning, Admissible Search Enhancements, Neural Networks: Implementation and Application, Information Retrieval and Data Mining, Software Engineering, Modern Imperative Programming Languages
 \end{tightitemize}
 \largesectionsep
 
@@ -107,12 +95,9 @@
 %    % \item Year's best student award of the Warndtgymnasiums Geislautern
 %    % \item Computer science and mathematics award 2015 of Saarland University
 %\end{tightitemize}
-\largesectionsep
+\sectionsep
 
-
-\sectionTitle{Research Experience}{dna}
-\hrule
-\vspace{0.4em}
+\sectionTitle{Dissertations}{book-open}
 
 \noindent
 \headerrow{M.Sc. Dissertation, University of Edinburgh}{05/2019 -- 08/2019}
@@ -145,46 +130,61 @@
 \begin{tightitemize}{1.7em}
     \item Transferred domain-dependent policy learning Action-Schema Networks to
     classical automated planning
-    \item Implemented the network using Keras, slightly adjusted its training for classical planning and extended 
-    the \href{http://www.fast-downward.org}{FastDownward planning framework}
+    \item Keras implementation, adjusted training for classical planning and extended the \href{http://www.fast-downward.org}{FastDownward planning framework}
     \item Extensive evaluation and analysis was conducted on IPC domains of varying complexity identifying
     limitations in generalisation and scalability
 \end{tightitemize}
 \largesectionsep
 
 \sectionTitle{Skills}{poll}
-\hrule
-\ \vspace{-1em}
+\vspace{-0.7em}
 \begin{multicols}{2}
     \raggedright
     \setlength{\columnsep}{1.5cm}
     \setlength{\columnseprule}{0.2pt}
     \noindent
-    \fontspec{Helvetica}\fontsize{12pt}{12pt}\selectfont\bfseries{\color{subheadings}Programming} \vspace{0.3em} \\
-    \color{headings}\scshape\fontspec{Heiti TC Medium}\fontsize{10pt}{10pt}\selectfont{Competent}\\
-    \fontspec{Heiti TC Medium}\fontsize{10pt}{8pt}\selectfont \color{primary}Python \textbullet{} C++ \textbullet{} SML
+    \fontspec[Path = ../../fonts/Openfonts/lato/]{Lato-Bol}\fontsize{12pt}{12pt}\selectfont\bfseries{\color{subheadings}Programming} \vspace{0.3em} \\
+    \color{headings}\scshape\fontspec[Path = ../../fonts/Openfonts/raleway/]{Raleway-Medium}\fontsize{10pt}{10pt}\selectfont{Competent}\\
+    \fontspec[Path = ../../fonts/Openfonts/raleway/]{Raleway-Medium}\fontsize{10pt}{8pt}\selectfont \color{primary}Python \textbullet{} C++ \textbullet{} SML
     \ \vspace{0.3em} \\
-    \color{headings}\scshape\fontspec{Heiti TC Medium}\fontsize{10pt}{10pt}\selectfont{Familiar}\\
-    \fontspec{Heiti TC Medium}\fontsize{10pt}{8pt}\selectfont\color{primary}C \textbullet{} Java \textbullet{} Rust \textbullet{} HTML \textbullet{} CSS \textbullet{} Matlab \textbullet{} Bash\\
+    \color{headings}\scshape\fontspec[Path = ../../fonts/Openfonts/raleway/]{Raleway-Medium}\fontsize{10pt}{10pt}\selectfont{Familiar}\\
+    \fontspec[Path = ../../fonts/Openfonts/raleway/]{Raleway-Medium}\fontsize{10pt}{8pt}\selectfont\color{primary}C \textbullet{} Java \textbullet{} Rust \textbullet{} HTML \textbullet{} CSS \textbullet{} Matlab \textbullet{} Bash\\
     \ \\
     \raggedleft
-    \fontspec{Helvetica}\fontsize{12pt}{12pt}\selectfont\bfseries{\color{subheadings}Technologies and Tools}\\
-    \fontspec{Heiti TC Medium}\fontsize{10pt}{8pt}\selectfont \color{primary}PyTorch \textbullet{} TensorFlow \textbullet{} Keras \textbullet{} NumPy \textbullet{} UNIX \textbullet{} Git\\
+    \fontspec[Path = ../../fonts/Openfonts/lato/]{Lato-Bol}\fontsize{12pt}{12pt}\selectfont\bfseries{\color{subheadings}Technologies and Tools}\\
+    \fontspec[Path = ../../fonts/Openfonts/raleway/]{Raleway-Medium}\fontsize{10pt}{8pt}\selectfont \color{primary}PyTorch \textbullet{} TensorFlow \textbullet{} Keras \textbullet{} NumPy \textbullet{} UNIX \textbullet{} Git\\
     \ \\
-    \fontspec{Helvetica}\fontsize{12pt}{12pt}\selectfont\bfseries{\color{subheadings}Languages}\\
-    \fontspec{Heiti TC Medium}\fontsize{10pt}{8pt}\selectfont \color{primary}Native in German \textbullet{} Fluent in English \textbullet{} Intermediate in French \textbullet{} Beginner in Japanese
+    \fontspec[Path = ../../fonts/Openfonts/lato/]{Lato-Bol}\fontsize{12pt}{12pt}\selectfont\bfseries{\color{subheadings}Languages}\\
+    \fontspec[Path = ../../fonts/Openfonts/raleway/]{Raleway-Medium}\fontsize{10pt}{8pt}\selectfont \color{primary}Native in German \textbullet{} Fluent in English \textbullet{} Intermediate in French \textbullet{} Beginner in Chinese \textbullet{} Beginner in Japanese
 \end{multicols}
 
+
+\sectionTitle{Publications}{book}
+\noindent
+\vspace{1.2em}
+%\renewcommand\refname{\vskip -1.5cm} % Couldn't get this working from the .cls file
+\bibliographystyle{abbrv}
+\bibliography{publications}
+\nocite{*}
+\sectionsep
+
+\sectionTitle{Reviewing}{search}
+\noindent
+\begin{tightitemize}{1.0em}
+\item Reviewer for \textbf{NeurIPS 2020 workshop} \href{https://preregister.science/}{"\textbf{The pre-registration experiment}: an alternative publication model for machine learning research"}
+\end{tightitemize}
+\largesectionsep
+
+
 \sectionTitle{Teaching Experience}{chalkboard-teacher}
-\hrule
-\vspace{0.4em}
 
 \noindent
-\headerrow{Teaching Assistant, University of Edinburgh}{10/2019 -- Present}
+\headerrow{Teaching Assistant, University of Edinburgh}{10/2019 -- 05/2020}
 \\
 \locationrow{Reinforcement Learning, School of Informatics}{}
 \begin{tightitemize}{1.7em}
-    \item Designing reinforcement learning (RL) project covering wide range of topics including dynamic programming, single- and multi-agent RL as well as deep RL
+    \item \textbf{Delivering lectures} and \textbf{designing RL coursework} coveringwide range of topics from single- to multi-agent and deep RL
+    %\item Designing reinforcement learning (RL) project covering wide range of topics including dynamic programming, single- and multi-agent RL as well as deep RL
     \item Marking project and exam for reinforcement learning course
     \item Advising students on various challenges regarding lecture material and content
 \end{tightitemize}
@@ -207,16 +207,14 @@
 \\
 \locationrow{Programming 1, Dependable Systems and Software Group}{}
 \begin{tightitemize}{1.7em}
-    \item Taught first-year students fundamental concepts of functional programming, basic complexity theory and inductive correctness proofs in weekly tutorials and office hours
-    \item Marked weekly tests as well as mid- and endterm exams
+    \item Taught first-year students concepts of functional programming, basic complexity theory and inductive correctness proofs in weekly tutorials and office hours
+    %\item Marked weekly tests as well as mid- and endterm exams
     \item Collectively created learning materials and discussed student progress as part of the whole teaching team
 \end{tightitemize}
 \largesectionsep
 
 
 % \sectionTitle{Work Experience}{briefcase}
-% \hrule
-% \vspace{0.4em}
 
 % \noindent
 % \headerrow{Team Advisor, University of Edinburgh}{09/2019 -- Present}
@@ -228,9 +226,8 @@
 % \largesectionsep
 
 
+
 \sectionTitle{Project Experience}{code}
-\hrule
-\vspace{0.4em}
 
 \noindent
 \headerrow{Navigation Software Engineer, University of Edinburgh}{09/2018 -- 08/2019}
@@ -279,17 +276,17 @@
 % \end{tightitemize}
 % \largesectionsep
 
-\noindent
-\headerrow{Plagiarism Detection Tool, Saarland University}{04/2017 -- 07/2017}
-\\
-\locationrow{Group Project for Software Engineering Lecture}{}
-\begin{tightitemize}{1.7em}
-    %\item Implemented a plagiarism detection tool in Python for Prof. Rossow at Saarland University
-    \item Researched, planned and built a reliable similarity detection for text \& code in Python with language-specific analysis for Python and C as a group of five
-    \item Designed and implemented a web-based output creation, highlighting similar submissions and plagiarism
-    \item Our software is now successfully used in our customer's lectures to detect plagiarism cases on Python code
-\end{tightitemize}
-\largesectionsep
+%\noindent
+%\headerrow{Plagiarism Detection Tool, Saarland University}{04/2017 -- 07/2017}
+%\\
+%\locationrow{Group Project for Software Engineering Lecture}{}
+%\begin{tightitemize}{1.7em}
+%    %\item Implemented a plagiarism detection tool in Python for Prof. Rossow at Saarland University
+%    \item Researched, planned and built a reliable similarity detection for text \& code in Python with language-specific analysis for Python and C as a group of five
+%    \item Designed and implemented a web-based output creation, highlighting similar submissions and plagiarism
+%    \item Our software is now successfully used in our customer's lectures to detect plagiarism cases on Python code
+%\end{tightitemize}
+%\largesectionsep
 
 % \noindent
 % \headerrow{Concurrent CDCL SAT-Solver, Saarland University}{07/2017 -- 09/2017}
@@ -303,5 +300,5 @@
 
 \ \\
 
-[\scshape\fontspec{Heiti TC Medium}\fontsize{10pt}{8pt}\selectfont References available on request - Last updated on \today]
+[\scshape\fontspec[Path = ../../fonts/Openfonts/raleway/]{Raleway-Medium}\fontsize{10pt}{8pt}\selectfont References available on request - Last updated on \today]
 \end{document}

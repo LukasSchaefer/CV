@@ -29,6 +29,17 @@
 }
 {\end{list}}
 
+% define bibliographies
+% \usepackage{splitbib}
+% \begin{category}[A]{Conference and Journal Publications}
+%     \SBentries{christianos2020shared}
+% \end{category}
+% \begin{category}[B]{Pre-prints}
+%     \SBentries{papoudakis2020comparative}
+% \end{category}
+\usepackage{bibtopic}
+\bibliographystyle{plain}
+
 
 \begin{document}
 %\expandafter\show\the\font
@@ -38,7 +49,7 @@
         %\researchgate{Lukas\_Schaefer9}
         \linkedin{lukas-schaefer}
         \github{LukasSchaefer}\\
-        \homepage{lukaschaefer.de/profile}
+        \homepage{lukaschaefer.com/profile}
         \email{luki.schaefer96@gmail.com}
         \smartphone{+44 7925 103212}\\
         %\address{}\\
@@ -46,6 +57,18 @@
 }
 
 \vspace{1em}
+
+\sectionTitle{Work Experience}{briefcase}
+
+\noindent
+\headerrow{Research Intern}{11/2020 -- 03/2021}
+\\
+\locationrow{Dematic - Technology and Innovation}{Remote}
+\begin{tightitemize}{1.7em}
+    \item Applying state-of-the-art AI technology to automate large-scale robotic warehouse logistics.
+\end{tightitemize}
+\largesectionsep
+
 
 \sectionTitle{Education}{graduation-cap}
 
@@ -56,6 +79,7 @@
 \begin{tightitemize}{1.7em}
     \item Principal supervisor: Dr. Stefano V. Albrecht (\href{https://agents.inf.ed.ac.uk}{Autonomous Agents Research Group})
     \item Project: Collaborative Exploration in Multi-Agent Reinforcement Learning using Intrinsic Curiosity
+    \item Receiving \textbf{Principal's Career Development Scholarship} from the University of Edinburgh
     \item Research: Reinforcement Learning, Multi-Agent Systems, Generalisation, Exploration, Intrinsic Rewards
 \end{tightitemize}
 \largesectionsep
@@ -66,7 +90,6 @@
 \locationrow{University of Edinburgh}{Edinburgh, United Kingdom}
 \begin{tightitemize}{1.7em}
     \item Degree classification: \textbf{Distinction} (77.28\%)
-    \item MSc thesis: \href{https://www.lukaschaefer.de/assets/files/msc_thesis.pdf}{Curiosity in Multi-Agent Reinforcement Learning (74\%)}
     \item Received \textbf{DAAD} (German Academic Exchange Service) \textbf{graduate scholarship} and \textbf{Stevenson Exchange Scholarship} 
     \item Modules include: Reinforcement Learning, Algorithmic Game Theory and its Applications, Machine Learning and 
     Pattern Recognition, Probabilistic Modelling and Reasoning, Decision Making in Robots and Autonomous Agents
@@ -79,30 +102,29 @@
 \locationrow{Saarland University}{Saarbrücken, Germany}
 \begin{tightitemize}{1.7em}
     \item Degree classification: grade of \textbf{1.2} (\href{https://en.wikipedia.org/wiki/Academic_grading_in_Germany}{German scale}) equivalent to UK \textbf{1\textsuperscript{st} class honours}
-    \item BSc thesis: \href{https://www.lukaschaefer.de/assets/files/bsc_thesis.pdf}{Domain-Dependent Policy Learning using Neural Networks in Classical Planning} (1.0)
     % \item Modules include: Automated Planning, Admissible Search Enhancements, Neural Networks: Implementation and Application, Information Retrieval and Data Mining, Software Engineering, Modern Imperative Programming Languages
 \end{tightitemize}
 \largesectionsep
 
-\noindent
-\headerrow{Abitur 1.0 - Secondary School}{08/2008 -- 06/2015}
-\\
-\locationrow{Warndtgymnasium Geislautern, Völklingen}{Geislautern, Germany}
-%\begin{tightitemize}{1.7em}
-%	\item Graduated \textbf{Abitur 1.0}; school year's best student award, computer science and mathematics award of Saarland University
-%    %\item Graduated \textbf{Abitur 1.0} with examination subjects:\\
-%    %    Mathematics - 15, English - 12, Computer Science - 14, German - 15, History - 15
-%    % \item Year's best student award of the Warndtgymnasiums Geislautern
-%    % \item Computer science and mathematics award 2015 of Saarland University
-%\end{tightitemize}
-\sectionsep
+%\noindent
+%\headerrow{Abitur 1.0 - Secondary School}{08/2008 -- 06/2015}
+%\\
+%\locationrow{Warndtgymnasium Geislautern, Völklingen}{Geislautern, Germany}
+%%\begin{tightitemize}{1.7em}
+%%	\item Graduated \textbf{Abitur 1.0}; school year's best student award, computer science and mathematics award of Saarland University
+%%    %\item Graduated \textbf{Abitur 1.0} with examination subjects:\\
+%%    %    Mathematics - 15, English - 12, Computer Science - 14, German - 15, History - 15
+%%    % \item Year's best student award of the Warndtgymnasiums Geislautern
+%%    % \item Computer science and mathematics award 2015 of Saarland University
+%%\end{tightitemize}
+%\sectionsep
 
 \sectionTitle{Dissertations}{book-open}
 
 \noindent
-\headerrow{M.Sc. Dissertation, University of Edinburgh}{05/2019 -- 08/2019}
+\headerrow{M.Sc. Dissertation, Autonomous Agents Research Group}{05/2019 -- 08/2019}
 \\
-\locationrow{Autonomous Agents Research Group}{}
+\locationrow{\href{https://www.lukaschaefer.com/assets/files/msc_thesis.pdf}{Curiosity in Multi-Agent Reinforcement Learning (74\%)}}{}
 \begin{tightitemize}{1.7em}
     \item Applied curiosity as intrinsically computed exploration bonuses for multi-agent reinforcement learning (MARL)
     \item Implemented count- and prediction-based curiosities for value-based and policy-gradient MARL methods using PyTorch
@@ -124,9 +146,9 @@
 % \largesectionsep
 
 \noindent
-\headerrow{B.Sc. Dissertation, Saarland University}{04/2018 -- 07/2018}
+\headerrow{B.Sc. Dissertation, Foundations of Artificial Intelligence (FAI) Group}{04/2018 -- 07/2018}
 \\
-\locationrow{Foundations of Artificial Intelligence (FAI) Group}{}
+\locationrow{\href{https://www.lukaschaefer.com/assets/files/bsc_thesis.pdf}{Domain-Dependent Policy Learning using Neural Networks in Classical Planning (1.0)}}{}
 \begin{tightitemize}{1.7em}
     \item Transferred domain-dependent policy learning Action-Schema Networks to
     classical automated planning
@@ -159,27 +181,11 @@
 \end{multicols}
 
 
-\sectionTitle{Publications}{book}
-\noindent
-\vspace{1.2em}
-%\renewcommand\refname{\vskip -1.5cm} % Couldn't get this working from the .cls file
-\bibliographystyle{abbrv}
-\bibliography{publications}
-\nocite{*}
-\sectionsep
-
-\sectionTitle{Reviewing}{search}
-\noindent
-\begin{tightitemize}{1.0em}
-\item Reviewer for \textbf{NeurIPS 2020 workshop} \href{https://preregister.science/}{"\textbf{The pre-registration experiment}: an alternative publication model for machine learning research"}
-\end{tightitemize}
-\largesectionsep
-
 
 \sectionTitle{Teaching Experience}{chalkboard-teacher}
 
 \noindent
-\headerrow{Teaching Assistant, University of Edinburgh}{10/2019 -- 05/2020}
+\headerrow{Teaching Assistant, University of Edinburgh}{10/2019 -- Present}
 \\
 \locationrow{Reinforcement Learning, School of Informatics}{}
 \begin{tightitemize}{1.7em}
@@ -214,17 +220,30 @@
 \largesectionsep
 
 
-% \sectionTitle{Work Experience}{briefcase}
+\sectionTitle{Publications}{book}
+\noindent
+\headerrow{Journal \& Conference Publications}{}
+\vspace{-1.4em}
+\begin{btSect}{publications}
+\btPrintNotCited
+\end{btSect}
+\largesectionsep
 
-% \noindent
-% \headerrow{Team Advisor, University of Edinburgh}{09/2019 -- Present}
-% \\
-% \locationrow{HYPED -- University of Edinburgh Hyperloop Team}{}
-% \begin{tightitemize}{1.7em}
-%     \item Consulting the HYPED software team regarding navigation and sensor filtering to achieve a reliable prototype design competing at the 5th SpaceX Hyperloop Competition
-% \end{tightitemize}
-% \largesectionsep
+\noindent
+\headerrow{Preprint Publications}{}
+\vspace{-1.4em}
+\begin{btSect}{preprints}
+\btPrintNotCited
+\end{btSect}
+\sectionsep
 
+
+\sectionTitle{Reviewing}{search}
+\noindent
+\begin{tightitemize}{1.0em}
+\item Reviewer for \textbf{NeurIPS 2020 workshop} \href{https://preregister.science/}{"\textbf{The pre-registration experiment}: an alternative publication model for machine learning research"}
+\end{tightitemize}
+\sectionsep
 
 
 \sectionTitle{Project Experience}{code}
@@ -239,16 +258,16 @@
 \end{tightitemize}
 \largesectionsep
 
-\noindent
-\headerrow{Reinforcement Learning for Soccer Playing, University of Edinburgh}{02/2019 -- 03/2019}
-\\
-\locationrow{Project for Reinforcement Learning Lecture}{}
-\begin{tightitemize}{1.7em}
-    \item Implemented several foundational RL methods including value iteration, Q-learning, first-visit Monte Carlo and SARSA for simple control tasks and the \href{https://github.com/LARG/HFO}{half-field-offense (HFO) 2D environment}
-    \item Implemented asynchronous 1-step Q-learning with deep Q-networks (DQNs)
-    \item Implemented multi-agent RL methods independent Q-learning, joint action learning and WoLF-PHC controlling two cooperating agents in the HFO environment
-\end{tightitemize}
-\largesectionsep
+% \noindent
+% \headerrow{Reinforcement Learning for Soccer Playing, University of Edinburgh}{02/2019 -- 03/2019}
+% \\
+% \locationrow{Project for Reinforcement Learning Lecture}{}
+% \begin{tightitemize}{1.7em}
+%     \item Implemented several foundational RL methods including value iteration, Q-learning, first-visit Monte Carlo and SARSA for simple control tasks and the \href{https://github.com/LARG/HFO}{half-field-offense (HFO) 2D environment}
+%     \item Implemented asynchronous 1-step Q-learning with deep Q-networks (DQNs)
+%     \item Implemented multi-agent RL methods independent Q-learning, joint action learning and WoLF-PHC controlling two cooperating agents in the HFO environment
+% \end{tightitemize}
+% \largesectionsep
 
 \noindent
 \headerrow{Autonomous Robot Localisation, University of Edinburgh}{09/2018 -- 12/2018}

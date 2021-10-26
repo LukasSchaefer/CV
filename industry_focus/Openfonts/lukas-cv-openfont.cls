@@ -1,1 +1,0 @@
-../../lukas-cv-openfont.cls

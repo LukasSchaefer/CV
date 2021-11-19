@@ -164,7 +164,7 @@
     \noindent
     \fontspec[Path = ../fonts/Openfonts/lato/]{Lato-Bol}\fontsize{12pt}{12pt}\selectfont\bfseries{\color{subheadings}Programming} \vspace{0.3em} \\
     % \color{headings}\scshape\fontspec[Path = ../fonts/Openfonts/raleway/]{Raleway-Medium}\fontsize{10pt}{10pt}\selectfont{Competent}\\
-    \fontspec[Path = ../fonts/Openfonts/raleway/]{Raleway-Medium}\fontsize{10pt}{8pt}\selectfont \color{primary}Python \textbullet{} C++ \textbullet{} C \textbullet{} SML \textbullet{} Bash\\
+    \fontspec[Path = ../fonts/Openfonts/raleway/]{Raleway-Medium}\fontsize{10pt}{8pt}\selectfont \color{primary}Python \textbullet{} C++ \textbullet{} SML \textbullet{} Bash\\
     % \ \vspace{0.3em} \\
     % \color{headings}\scshape\fontspec[Path = ../fonts/Openfonts/raleway/]{Raleway-Medium}\fontsize{10pt}{10pt}\selectfont{Familiar}\\
     \ \\
@@ -193,17 +193,17 @@
 % \end{tightitemize}
 % \largesectionsep
 
-\noindent
-\headerrow{Reinforcement Learning for Soccer Playing, University of Edinburgh}{02/2019 -- 03/2019}
-\\
-\locationrow{Project for Reinforcement Learning Lecture}{}
-\begin{tightitemize}{1.7em}
-    \item Implemented several RL methods including value iteration, Q-learning, SARSA and DQN for simple control tasks% and the \href{https://github.com/LARG/HFO}{half-field-offense (HFO) 2D environment}
-    % \item Implemented asynchronous 1-step Q-learning with deep Q-networks (DQNs)
-    % \item Implemented tabular multi-agent RL methods independent Q-learning, joint action learning and WoLF-PHC controlling two cooperating agents in the HFO environment
-    \item Implemented tabular multi-agent RL methods to control two cooperative agents in a 2D football game
-\end{tightitemize}
-\largesectionsep
+% \noindent
+% \headerrow{Reinforcement Learning for Soccer Playing, University of Edinburgh}{02/2019 -- 03/2019}
+% \\
+% \locationrow{Project for Reinforcement Learning Lecture}{}
+% \begin{tightitemize}{1.7em}
+%     \item Implemented several RL methods including value iteration, Q-learning, SARSA and DQN for simple control tasks% and the \href{https://github.com/LARG/HFO}{half-field-offense (HFO) 2D environment}
+%     % \item Implemented asynchronous 1-step Q-learning with deep Q-networks (DQNs)
+%     % \item Implemented tabular multi-agent RL methods independent Q-learning, joint action learning and WoLF-PHC controlling two cooperating agents in the HFO environment
+%     \item Implemented tabular multi-agent RL methods to control two cooperative agents in a 2D football game
+% \end{tightitemize}
+% \largesectionsep
 
 \noindent
 \headerrow{Autonomous Robot Localisation, University of Edinburgh}{09/2018 -- 12/2018}
@@ -218,6 +218,7 @@
     \item Implemented particle-filter localisation and obstacle avoidance in a predetermined environment
     \item Robot successfully managed to navigate through the constructed arena, detect and communicate points of interest using light sensors and return back to its deployment location
 \end{tightitemize}
+%\largesectionsep
 
 % \noindent
 % \headerrow{Galaxy-based Search, University of Edinburgh}{09/2018 -- 12/2018}
@@ -237,8 +238,8 @@
 %\locationrow{Group Project for Software Engineering Lecture}{}
 %\begin{tightitemize}{1.7em}
 %    %\item Implemented a plagiarism detection tool in Python for Prof. Rossow at Saarland University
-%    \item Researched, planned and built a reliable similarity detection for text \& code in Python with language-specific analysis for Python and C as a group of five
-%    \item Designed and implemented a web-based output creation, highlighting similar submissions and plagiarism
+%    \item Developed a similarity detection tool for submissions in Python with language-specific analysis for Python and C
+%    \item Designed and implemented a web-based interface, highlighting similar submissions and presumable cases of plagiarism
 %    \item Our software is now successfully used in our customer's lectures to detect plagiarism cases on Python code
 %\end{tightitemize}
 %\largesectionsep
@@ -270,7 +271,7 @@
 \begin{tightitemize}{1.7em}
     \item Applied curiosity as intrinsically computed exploration bonuses for multi-agent reinforcement learning (MARL)
     \item Implemented count- and prediction-based curiosities for value-based and policy-gradient MARL methods using PyTorch
-    \item Evaluated the influence of curiosity on cooperative and competitive MARL under partial observability and sparse rewards in a multi-agent particle environment
+    \item Evaluated MARL with curiosity under partial observability and sparse rewards in multi-agent particle environments
     \item Applied curiosity led to improved stability and convergence of policy-gradient MARL trained with sparse reward signals
 \end{tightitemize}
 \largesectionsep
@@ -292,10 +293,18 @@
 \\
 \locationrow{\href{https://www.lukaschaefer.com/assets/files/bsc_thesis.pdf}{Domain-Dependent Policy Learning using Neural Networks in Classical Planning (1.0)}}{}
 \begin{tightitemize}{1.7em}
-    \item Transferred domain-dependent policy learning Action-Schema Networks to
-    classical automated planning
-    \item Keras implementation, adjusted training for classical planning and extended the \href{http://www.fast-downward.org}{FastDownward planning framework}
+    \item Transferred policy learning Action-Schema Networks to classical automated planning with adjusted training scheme, Keras implementation and extension of the \href{http://www.fast-downward.org}{FastDownward planning framework}
     \item Extensive evaluation and analysis on IPC domains identifying limitations in generalisation and scalability
+\end{tightitemize}
+\largesectionsep
+
+
+\sectionTitle{Supervision}{user-friends}
+\noindent
+\headerrow{M.Sc. Thesis Supervision, University of Edinburgh}{02/2021 -- 08/2021}
+\begin{tightitemize}{1.7em}
+    \item Co-supervised two M.Sc. students through project proposal, refinement and execution towards final thesis
+    \item Assisted M.Sc. student from their thesis towards a successful workshop submission at NeurIPS 2021
 \end{tightitemize}
 \largesectionsep
 
@@ -342,8 +351,8 @@
 \sectionTitle{Reviewing}{search}
 \noindent
 \begin{tightitemize}{1.0em}
-\item Reviewer for \href{https://openreview.net/group?id=NeurIPS.cc/2021/Track/Datasets_and_Benchmarks/Round1}{\textbf{NeurIPS 2021 Datasets and Benchmarks Track}}
-\item Reviewer for \textbf{NeurIPS 2020 workshop} \href{https://preregister.science/}{"\textbf{The pre-registration experiment}: an alternative publication model for machine learning research"}
+\item \textbf{Conferences}: AAMAS 2022, NeurIPS 2021 Datasets and Benchmarks Track
+\item \textbf{Workshops}: Pre-Registration Experiment Workshop at NeurIPS 2020
 \end{tightitemize}
 \sectionsep
 

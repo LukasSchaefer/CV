@@ -138,7 +138,8 @@ Last Updated on \today
 \usepackage{titlesec}
 \titlespacing{\section}{0pt}{0pt}{0pt} 
 \titlespacing{\subsection}{0pt}{0pt}{0pt}
-\newcommand{\tinysectionsep}[0]{\vspace{3pt}}
+\newcommand{\tinysectionsep}[0]{\vspace{-5pt}}
+\newcommand{\smallsectionsep}[0]{\vspace{3pt}}
 \newcommand{\sectionsep}{\vspace{8pt}}
 \newcommand{\largesectionsep}[0]{\vspace{12pt}}
 

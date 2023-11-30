@@ -112,7 +112,9 @@ Last Updated on \today
 
 % Render author's github
 % Usage: \github{<github-nick>}
-\newcommand*{\github}[1]{\sociallink{\githubSymbol}{https://www.github.com/#1}{#1}}           % Github icon + URL
+\newcommand*{\github}[1]{\sociallink{\githubSymbol}{https://www.github.com/#1}{#1}}
+% Usage: \githuburl{<short-url>}
+\newcommand*{\githuburl}[1]{\sociallink{\githubSymbol}{https://www.#1}{#1}}
 
 % Render author's researchgate
 % Usage: \researchgate{<resarchgate-nick>}

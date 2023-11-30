@@ -3,8 +3,8 @@
 \ProvidesPackage{fontawesome5}[2018/01/04 v5.0.2 font awesome icons]
 % Requirements to use.
 \usepackage{fontspec}
-% Configure a directory location for fonts(default: '../../fonts/')
-\newcommand*{\fontdir}[1][../fonts/fontawesome/]{\def\@fontdir{#1}}
+% Configure a directory location for fonts(default: 'fonts/')
+\newcommand*{\fontdir}[1][fonts/fontawesome/]{\def\@fontdir{#1}}
 \fontdir
 % Define pro option
 \DeclareOption{pro}{
@@ -63,6 +63,7 @@
 \expandafter\def\csname faicon@graduation-cap\endcsname {\FA\symbol{"F19D}}
 \expandafter\def\csname faicon@home\endcsname {\FA\symbol{"F015}}
 \expandafter\def\csname faicon@info\endcsname {\FA\symbol{"F129}}
+\expandafter\def\csname faicon@id-badge\endcsname {\FA\symbol{"F2C1}}
 \expandafter\def\csname faicon@instagram\endcsname {\FAbrands\symbol{"F16D}}
 \expandafter\def\csname faicon@itunes-note\endcsname {\FAbrands\symbol{"F3B5}}
 \expandafter\def\csname faicon@language\endcsname {\FA\symbol{"F1AB}} 

@@ -1,0 +1,426 @@
+% !TEX program = xelatex
+% inspiration: https://github.com/sebastianruder/cv, https://github.com/deedy/Deedy-Resume
+\documentclass[]{lukas-cv-openfont}
+
+\usepackage[utf8]{inputenc}
+%\usepackage{tgpagella}
+\usepackage{latexsym}
+\usepackage{multicol}
+\usepackage{ragged2e}
+\setlength{\tabcolsep}{0em}
+
+\urlstyle{same}
+
+\usepackage[bibstyle=ieee,citestyle=numeric,sorting=none,defernumbers=true,backend=biber]{biblatex}
+\addbibresource{bibliography.bib}
+\defbibfilter{conf_jour}{keyword=conference or keyword=journal}
+
+\begin{document}
+%\expandafter\show\the\font
+
+\namesectionnorule{Lukas}{Schäfer}{
+        \homepage{lukaschaefer.com}
+        \googlescholar{-yp0O\_IAAAAJ}
+        \github{LukasSchaefer}\\
+        %\researchgate{Lukas\_Schaefer9}
+        \linkedin{lukas-schaefer}
+        \email{luki.schaefer96@gmail.com}
+        \smartphone{+44 7925 103212}\\
+        %\address{}\\
+        %\infos{}
+}
+
+\vspace{1em}
+
+\sectionTitle{Research Focus}{id-badge}
+\noindent
+\vspace{-1em}
+\begin{flushleft}
+    How can multiple agents learn robust behaviour which transfers to unseen tasks from limited data? Guided by this question, my research focuses on \textbf{efficient} and \textbf{generalisable decision making} in complex environments, with a particular focus on \textbf{reinforcement learning} and \textbf{multi-agent systems} in which multiple autonomous agents interact with each other.
+    % My research focuses on \textbf{efficient} and \textbf{generalisable decision making} in complex environments, with a particular focus on \textbf{reinforcement learning} and \textbf{multi-agent systems} in which multiple autonomous agents interact with each other.
+
+    % Guided by the challenges of efficiency and generalisation, I would like to further explore the idea of \textbf{learning from demonstrations} and \textbf{planning}. \textbf{Imitation learning} and \textbf{offline reinforcement learning} have the potential to greatly improve the efficiency of learning in the presence of demonstration data, while planning might enable more robust decision making agents that are able to reason in complex long-horizon tasks.
+    % Despite its effectiveness in simple environments, reinforcement learning is often sample inefficient, and prone to overfitting, leading to behaviour which often does not generalise across tasks. In future research, I would like to further explore the idea of learning from existing demonstrations using imitation learning and offline reinforcement learning to improve the efficiency of training. To obtain more robust decision making agents, I would also like to explore the intersection of reinforcement learning with planning and search, and how these can be used to improve the generalisation of agents.\\
+
+    \ \\
+
+    Keywords: \textbf{reinforcement learning}, \textbf{multi-agent systems}, \textbf{generalisation}, \textbf{exploration}, \textbf{imitation learning}% \textbf{learning from demonstrations}, \textbf{planning}
+\end{flushleft}
+\largesectionsep
+
+\sectionTitle{Education}{graduation-cap}
+
+\noindent
+\headerrow{PhD Data Science \& Artificial Intelligence}{12/2019 - \textbf{Expected 08/2024}}
+\\
+\locationrow{University of Edinburgh}{Edinburgh, United Kingdom}
+\begin{tightitemize}{1.7em}
+    \item Supervisors: \textbf{Stefano V. Albrecht} (primary) and \textbf{Amos Storkey} (secondary)
+    \item Project: \textbf{Sample Efficiency and Generalisation in Multi-Agent Reinforcement Learning}
+    % \item Research Interests: Reinforcement Learning, Multi-Agent Systems, Generalisation, Exploration, Imitation Learning
+    \item Receiving \textbf{Principal's Career Development Scholarship} from the University of Edinburgh
+    \item Organisation and hosting of \textbf{RL reading group} with speakers from industry (DeepMind, MSR, Google Brain, FAIR) and academia (Oxford University, McGill University, Georgia Institute of Technology, National University of Singapore)
+
+\end{tightitemize}
+\sectionsep
+
+\noindent
+\headerrow{M.Sc. Informatics}{09/2018 - 08/2019}
+\\
+\locationrow{University of Edinburgh - Grade: \textbf{Distinction} (77.28\%)}{Edinburgh, United Kingdom}
+\begin{tightitemize}{1.7em}
+    % \item Degree classification: \textbf{Distinction} (77.28\%)
+    \item Thesis: \href{https://www.lukaschaefer.com/assets/files/msc_thesis.pdf}{Curiosity in Multi-Agent Reinforcement Learning (74\%)}, advised by Stefano V. Albrecht
+    \item Received \textbf{DAAD graduate scholarship} and \textbf{Stevenson Exchange Scholarship} 
+    % \item Modules include: Reinforcement Learning, Algorithmic Game Theory and its Applications, Machine Learning and Pattern Recognition, Probabilistic Modelling and Reasoning, Decision Making in Robots and Autonomous Agents
+\end{tightitemize}
+\sectionsep
+
+\noindent
+\headerrow{B.Sc. Computer Science, minor subject Japanese}{10/2015 - 09/2018}
+\\
+\locationrow{Saarland University - Grade: \textbf{1.2} (German scale) within top 5\%}{Saarbrücken, Germany}
+\begin{tightitemize}{1.7em}
+    % \item Degree classification: grade of \textbf{1.2} (\href{https://en.wikipedia.org/wiki/Academic_grading_in_Germany}{German scale}) - within \textbf{top 5\%}% equivalent to UK \textbf{1\textsuperscript{st} class honours} (\textbf{Top 5\%})
+    \item Thesis: \href{https://www.lukaschaefer.com/assets/files/bsc_thesis.pdf}{Domain-Dependent Policy Learning using Neural Networks in Classical Planning (1.0)}, advised by J\"org Hoffmann
+    % \item Modules include: Automated Planning, Admissible Search Enhancements, Neural Networks: Implementation and Application, Information Retrieval and Data Mining, Software Engineering, Modern Imperative Programming Languages
+\end{tightitemize}
+% \largesectionsep
+
+%\noindent
+%\headerrow{Abitur - Secondary School}{08/2008 - 06/2015}
+%\\
+%\locationrow{Warndtgymnasium Geislautern, Völklingen}{Geislautern, Germany}
+%\begin{tightitemize}{1.7em}
+%	\item \textbf{Grade of 1.0}; school year's best student award, computer science and mathematics award of Saarland University
+%    %\item Graduated \textbf{Abitur 1.0} with examination subjects:\\
+%    %    Mathematics - 15, English - 12, Computer Science - 14, German - 15, History - 15
+%    % \item Year's best student award of the Warndtgymnasiums Geislautern
+%    % \item Computer science and mathematics award 2015 of Saarland University
+%\end{tightitemize}
+\largesectionsep
+
+
+\sectionTitle{Experience}{briefcase}
+
+\noindent
+\headerrow{Textbook Author}{03/2022 - 10/2023}
+
+\vspace{-0.5em}
+\begin{flushleft}
+    Designed and wrote a \textbf{textbook on multi-agent reinforcement learning} with \textbf{Stefano V. Albrecht} and \textbf{Filippos Christianos} (equal contributions). The book will be published with \textbf{MIT Press} in 2024 \cite{albrecht2024multi}.
+\end{flushleft}
+\sectionsep
+
+\noindent
+\headerrow{Research Scientist Intern}{04/2023 - 06/2023}
+\\
+\locationrow{Microsoft Research}{Cambridge, United Kingdom}
+\begin{tightitemize}{1.7em}
+    \item Conducted an empirical study on the effectiveness of various \textbf{visual encoders}, including pre-trained \textbf{vision foundation models}, for \textbf{imitation learning in modern video games} \cite{schaefer2023visual}
+    \item Developed \textbf{novel platform} for imitation learning in Minecraft Dungeons \textbf{from scratch}, including human gameplay recorder, imitation learning framework using \textbf{PyTorch Lightning}, and programmatic interface for online evaluation
+    \item Mentored by \textbf{Sam Devlin} and \textbf{Tabish Rashid}
+\end{tightitemize}
+\sectionsep
+
+\noindent
+\headerrow{Young Research Attendee}{09/2022 - 09/2022}
+\\
+\locationrow{Heidelberg Laureate Forum}{Heidelberg, Germany}
+\begin{tightitemize}{1.7em}
+    \item Selected as one of 100 international young researchers in computer science to network and discuss research
+    % \item Discussed research and connected with laureates of the most prestigious awards in mathematics and computer science
+\end{tightitemize}
+\sectionsep
+
+\noindent
+\headerrow{Research Scientist Intern}{07/2022 - 12/2022}
+\\
+\locationrow{Huawei Noah's Ark Lab}{London, United Kingdom}
+\begin{tightitemize}{1.7em}
+    \item Researched the application of \textbf{ensemble models} to guide exploration and improve training stability of \textbf{multi-agent reinforcement learning} under the supervision of \textbf{David Mguni} \cite{schaefer2023emax}
+    % \item Researched ensemble value functions as a plug-and-play approach which is shown to improve sample efficiency, policy robustness, and training stability by leveraging aggregation and uncertainty of the value function ensemble
+    % \item Resulting publication was submitted to top-tier conference (under review)
+\end{tightitemize}
+\sectionsep
+
+\noindent
+\headerrow{Research Intern}{11/2020 - 03/2021}
+\\
+\locationrow{Dematic - Technology and Innovation}{Remote}
+\begin{tightitemize}{1.7em}
+\item Applied multi-agent reinforcement learning to automate \textbf{large-scale robotic warehouse logistics} \cite{krnjaic2022scalable}
+\item My internship led to two further internship projects and a \textbf{fellowship-funded research collaboration}
+\end{tightitemize}
+\largesectionsep
+
+
+\newpage
+
+\sectionTitle{Skills}{poll}
+\vspace{-0.7em}
+\begin{multicols}{2}
+    \raggedright
+    \setlength{\columnsep}{1.5cm}
+    \setlength{\columnseprule}{0.2pt}
+    \noindent
+
+    \begin{skillblock}[Machine Learning \& Data Science]
+        Python: PyTorch \textbullet{} PyTorch Lightning \textbullet{} NumPy \textbullet{} Pandas \textbullet{} Scikit-Learn \textbullet{} Matplotlib \textbullet{} Jupyter \textbullet{} Anaconda
+    \end{skillblock}
+
+    \ \\
+
+    \begin{skillblock}[Software Engineering]
+        C++ \textbullet{} C \textbullet{} Bash \textbullet{} Git \textbullet{} Docker \textbullet{} HTML \textbullet{} CSS \textbullet{} JavaScript
+    \end{skillblock}
+
+    \raggedleft
+
+    \begin{skillblock}[Natural Languages]
+        German (native) \textbullet{} English (fluent) \textbullet{} Chinese (beginner)
+    \end{skillblock}
+
+    \ \\
+    \ \\
+
+    \begin{skillblock}[Soft Skills]
+        Teamwork \textbullet{} Teaching \textbullet{} Communication \textbullet{} Organisation
+    \end{skillblock}
+\end{multicols}
+\largesectionsep
+
+
+% make sure to include all publications in the bib file (also those not cited)
+\nocite{*}
+
+\sectionTitle{Selected Publications}{book}
+\noindent
+\headerrow{Textbook}{}
+\printbibliography[heading=none, type=book]
+\smallsectionsep
+
+\noindent
+\headerrow{Conferences and Journals}{}
+% sort in descending order by year
+\printbibliography[heading=none, filter=conf_jour, notkeyword=skip, sorting=none]
+\smallsectionsep
+
+\noindent
+\headerrow{Workshops}{}
+\printbibliography[heading=none, keyword=workshop, notkeyword=skip, sorting=none]
+\smallsectionsep
+
+\noindent
+\headerrow{Pre-prints}{}
+\printbibliography[heading=none, keyword=preprint, notkeyword=skip, sorting=none]
+\smallsectionsep
+
+\noindent
+\headerrow{Theses}{}
+\printbibliography[heading=none, keyword=thesis, notkeyword=skip, sorting=none]
+\largesectionsep
+
+% \sectionTitle{Dissertations}{book-open}
+
+% \noindent
+% \headerrow{M.Sc. Dissertation, Supervision by Stefano Albrecht}{05/2019 - 08/2019}
+% \\
+% \locationrow{\href{https://www.lukaschaefer.com/assets/files/msc_thesis.pdf}{Curiosity in Multi-Agent Reinforcement Learning (74\%)}}{}
+% \begin{tightitemize}{1.7em}
+%     \item Applied count- and prediction-based \textbf{intrinsic rewards} as exploration bonuses to \textbf{multi-agent reinforcement learning}
+%     % \item Implemented count- and prediction-based curiosities for value-based and policy-gradient MARL methods using PyTorch
+%     % \item Evaluated intrinsic rewards under partial observability and sparse rewards in the multi-agent particle environment
+%     \item Proposed multi-agent curiosity \textbf{improved stability and convergence of MADDPG in sparse-reward tasks}
+% \end{tightitemize}
+% \largesectionsep
+
+% % \noindent
+% % \headerrow{Reinforcement Learning for Video Game Playing, University of Edinburgh}{09/2018 - 01/2019}
+% % \\
+% % \locationrow{Informatics Research Review}{}
+% % \begin{tightitemize}{1.7em}
+% %     \item Reviewed the development of reinforcement learning research for game playing and the challenge from board games
+% %     Backgammon, Chess and Go to video games focusing on Atari and StarCraft
+% %     \item Outlined the development of common reinforcement learning approaches and highlighted the challenge of
+% %     multi-agent tasks, particular in partially-observable environments and proposed recent, promising ideas
+% % \end{tightitemize}
+% % \largesectionsep
+
+% \noindent
+% \headerrow{B.Sc. Dissertation, Supervision by J\"org Hoffmann}{04/2018 - 07/2018}
+% \\
+% \locationrow{\href{https://www.lukaschaefer.com/assets/files/bsc_thesis.pdf}{Domain-Dependent Policy Learning using Neural Networks in Classical Planning (1.0)}}{}
+% \begin{tightitemize}{1.7em}
+%     \item Transferred policy learning \textbf{Action-Schema Networks} to classical automated planning with adjusted training scheme, Keras implementation and extension of the \textbf{FastDownward} planning framework
+%     % \item Extensive evaluation and analysis on IPC domains identifying limitations in generalisation and scalability
+% \end{tightitemize}
+% \sectionsep
+
+
+\sectionTitle{Reviewing}{search}
+\noindent
+\begin{tightitemize}{1.0em}
+    \item 2023: NeurIPS, NeurIPS Datasets and Benchmark Track, ICML, AAMAS
+    \item 2022: NeurIPS, NeurIPS Datasets and Benchmark Track, ICML (\textbf{top 10\% outstanding reviewer award}), AAMAS
+    \item 2021: NeurIPS
+    \item 2020: Pre-registration experiment workshop at NeurIPS
+\end{tightitemize}
+\sectionsep
+
+
+\sectionTitle{Teaching and Supervision Experience}{chalkboard-teacher}
+
+\noindent
+\headerrow{Teaching Assistant, University of Edinburgh}{10/2019 - 06/2022}
+\\
+\locationrow{Reinforcement Learning, School of Informatics}{}
+\begin{tightitemize}{1.7em}
+    \item \textbf{Delivered lectures} and \textbf{designed coursework} on reinforcement learning (including deep and multi-agent RL) for last year undergraduate and M.Sc. students
+    \item \textbf{Supervised and marked coursework} and \textbf{exam scripts} for 100+ students
+\end{tightitemize}
+\largesectionsep
+
+\headerrow{M.Sc. Student Supervision, University of Edinburgh}{02/2021 - 08/2021}
+\begin{tightitemize}{1.7em}
+    \item Co-supervised two M.Sc. students through project proposal, refinement and execution towards final thesis
+    \item Rujie Zhong: \href{https://agents.inf.ed.ac.uk/blog/master-dissertations/rzhong_msc2021.pdf}{Data Collection for Policy Evaluation in Reinforcement Learning}\\
+    Revised paper accepted at Workshop on Offline Reinforcement Learning at NeurIPS 2021, and later as a \textbf{main conference paper at NeurIPS 2022}
+    \item Panagiotis Kyriakou: \href{https://agents.inf.ed.ac.uk/blog/master-dissertations/pkyriakou_msc2021.pdf}{Reinforcement Learning with Function Approximation in Continuing Tasks: Discounted Return or Average Reward?}
+\end{tightitemize}
+\largesectionsep
+
+\noindent
+\headerrow{Voluntary Lecturer and Coach, Saarland University}{09/2017 - 10/2017}
+\\
+\locationrow{Mathematics Preparation Course}{}
+\begin{tightitemize}{1.7em}
+    % \item Assisted the organization of the mathematics preparation course for upcoming computer science students% to student life and mathematical concepts covered in their first year
+    \item Delivered daily \textbf{lectures} on formal languages and predicate logic \textbf{to 250 participants} in first week
+    % \item Supervised two groups to provide feedback and further assistance in daily coaching-sessions
+    \item The course received \textbf{BESTE-award} for special student commitment 2017 of Saarland University
+\end{tightitemize}
+\largesectionsep
+
+\noindent
+\headerrow{Teaching Assistant, Saarland University}{10/2016 - 03/2017}
+\\
+\locationrow{Programming 1, Dependable Systems and Software Group}{}
+\begin{tightitemize}{1.7em}
+    \item Taught functional programming, basic complexity theory, and inductive proofs to first-year undergraduate students in weekly tutorials and office hours
+    \item Collectively created learning materials and discussed student progress as part of the whole teaching team
+    \item Marked weekly tests, mid-term and final exams
+\end{tightitemize}
+\largesectionsep
+
+
+% \sectionTitle{Supervision}{user-friends}
+% \noindent
+% \headerrow{M.Sc. Thesis Supervision, University of Edinburgh}{02/2021 - 08/2021}
+% \begin{tightitemize}{1.7em}
+%     \item Co-supervised two M.Sc. students through project proposal, refinement and execution towards final thesis
+%     \item Assisted M.Sc. student from their thesis towards a successful workshop submission at NeurIPS 2021
+% \end{tightitemize}
+% \largesectionsep
+
+
+\sectionTitle{Awards}{trophy}
+\noindent
+\begin{tightitemize}{1.0em}
+    \item Principal's Career Development Scholarship\hfill 12/2019 -- 06/2024
+    \item Top 10\% outstanding reviewer award at ICML 2022\hfill 07/2022
+    \item DAAD graduate scholarship\hfill 09/2018 - 08/2019
+    \item Stevenson Exchange Scholarship\hfill 09/2018 - 08/2019
+    \item BESTE-award for special student commitment 2017 of Saarland University\hfill 10/2017
+\end{tightitemize}
+\sectionsep
+
+% \sectionTitle{Project Experience}{code}
+
+% \noindent
+% \headerrow{Navigation Software Engineer, University of Edinburgh}{09/2018 - 08/2019}
+% \\
+% \locationrow{HYPED -- University of Edinburgh Hyperloop Team}{}
+% \begin{tightitemize}{1.7em}
+%     \item Developing navigation system of "The Flying Podsman" Hyperloop prototype using sensor filtering, processing and control techniques to estimate location, orientation and speed of the pod
+%     \item Finalist for the SpaceX 2019 Hyperloop competition in California in Summer 2019
+% \end{tightitemize}
+% \largesectionsep
+
+% \noindent
+% \headerrow{Reinforcement Learning for Soccer Playing, University of Edinburgh}{02/2019 -- 03/2019}
+% \\
+% \locationrow{Project for Reinforcement Learning Lecture}{}
+% \begin{tightitemize}{1.7em}
+%     \item Implemented several RL methods including value iteration, Q-learning, SARSA and DQN for simple control tasks% and the \href{https://github.com/LARG/HFO}{half-field-offense (HFO) 2D environment}
+%     % \item Implemented asynchronous 1-step Q-learning with deep Q-networks (DQNs)
+%     % \item Implemented tabular multi-agent RL methods independent Q-learning, joint action learning and WoLF-PHC controlling two cooperating agents in the HFO environment
+%     \item Implemented tabular multi-agent RL methods to control two cooperative agents in a 2D football game
+% \end{tightitemize}
+% \largesectionsep
+
+% \noindent
+% \headerrow{Autonomous Robot Localisation, University of Edinburgh}{09/2018 -- 12/2018}
+% \\
+% \locationrow{Group Project for Robotics: Science and Systems Lecture}{}
+% \begin{tightitemize}{1.7em}
+%     % \item Constructed a four-wheel differential steering mobile robot as group of three for autonomous localisation in a 
+%     % known environment using LEGO aside of technical components including a Raspberry Pi computer
+%     % \item Implemented particle-filter localisation and obstacle avoidance based on IR and sonar sensors
+%     % \item Robot successfully managed to navigate through the constructed arena, detect and communicate points of interest using light sensors and return back to its deployment location
+%     \item Constructed a differential steering mobile robot using LEGO, a Raspberry Pi, and an array of IR, camera and sonar sensors
+%     \item Implemented particle-filter localisation and obstacle avoidance in a predetermined environment
+%     \item Robot successfully managed to navigate through the constructed arena, detect and communicate points of interest using light sensors and return back to its deployment location
+% \end{tightitemize}
+%\largesectionsep
+
+% \noindent
+% \headerrow{Galaxy-based Search, University of Edinburgh}{09/2018 -- 12/2018}
+% \\
+% \locationrow{Group Project for Natural Computing Lecture}{}
+% \begin{tightitemize}{1.7em}
+%     \item Implemented the Galaxy-based Search Algorithm (GbSA) and Particle Swarm Optimisation (PSO) baseline 
+%     for PCA approximation as metaheuristic optimisation algorithms
+%     \item Evaluated and analysed GbSA and its foundational research paper, outlined limitations, proposed adjustments to 
+%     the algorithm and showed their positive impact on performance in an evaluation
+% \end{tightitemize}
+% \largesectionsep
+
+%\noindent
+%\headerrow{Plagiarism Detection Tool, Saarland University}{04/2017 -- 07/2017}
+%\\
+%\locationrow{Group Project for Software Engineering Lecture}{}
+%\begin{tightitemize}{1.7em}
+%    %\item Implemented a plagiarism detection tool in Python for Prof. Rossow at Saarland University
+%    \item Developed a similarity detection tool for submissions in Python with language-specific analysis for Python and C
+%    \item Designed and implemented a web-based interface, highlighting similar submissions and presumable cases of plagiarism
+%    \item Our software is now successfully used in our customer's lectures to detect plagiarism cases on Python code
+%\end{tightitemize}
+%\largesectionsep
+
+% \noindent
+% \headerrow{Concurrent CDCL SAT-Solver, Saarland University}{07/2017 -- 09/2017}
+% \\
+% \locationrow{Group Project for Modern Imperative Programming Languages Seminar}{}
+% \begin{tightitemize}{1.7em}
+%     \item Planned and implemented a concurrent Conflict-Driven Clause Learning SAT-Solver using Rust
+%     \item Optimised literal assignment using multiple heuristic strategies, pure variable detection and handling
+% \end{tightitemize}
+% \largesectionsep
+
+% \vspace{-.2em}
+
+% \begin{flushleft}
+%     For project experience, see \href{https://www.lukaschaefer.com/#projects}{\textbf{lukaschaefer.com/\#projects}}
+% \end{flushleft}
+% \sectionsep
+
+
+
+
+
+
+% \ \\
+
+[\scshape\fontspec[Path = fonts/Openfonts/raleway/]{Raleway-Medium}\fontsize{10pt}{8pt}\selectfont References available on request]% - Last updated on \today]
+\end{document}

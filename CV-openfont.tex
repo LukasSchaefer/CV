@@ -11,11 +11,17 @@
 
 \urlstyle{same}
 
-\usepackage[bibstyle=ieee,citestyle=numeric,sorting=none,defernumbers=true,backend=biber]{biblatex}
+\usepackage[bibstyle=ieee,citestyle=numeric,defernumbers=true,backend=biber,citetracker=true]{biblatex}
 \addbibresource{bibliography.bib}
 \defbibfilter{conf_jour}{keyword=conference or keyword=journal}
 
+% make sure to include all publications in the bib file (also those not cited)
+% \nocite{*}
+
 \begin{document}
+\phantom{\cite{mcinroe2023learning,schaefer2022derl,schaefer2022gen,zhong2022datacollection,papoudakis2021benchmarking,christianos2020shared,albrecht2022aic,schaefer2023mate,schaefer2023emax,andres2023using,schaefer2023visual,krnjaic2022scalable,mcinroe2021learning,schaefer2019curiosity,schaefer2018domain}}
+\vspace{-1em}
+
 %\expandafter\show\the\font
 
 \namesectionnorule{Lukas}{Schäfer}{
@@ -37,16 +43,16 @@
 \vspace{-1em}
 \begin{flushleft}
     % How can multiple agents learn robust behaviour which transfers to unseen tasks from limited data?
-    \textbf{Reinforcement learning} is often sample inefficient, and prone to overfitting, leading to behaviour which often does not generalise across tasks. These challenges are further exacerbated in \textbf{multi-agent systems} in which multiple agents interact with each other in a shared environment. Guided by these challenges of \textbf{efficiency} and \textbf{generalisation}, my PhD research focuses on efficient and generalisable reinforcement learning in multi-agent systems.
+    \textbf{Reinforcement learning} is sample inefficient, and prone to overfitting, leading to behaviour which often does not generalise across tasks. These challenges are further exacerbated in \textbf{multi-agent systems} in which multiple agents interact with each other in a shared environment. Guided by these challenges of \textbf{efficiency} and \textbf{generalisation}, my PhD research focuses on efficient and generalisable reinforcement learning in multi-agent systems.
 
     % My research focuses on \textbf{efficient} and \textbf{generalisable decision making} in complex environments, with a particular focus on \textbf{reinforcement learning} and \textbf{multi-agent systems} in which multiple autonomous agents interact with each other.
 
     % Guided by the challenges of efficiency and generalisation, I would like to further explore the idea of \textbf{learning from demonstrations} and \textbf{planning}. \textbf{Imitation learning} and \textbf{offline reinforcement learning} have the potential to greatly improve the efficiency of learning in the presence of demonstration data, while planning might enable more robust decision making agents that are able to reason in complex long-horizon tasks.
     % Despite its effectiveness in simple environments, reinforcement learning is often sample inefficient, and prone to overfitting, leading to behaviour which often does not generalise across tasks. In future research, I would like to further explore the idea of learning from existing demonstrations using imitation learning and offline reinforcement learning to improve the efficiency of training. To obtain more robust decision making agents, I would also like to explore the intersection of reinforcement learning with planning and search, and how these can be used to improve the generalisation of agents.\\
 
-    \ \\
+    % \ \\
 
-    Keywords: \textbf{reinforcement learning}, \textbf{multi-agent systems}, \textbf{generalisation}, \textbf{exploration}% \textbf{learning from demonstrations}, \textbf{planning}
+    % Keywords: \textbf{reinforcement learning}, \textbf{multi-agent systems}, \textbf{generalisation}, \textbf{exploration}% \textbf{learning from demonstrations}, \textbf{planning}
 \end{flushleft}
 \largesectionsep
 
@@ -60,7 +66,7 @@
     \item Supervisors: \textbf{Stefano V. Albrecht} (primary) and \textbf{Amos Storkey} (secondary)
     \item Thesis: \textbf{Sample Efficiency and Generalisation in Multi-Agent Reinforcement Learning}
     % \item Research Interests: Reinforcement Learning, Multi-Agent Systems, Generalisation, Exploration, Imitation Learning
-    \item Receiving \textbf{Principal's Career Development Scholarship} from the University of Edinburgh
+    \item Awarded \textbf{Principal's Career Development Scholarship} from the University of Edinburgh
     \item Organisation and hosting of \textbf{RL reading group} with speakers from industry (DeepMind, MSR, Google Brain, FAIR) and academia (Oxford University, McGill University, Georgia Institute of Technology, National University of Singapore)
 
 \end{tightitemize}
@@ -73,8 +79,8 @@
 \begin{tightitemize}{1.7em}
     % \item Degree classification: \textbf{Distinction} (77.28\%)
     \item Thesis: \href{https://www.lukaschaefer.com/assets/files/msc_thesis.pdf}{Curiosity in Multi-Agent Reinforcement Learning}, advised by Stefano V. Albrecht
-    \item Received \textbf{DAAD graduate scholarship} and \textbf{Stevenson Exchange Scholarship} 
-    % \item Modules include: Reinforcement Learning, Algorithmic Game Theory and its Applications, Machine Learning and Pattern Recognition, Probabilistic Modelling and Reasoning, Decision Making in Robots and Autonomous Agents
+    \item Awarded \textbf{DAAD graduate scholarship} and \textbf{Stevenson Exchange Scholarship} 
+    \item Modules include: Decision Making in Robots and Autonomous Agents, Robotics: Science and Systems, Reinforcement Learning, Machine Learning and Pattern Recognition, Probabilistic Modelling and Reasoning % Algorithmic Game Theory and its Applications, 
 \end{tightitemize}
 \sectionsep
 
@@ -193,13 +199,10 @@
 \largesectionsep
 
 
-% make sure to include all publications in the bib file (also those not cited)
-\nocite{*}
-
 \sectionTitle{Selected Publications}{book}
 \noindent
 \headerrow{Textbook}{}
-\printbibliography[heading=none, type=book]
+\printbibliography[heading=none, type=book, sorting=none]
 \smallsectionsep
 
 \noindent
@@ -263,6 +266,7 @@
 \sectionTitle{Reviewing}{search}
 \noindent
 \begin{tightitemize}{1.0em}
+    \item 2024: AAMAS
     \item 2023: NeurIPS, NeurIPS Datasets and Benchmark Track, ICML, AAMAS
     \item 2022: NeurIPS, NeurIPS Datasets and Benchmark Track, ICML (\textbf{top 10\% outstanding reviewer award}), AAMAS
     \item 2021: NeurIPS
@@ -272,6 +276,13 @@
 
 
 \sectionTitle{Teaching and Supervision Experience}{chalkboard-teacher}
+
+\headerrow{Visiting PhD Student Supervision, University of Edinburgh}{05/2022 - 05/2023}
+\begin{tightitemize}{1.7em}
+    \item Supervised \href{https://aklein1995.github.io/}{Alain Andres Fernandez} from Tecnalia, Spain, during his 3-month research visit and subsequent collaboration
+    \item Jointly developed and executed research project investigating the efficacy of imitation learning for pre-training and concurrent training of reinforcement learning agents in procedurally generated environments \cite{andres2023using}
+\end{tightitemize}
+\largesectionsep
 
 \noindent
 \headerrow{Teaching Assistant, University of Edinburgh}{10/2019 - 06/2022}
@@ -287,7 +298,7 @@
 \begin{tightitemize}{1.7em}
     \item Co-supervised two M.Sc. students through project proposal, refinement and execution towards final thesis
     \item Rujie Zhong: \href{https://agents.inf.ed.ac.uk/blog/master-dissertations/rzhong_msc2021.pdf}{Data Collection for Policy Evaluation in Reinforcement Learning}\\
-    Revised paper accepted at Workshop on Offline Reinforcement Learning at NeurIPS 2021, and later as a \textbf{main conference paper at NeurIPS 2022}
+    Revised paper accepted at Workshop on Offline Reinforcement Learning at NeurIPS 2021, and later as a \textbf{main conference paper at NeurIPS 2022} \cite{zhong2022datacollection}
     \item Panagiotis Kyriakou: \href{https://agents.inf.ed.ac.uk/blog/master-dissertations/pkyriakou_msc2021.pdf}{Reinforcement Learning with Function Approximation in Continuing Tasks: Discounted Return or Average Reward?}
 \end{tightitemize}
 \largesectionsep

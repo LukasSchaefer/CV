@@ -19,7 +19,7 @@
 % \nocite{*}
 
 \begin{document}
-\phantom{\cite{schaefer2025emax,andres2024using,krnjaic2024scalable,mcinroe2023learning,schaefer2022derl,schaefer2022gen,zhong2022datacollection,papoudakis2021benchmarking,christianos2020shared,albrecht2022aic,schaefer2023mate,schaefer2023visual,mcinroe2021learning,schaefer2024efficient,schaefer2019curiosity,schaefer2018domain}}
+\phantom{\cite{schaefer2025emax,schaefer2025visual,andres2024using,krnjaic2024scalable,mcinroe2023learning,schaefer2022derl,schaefer2022gen,zhong2022datacollection,papoudakis2021benchmarking,christianos2020shared,albrecht2022aic,schaefer2023mate,mcinroe2021learning,schaefer2024efficient,schaefer2019curiosity,schaefer2018domain}}
 \vspace{-1em}
 
 %\expandafter\show\the\font
@@ -64,11 +64,8 @@
 \locationrow{University of Edinburgh - Grade: Pass with no corrections}{Edinburgh, United Kingdom}
 \begin{tightitemize}{1.7em}
     \item Supervisors: \textbf{Stefano V. Albrecht} (primary) and \textbf{Amos Storkey} (secondary)
-    \item Thesis: \textbf{Sample Efficiency and Generalisation in Multi-Agent Reinforcement Learning}
+    \item Thesis: \textbf{Efficient Exploration in Single-Agent and Multi-Agent Deep Reinforcement Learning}
     % \item Research Interests: Reinforcement Learning, Multi-Agent Systems, Generalisation, Exploration, Imitation Learning
-    \item Awarded \textbf{Principal's Career Development Scholarship} from the University of Edinburgh
-    \item Organisation and hosting of \textbf{RL reading group} with speakers from industry (DeepMind, MSR, Google Brain, FAIR) and academia (Oxford University, McGill University, Georgia Institute of Technology, National University of Singapore)
-
 \end{tightitemize}
 \sectionsep
 
@@ -79,7 +76,7 @@
 \begin{tightitemize}{1.7em}
     % \item Degree classification: \textbf{Distinction} (77.28\%)
     \item Thesis: \href{https://www.lukaschaefer.com/assets/files/msc_thesis.pdf}{Curiosity in Multi-Agent Reinforcement Learning}, advised by Stefano V. Albrecht
-    \item Awarded \textbf{DAAD graduate scholarship} and \textbf{Stevenson Exchange Scholarship} 
+    % \item Awarded \textbf{DAAD graduate scholarship} and \textbf{Stevenson Exchange Scholarship} 
     % \item Modules include: Decision Making in Robots and Autonomous Agents, Robotics: Science and Systems, Reinforcement Learning, Machine Learning and Pattern Recognition, Probabilistic Modelling and Reasoning % Algorithmic Game Theory and its Applications, 
 \end{tightitemize}
 \sectionsep
@@ -116,7 +113,8 @@
 \\
 \locationrow{Microsoft Research}{Cambridge, United Kingdom}
 \begin{tightitemize}{1.7em}
-    \item Working towards autonomous agents that can enable novel experiences and tools in video games.
+    \item Researching decision-making agents that learn to imitate behaviour in complex environments from few demonstrations
+    \item Developed gameplay recording and data cleaning pipeline used to train \href{https://www.microsoft.com/en-us/research/articles/whamm-real-time-world-modelling-of-interactive-environments/}{real-time world models deployed on Copilot Labs}
 \end{tightitemize}
 \sectionsep
 
@@ -126,15 +124,15 @@
 \begin{flushleft}
     Designed and wrote an introductory \textbf{textbook on multi-agent reinforcement learning} with \textbf{Stefano V. Albrecht} and \textbf{Filippos Christianos} (equal contributions). The book will be published with \textbf{MIT Press} in 2024 \cite{albrecht2024multi}.
 \end{flushleft}
-\sectionsep
+
+\vspace{.0em}
 
 \noindent
 \headerrow{Research Intern}{04/2023 - 10/2023}
 \\
 \locationrow{Microsoft Research}{Cambridge, United Kingdom}
 \begin{tightitemize}{1.7em}
-    \item Mentored by \textbf{Sam Devlin} and \textbf{Tabish Rashid}
-    \item Conducted an empirical study on the effectiveness of various \textbf{visual encoders}, including pre-trained \textbf{vision foundation models}, for \textbf{imitation learning in modern video games} \cite{schaefer2023visual}
+    \item Conducted an empirical study on the effectiveness of various \textbf{visual encoders}, including pre-trained \textbf{vision foundation models}, for \textbf{imitation learning in modern video games} under mentorship of \textbf{Sam Devlin} and \textbf{Tabish Rashid} \cite{schaefer2025visual}
     \item Developed \textbf{novel platform} for imitation learning in Minecraft Dungeons \textbf{from scratch}, including human gameplay recorder, imitation learning framework using \textbf{PyTorch Lightning}, and programmatic interface for online evaluation
 \end{tightitemize}
 \sectionsep
@@ -168,10 +166,7 @@
 \item Applied multi-agent reinforcement learning to automate \textbf{robotic warehouse logistics} and \textbf{scale to real-world settings}~\cite{krnjaic2024scalable}
 \item My internship led to four further internship projects and a \textbf{fellowship-funded research collaboration}
 \end{tightitemize}
-\largesectionsep
-
-
-\newpage
+\sectionsep
 
 \sectionTitle{Skills}{poll}
 \vspace{-0.7em}
@@ -224,10 +219,10 @@
 \printbibliography[heading=none, keyword=workshop, notkeyword=skip, sorting=none]
 \smallsectionsep
 
-\noindent
-\headerrow{Pre-prints}{}
-\printbibliography[heading=none, keyword=preprint, notkeyword=skip, sorting=none]
-\smallsectionsep
+% \noindent
+% \headerrow{Pre-prints}{}
+% \printbibliography[heading=none, keyword=preprint, notkeyword=skip, sorting=none]
+% \smallsectionsep
 
 \noindent
 \headerrow{Theses}{}
@@ -271,9 +266,18 @@
 % \sectionsep
 
 
-\sectionTitle{Reviewing}{search}
+\sectionTitle{Community}{search}
+
+\headerrow{Organisation}{}
+\begin{tightitemize}{1.7em}
+    \item Co-lead organiser of the \href{https://www.turing.ac.uk/events/uk-multi-agent-systems-symposium-2025-uk-mas}{\textbf{UK Multi-Agent Systems Symposium 2025}} with ~200 participants in collaboration with the Alan Turing Institute and King's College London.
+    \item Organisation and hosting of \textbf{RL reading group} at University of Edinburgh with speakers from industry (e.g.\ DeepMind, MSR, FAIR) and academia (e.g.\ Oxford University, McGill University, NUS)
+\end{tightitemize}
+\largesectionsep
+
 \noindent
-\begin{tightitemize}{1.0em}
+\headerrow{Reviewing}{}
+\begin{tightitemize}{1.7em}
     \item 2025: ICML, RLDM
     \item 2024: ICML (\textbf{best reviewer award}), RLC, AAMAS, TMLR
     \item 2023: NeurIPS, NeurIPS Datasets and Benchmark Track, ICML, AAMAS

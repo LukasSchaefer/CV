@@ -1,0 +1,43 @@
+% job listing environments
+\newcommand*{\exptitle}[2]{
+    \begin{tabularx}{\linewidth}{@{}l X r@{}}
+        \textbf{#1} & \hfill &  #2 \\[5pt]
+    \end{tabularx}
+}
+
+\newcommand*{\exptitlelong}[4]{
+    \begin{tabularx}{\linewidth}{@{}l X r@{}}
+        \textbf{#1} & \hfill & #2 \\
+        \textit{#3} & \hfill & \textit{#4} \\[5pt]
+    \end{tabularx}
+}
+
+% block that is left-aligned and only reaches to a certain width
+\newenvironment{expblock}[1][0.75\linewidth]
+{
+    \begin{minipage}{#1}
+}
+{
+    \end{minipage}
+    \expspace
+}
+
+\newenvironment{explist}
+{
+    \begin{itemize}[nosep,after=\strut, leftmargin=1em, itemsep=3pt]%, label=--]
+}
+{
+    \end{itemize}
+}
+
+
+% Social link command
+\newcommand*{\homepage}[2]{\href{#1}{\raisebox{-0.05\height}\faGlobe \ #2}}
+\newcommand*{\github}[1]{\href{https://www.github.com/#1}{\raisebox{-0.05\height}\faGithub\ #1}}
+\newcommand*{\linkedin}[1]{\href{https://www.linkedin.com/in/#1}{\raisebox{-0.05\height}\faLinkedin\ #1}}
+\newcommand*{\scholar}[2]{\href{https://scholar.google.com/citations?user=#1}{\raisebox{-0.05\height}\faGraduationCap\ #2}}
+\newcommand*{\email}[1]{\href{mailto:#1}{\raisebox{-0.05\height}\faEnvelope \ #1}}
+\newcommand*{\phone}[1]{\href{tel:#1}{\raisebox{-0.05\height}\faMobile \ #1}}
+
+% spacing commands
+\newcommand*{\expspace}{\vspace{8pt}}

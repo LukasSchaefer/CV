@@ -94,7 +94,7 @@
 ]{biblatex}
 \addbibresource{bibliography.bib}
 \defbibfilter{conf_jour}{keyword=conference or keyword=journal}
-\setlength\bibitemsep{1em}
+\setlength\bibitemsep{0.5em}
 
 %Setup hyperref package, and colours for links
 \usepackage[unicode, draft=false]{hyperref}
@@ -142,88 +142,7 @@
 
 %Interests/ Keywords/ Summary
 \section{Research Profile}
-I am a postdoctoral researcher at Microsoft Research, focusing on efficient learning algorithms for decision-making and multi-agent systems. I am interested in developing algorithms that enable autonomous agents to efficiently learn to solve complex real-world decision-making tasks. My research spans the areas of reinforcement learning, multi-agent systems, and imitation learning, with a particular interest in exploration towards sample-efficient learning and generalisation across tasks.
-
-%----------------------------------------------------------------------------------------
-% EXPERIENCE SECTIONS
-%----------------------------------------------------------------------------------------
-
-\section{Work Experience}
-
-\exptitlelong{Microsoft Research}{Oct 2024 - Present}{Postdoctoral Researcher}{Cambridge, UK}
-\begin{expblock}
-    My postdoctoral research focuses on developing novel imitation learning algorithms that enable decision making from few demonstrations in complex environments. I also contributed to the recording and data pipeline for training \href{https://copilot.microsoft.com/labs/experiments/copilot-gaming-experiences}{real-time world models deployed on Copilot Labs}.\\
-    \textbf{Supervisor:} Sergio Valcarcel Macua
-\end{expblock}
-
-\exptitlelong{Microsoft Research}{Apr 2023 - Oct 2023}{Research Intern}{Cambridge, UK}
-\begin{expblock}
-    I conducted an empirical study on the effectiveness of 16 visual encoders, including pre-trained vision foundation models, for imitation learning in modern video games. Our findings were presented at the ALA workshop at AAMAS 2024~\cite{schaefer2025visual}.\\
-    \textbf{Supervisors:} Sam Devlin and Tabish Rashid
- %    \begin{explist}
-	% \item Conducted an empirical study on the effectiveness of various visual encoders, including pre-trained vision foundation models, for imitation learning in modern video games under mentorship of Sam Devlin and Tabish Rashid
-	% \item Developed novel platform for imitation learning in Minecraft Dungeons from scratch, including human gameplay recorder, imitation learning framework using PyTorch Lightning, and programmatic interface for online evaluation
- %    \end{explist}
-\end{expblock}
-
-\exptitlelong{Huawei Noah's Ark Lab}{Jul 2022 - Dec 2022}{Research Intern}{London, UK}
-\begin{expblock}
-    I researched ensemble models and how they can guide exploration and improve training stability in multi-agent reinforcement learning. The resulting publication was accepted and presented as an \textbf{oral paper at AAMAS 2025}~\cite{schaefer2025emax}.\\
-    \textbf{Supervisor:} David Mguni
- %    \begin{explist}
-	% \item Researched the application of ensemble models to guide exploration and improve training stability of multi-agent reinforcement learning under the supervision of David Mguni
-	% % \item Researched ensemble value functions as a plug-and-play approach which is shown to improve sample efficiency, policy robustness, and training stability by leveraging aggregation and uncertainty of the value function ensemble
-	% % \item Resulting publication was submitted to top-tier conference (under review)
- %    \end{explist}
-\end{expblock}
-
-\exptitlelong{Dematic - Technology and Innovation}{Nov 2020 - Mar 2021}{Research Intern}{Remote}
-\begin{expblock}
-    I designed and implemented an efficient multi-agent robotic warehouse simulator and novel multi-agent reinforcement learning algorithms for scalable robotic warehouse logistics. My internship led to a \textbf{fellowship funded research collaboration}, four further internship projects, and a publication at IROS 2024~\cite{krnjaic2024scalable}.\\
-    \textbf{Supervisors:} Aleksandar Krnjaic and Stefano V. Albrecht
- %    \begin{explist}
-	% \item Applied multi-agent reinforcement learning to automate robotic warehouse logistics and scale to real-world settings
-	% \item My internship led to a \textbf{fellowship funded research collaboration} and four further internship projects
- %    \end{explist}
-\end{expblock}
-
-%----------------------------------------------------------------------------------------
-%	EDUCATION
-%----------------------------------------------------------------------------------------
-\section{Education}
-
-\exptitlelong{University of Edinburgh}{Dec 2019 - Oct 2024}{PhD, Data Science \& Artificial Intelligence}{Edinburgh, UK}
-\begin{expblock}
-    \begin{explist}
-	\item Summary: Researched novel exploration methods for deep reinforcement learning in single-agent and multi-agent settings.
-	% \item \textbf{Thesis:} Efficient Exploration in Single-Agent and Multi-Agent Deep Reinforcement Learning \\
-	\item Supervisors: Stefano V. Albrecht (primary) and Amos Storkey (secondary)
-	% \item \textbf{Thesis:} Efficient Exploration in Single-Agent and Multi-Agent Deep Reinforcement Learning
-	% \item \textbf{Award:} Passed with no corrections
-	% \item \textbf{Supervisors:} Stefano V. Albrecht (primary) and Amos Storkey (secondary)
-    \end{explist}
-\end{expblock}
-
-\exptitlelong{University of Edinburgh}{Sep 2018 - Aug 2019}{MSc, Informatics}{Edinburgh, UK}
-\begin{expblock}
-    \begin{explist}
-	\item Grade: Distinction \ (77.28\%)
-	\item Dissertation project: Researched curiosity-driven exploration in multi-agent reinforcement learning.
-	\item Supervisor: Stefano V. Albrecht
-	% \item \textbf{Thesis:} Curiosity in Multi-Agent Reinforcement Learning
-	% \item \textbf{Key modules:} Decision Making in Robots and Autonomous Agents, Robotics: Science and Systems, Reinforcement Learning, Machine Learning and Pattern Recognition, Probabilistic Modelling and Reasoning % Algorithmic Game Theory and its Applications, 
-    \end{explist}
-\end{expblock}
-
-\exptitlelong{Saarland University}{Oct 2015 - Sep 2018}{BSc, Computer Science}{Saarbrücken, Germany}
-\begin{expblock}
-    \begin{explist}
-	\item Grade: 1.2 (within top 5\%)
-	\item Dissertation project: Extended Action-Schema-Networks to learn heuristic functions for classical planning using neural networks.
-	\item Supervisor: J\"org Hoffmann
-	% \item \textbf{Modules include:} Automated Planning, Admissible Search Enhancements, Neural Networks: Implementation and Application, Information Retrieval and Data Mining, Software Engineering, Modern Imperative Programming Languages
-    \end{explist}
-\end{expblock}
+I am a postdoctoral researcher at Microsoft Research, focusing on efficient learning algorithms for decision-making and multi-agent systems. I a co-author of the first introductory textbook on multi-agent reinforcement learning, and have published in top machine learning venues, including NeurIPS, TMLR, and AAMAS. %My research spans the areas of reinforcement learning, multi-agent systems, and imitation learning, with a particular interest in exploration towards sample-efficient learning and generalisation across tasks.
 
 %----------------------------------------------------------------------------------------
 %	PUBLICATIONS
@@ -245,9 +164,105 @@ I am a postdoctoral researcher at Microsoft Research, focusing on efficient lear
 % \subsection{Preprints}
 % \printbibliography[heading=none, keyword=preprint, notkeyword=skip], env=cvpubs]
 
-\subsection{Theses}
-\printbibliography[heading=none, keyword=thesis, notkeyword=skip]%, env=cvpubs]
+% \subsection{Theses}
+% \printbibliography[heading=none, keyword=thesis, notkeyword=skip]%, env=cvpubs]
 \expspace
+
+
+
+%----------------------------------------------------------------------------------------
+% EXPERIENCE SECTIONS
+%----------------------------------------------------------------------------------------
+
+\section{Work Experience -- Current}
+
+\exptitlelong{Postdoctoral Researcher}{Oct 2024 - Present}{Microsoft Research}{Cambridge, UK}
+\begin{expblock}
+    My postdoctoral research focuses on developing novel imitation learning algorithms that enable decision making from few demonstrations in complex environments. I also contributed to the recording and data pipeline for training \href{https://copilot.microsoft.com/labs/experiments/copilot-gaming-experiences}{real-time world models deployed on Copilot Labs}.\\
+    \textbf{Supervisor:} Sergio Valcarcel Macua
+\end{expblock}
+
+\section{Work Experience -- Past}
+
+\exptitlelong{Research Intern}{Apr 2023 - Oct 2023}{Microsoft Research}{Cambridge, UK}
+\begin{expblock}
+    I conducted an empirical study on the effectiveness of 16 visual encoders, including pre-trained vision foundation models, for imitation learning in modern video games. Our findings were presented at the ALA workshop at AAMAS 2024~\cite{schaefer2025visual}.\\
+    \textbf{Supervisors:} Sam Devlin and Tabish Rashid
+ %    \begin{explist}
+	% \item Conducted an empirical study on the effectiveness of various visual encoders, including pre-trained vision foundation models, for imitation learning in modern video games under mentorship of Sam Devlin and Tabish Rashid
+	% \item Developed novel platform for imitation learning in Minecraft Dungeons from scratch, including human gameplay recorder, imitation learning framework using PyTorch Lightning, and programmatic interface for online evaluation
+ %    \end{explist}
+\end{expblock}
+
+\exptitlelong{Research Intern}{Jul 2022 - Dec 2022}{Huawei Noah's Ark Lab}{London, UK}
+\begin{expblock}
+    I researched ensemble models and how they can guide exploration and improve training stability in multi-agent reinforcement learning. The resulting publication was accepted and presented as an \textbf{oral paper at AAMAS 2025}~\cite{schaefer2025emax}.\\
+    \textbf{Supervisor:} David Mguni
+ %    \begin{explist}
+	% \item Researched the application of ensemble models to guide exploration and improve training stability of multi-agent reinforcement learning under the supervision of David Mguni
+	% % \item Researched ensemble value functions as a plug-and-play approach which is shown to improve sample efficiency, policy robustness, and training stability by leveraging aggregation and uncertainty of the value function ensemble
+	% % \item Resulting publication was submitted to top-tier conference (under review)
+ %    \end{explist}
+\end{expblock}
+
+\exptitlelong{Research Intern}{Nov 2020 - Mar 2021}{Dematic - Technology and Innovation}{Remote}
+\begin{expblock}
+    I designed and implemented an efficient multi-agent robotic warehouse simulator and novel multi-agent reinforcement learning algorithms for scalable robotic warehouse logistics. My internship led to a \textbf{fellowship funded research collaboration}, four further internship projects, and a publication at IROS 2024~\cite{krnjaic2024scalable}.\\
+    \textbf{Supervisors:} Aleksandar Krnjaic and Stefano V. Albrecht
+ %    \begin{explist}
+	% \item Applied multi-agent reinforcement learning to automate robotic warehouse logistics and scale to real-world settings
+	% \item My internship led to a \textbf{fellowship funded research collaboration} and four further internship projects
+ %    \end{explist}
+\end{expblock}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+\section{Education}
+
+\exptitlelong{PhD, Data Science \& Artificial Intelligence}{Dec 2019 - Oct 2024}{University of Edinburgh}{Edinburgh, UK}
+\begin{expblock}
+    My PhD research focused on novel exploration methods to enable sample-efficient deep reinforcement learning in single-agent and multi-agent settings. I also studied the ability of agents to generalise across tasks, and how meta-learning task representations can facilitate such generalisation.\\
+    % \textbf{Thesis:} Efficient Exploration in Single-Agent and Multi-Agent Deep Reinforcement Learning \\
+    \textbf{Supervisors:} Stefano V. Albrecht (primary) and Amos Storkey (secondary)
+ %    \begin{explist}
+	% \item Summary: Researched novel exploration methods for deep reinforcement learning in single-agent and multi-agent settings.
+	% % \item \textbf{Thesis:} Efficient Exploration in Single-Agent and Multi-Agent Deep Reinforcement Learning \\
+	% \item Supervisors: Stefano V. Albrecht (primary) and Amos Storkey (secondary)
+	% % \item \textbf{Thesis:} Efficient Exploration in Single-Agent and Multi-Agent Deep Reinforcement Learning
+	% % \item \textbf{Award:} Passed with no corrections
+	% % \item \textbf{Supervisors:} Stefano V. Albrecht (primary) and Amos Storkey (secondary)
+ %    \end{explist}
+\end{expblock}
+
+\exptitlelong{MSc, Informatics}{Sep 2018 - Aug 2019}{University of Edinburgh}{Edinburgh, UK}
+\begin{expblock}
+    My Master's dissertation project researched the efficacy of curiosity-driven exploration for multi-agent reinforcement learning. I also completed advanced modules on reinforcement learning, machine learning, robotics, and game theory.\\
+    % \textbf{Thesis:} Curiosity in Multi-Agent Reinforcement Learning \\
+    \textbf{Supervisor:} Stefano V. Albrecht \hspace{1em} | \hspace{1em} 
+    \textbf{Award:} Distinction \ (77.28\%)
+ %    \begin{explist}
+	% \item Grade: Distinction \ (77.28\%)
+	% \item Dissertation project: Researched curiosity-driven exploration in multi-agent reinforcement learning.
+	% \item Supervisor: Stefano V. Albrecht
+	% % \item \textbf{Thesis:} Curiosity in Multi-Agent Reinforcement Learning
+	% % \item \textbf{Key modules:} Decision Making in Robots and Autonomous Agents, Robotics: Science and Systems, Reinforcement Learning, Machine Learning and Pattern Recognition, Probabilistic Modelling and Reasoning % Algorithmic Game Theory and its Applications, 
+ %    \end{explist}
+\end{expblock}
+
+\exptitlelong{BSc, Computer Science}{Oct 2015 - Sep 2018}{Saarland University}{Saarbrücken, Germany}
+\begin{expblock}
+    My Bachelor's dissertation project extended Action-Schema-Networks to learn heuristic functions for classical planning using neural networks. Beyond foundational modules in mathematics and computer science, I completed advanced modules on automated planning, neural networks, and software engineering.\\
+    % \textbf{Thesis:} Domain-Dependent Policy Learning using Neural Networks in Classical PlanningLearning Heuristic Functions for Classical Planning using Neural Networks \\
+    \textbf{Supervisor:} J\"org Hoffmann \hspace{1em} | \hspace{1em}
+    \textbf{Award:} 1.2 (within top 5\%)
+ %    \begin{explist}
+	% \item Grade: 1.2 (within top 5\%)
+	% \item Dissertation project: Extended Action-Schema-Networks to learn heuristic functions for classical planning using neural networks.
+	% \item Supervisor: J\"org Hoffmann
+	% % \item \textbf{Modules include:} Automated Planning, Admissible Search Enhancements, Neural Networks: Implementation and Application, Information Retrieval and Data Mining, Software Engineering, Modern Imperative Programming Languages
+ %    \end{explist}
+\end{expblock}
 
 %----------------------------------------------------------------------------------------
 %	TEACHING
@@ -256,20 +271,20 @@ I am a postdoctoral researcher at Microsoft Research, focusing on efficient lear
 
 \exptitle{Textbook Author}{Mar 2022 - Dec 2024}
 \begin{expblock}
-    Designed and wrote an introductory \textbf{textbook on multi-agent reinforcement learning} with Stefano V. Albrecht and Filippos Christianos (equal contributions). I also co-designed the accompanying \href{https://github.com/marl-book/codebase}{codebase} and developed \href{https://github.com/marl-book/marl-book-exercises}{exercises} for the Barcelona summer school on multi-agent reinforcement learning (2024).
+    Designed and wrote an introductory \textbf{textbook on multi-agent reinforcement learning} with Stefano V. Albrecht and Filippos Christianos (equal contributions). I also co-designed the accompanying \href{https://github.com/marl-book/codebase}{codebase} and developed \href{https://github.com/marl-book/marl-book-exercises}{exercises} for the Barcelona summer school on multi-agent reinforcement learning (2024). % The textbook has been downloaded over X times since its release in ...
 \end{expblock}
 
-\exptitlelong{University of Edinburgh}{Oct 2019 - Jun 2022}{Teaching Assistant}{Edinburgh, UK}
+\exptitlelong{Teaching Assistant}{Oct 2019 - Jun 2022}{University of Edinburgh}{Edinburgh, UK}
 \begin{expblock}
     Re-designed the Reinforcement Learning course as teaching assistant for three consecutive years (2019 -- 2022). Delivered lectures and designed coursework on reinforcement learning (including deep and multi-agent RL) for last year undergraduate and M.Sc. students. Supervised and marked coursework and exam scripts for 100+ students.
 \end{expblock}
 
-\exptitlelong{Saarland University}{Sep 2017 - Oct 2017}{Voluntary Lecturer and Coach}{Saarbrücken, Germany}
+\exptitlelong{Voluntary Lecturer and Coach}{Sep 2017 - Oct 2017}{Saarland University}{Saarbrücken, Germany}
 \begin{expblock}
     Delivered daily lectures on formal languages and predicate logic to 250 participants in the mathematics preparation course for upcoming computer science students. The course received \textbf{BESTE-award} for special student commitment 2017 of Saarland University.
 \end{expblock}
 
-\exptitlelong{Saarland University}{Oct 2016 - Mar 2017}{Teaching Assistant}{Saarbrücken, Germany}
+\exptitlelong{Teaching Assistant}{Oct 2016 - Mar 2017}{Saarland University}{Saarbrücken, Germany}
 \begin{expblock}
     Taught functional programming, basic complexity theory, and inductive proofs to first-year undergraduate students in weekly tutorials and office hours. Collectively created learning materials and discussed student progress as part of the whole teaching team. Marked weekly tests, mid-term and final exams.
 \end{expblock}
@@ -284,17 +299,18 @@ I am a postdoctoral researcher at Microsoft Research, focusing on efficient lear
 %     Mentoring graduate-level software engineer on a machine learning project leveraging large vision-language models for video understanding. Providing guidance on research methodology, experimental design, and technical implementations.
 % \end{expblock}
 
-\exptitlelong{Microsoft Research}{Apr 2025 - Aug 2025}{Supervision of PhD Research Intern}{Cambridge, UK}
+\exptitlelong{Supervision of PhD Research Intern}{Apr 2025 - Aug 2025}{Microsoft Research}{Cambridge, UK}
 \begin{expblock}
     Supervised PhD research intern Somjit Nath (McGill University/ Mila, Canada) during his 4-month internship. His work designed novel data augmentations for efficient imitation learning in video games.%, and led to a submission to a conference.
 \end{expblock}
 
-\exptitlelong{University of Edinburgh}{May 2022 - May 2023}{Supervision of Visiting PhD Student}{Edinburgh, UK}
+\newpage
+\exptitlelong{Supervision of Visiting PhD Student}{May 2022 - May 2023}{University of Edinburgh}{Edinburgh, UK}
 \begin{expblock}
     Supervised visiting PhD student Alain Andres Fernandez (Tecnalia, Spain) during his 3-month research visit and following collaboration. The project researched imitation learning for pre-training and concurrent training of reinforcement learning agents, and resulted in a publication at the \textbf{Neurocomputing Journal} \cite{andres2024using}.
 \end{expblock}
 
-\exptitlelong{University of Edinburgh}{Sep 2021 - May 2022}{Supervision of Master's Students}{Edinburgh, UK}
+\exptitlelong{Supervision of Master's Students}{Sep 2021 - May 2022}{University of Edinburgh}{Edinburgh, UK}
 \begin{expblock}
     Supervised two Master's students during their M.Sc. dissertation projects:
     \begin{explist}
@@ -302,6 +318,74 @@ I am a postdoctoral researcher at Microsoft Research, focusing on efficient lear
 	Led to publication at \textbf{NeurIPS 2022} \cite{zhong2022datacollection}, after presentation at Workshop on Offline Reinforcement Learning (NeurIPS 2021)
 	\item Panagiotis Kyriakou: Reinforcement Learning with Function Approximation in Continuing Tasks: Discounted Return or Average Reward?
     \end{explist}
+\end{expblock}
+
+% %----------------------------------------------------------------------------------------
+% %	AWARDS
+% %----------------------------------------------------------------------------------------
+% \section{Awards}
+% \begin{tabularx}{\linewidth}{@{}l X@{}}
+%     Jun 2025 & \textbf{Best reviewer award} at ICML 2025 \\
+%     Jun 2024 & \textbf{Best reviewer award} at ICML 2024 \\
+%     Jul 2022 & \textbf{Best reviewer award} at ICML 2022 \\
+%     Oct 2017 & \textbf{BESTE-award} for special student commitment 2017 of Saarland University
+% \end{tabularx}
+
+%----------------------------------------------------------------------------------------
+%	ACADEMIC ENGAGEMENT
+%----------------------------------------------------------------------------------------
+\section{Research Community Engagement}
+
+\subsection{Reviewing}
+\begin{expblock}
+    \begin{explist}
+	\item 3-time \textbf{best reviewer award} for ICML conference (2022, 2024, 2025)
+	\item Journals: Transactions on Machine Learning Research (TMLR, 2024)
+	\item Conferences: NeurIPS (2021, 2022, 2023), ICLR (2026), ICML (2021, 2022, 2023, 2024, 2025), AAMAS (2022, 2023, 2024), RLDM (2025), RLC (2024)
+	\item Workshops: NeurIPS Pre-registration experiment workshop (2020)
+    \end{explist}
+\end{expblock}
+
+\subsection{Invited Talks}
+\begin{tabularx}{\linewidth}{@{}l X@{}}
+    % Dec 2025 & \textbf{ELLIS UnConference, Interactive Learning and Interventional Representations (ILIR) Workshop} \newline Exploiting State and Action Uncertainty for Imitation Learning using Inverse Dynamics Models \\
+    Oct 2025 & \textbf{University of Sheffield, ML Seminar Series} \newline Decision-Making in Modern Video Games: From Human Play to World Models \\
+    Jul 2025 & \textbf{Belgium-Netherlands Workshop on Reinforcement Learning (BeNeRL)} \newline Decision Making in Video Games \\
+    Nov 2024 & \textbf{Gazi University Turkey, AI Research \& Big Data Seminars} \newline An Introduction to the Multi-Agent Reinforcement Learning Textbook \\
+    May 2024 & \textbf{Microsoft Research Cambridge} \newline Efficient and Scalable Decision Making In Complex Environments \\
+    Mar 2024 & \textbf{University of Maryland, MARL Reading Group} \newline An Introduction to MARL Textbook and EPyMARL Codebase \\
+    Feb 2024 & \textbf{Stanford University, Stanford Intelligent Systems Laboratory} \newline Sample-Efficient Multi-Agent Reinforcement Learning \\
+    Jul 2022 & \textbf{Berkeley RL Reading Group} \newline Deep Reinforcement Learning for Multi-Agent Interaction \\
+\end{tabularx}
+\expspace
+
+\subsection{Organisation}
+
+\exptitlelong{Lead Organiser}{Jul 2024 - Mar 2025}{UK Multi-Agent Systems Symposium 2025}{London, UK}
+\begin{expblock}
+    Co-lead organiser of the \href{https://www.turing.ac.uk/events/uk-multi-agent-systems-symposium-2025-uk-mas}{\textbf{UK Multi-Agent Systems Symposium 2025}} with 200 participants in collaboration with the Alan Turing Institute and King's College London.
+\end{expblock}
+
+\exptitlelong{RL Reading Group Organiser}{Sep 2020 - Sep 2022}{University of Edinburgh}{Edinburgh, UK}
+\begin{expblock}
+    Organised and hosted RL reading group at University of Edinburgh with speakers from industry (e.g.\ DeepMind, MSR, FAIR) and academia (e.g.\ Oxford University, McGill University, NUS)
+\end{expblock}
+
+\subsection{Awards}
+\exptitlelong{Young Researcher Attendee}{Sep 2022}{Heidelberg Laureate Forum}{Heidelberg, Germany}
+\begin{expblock}
+    Selected as one of 100 international young researchers in computer science to participate in the prestigious Heidelberg Laureate Forum where I had the opportunity to network and discuss research with laureates of the most prestigious awards in mathematics and computer science.% (Abel Prize, ACM A.M. Turing Award, ACM Prize in Computing, Fields Medal, IMU Abacus Medal and Nevanlinna Prize).
+\end{expblock}
+
+\subsection{Open-Source Software Contributions}
+\exptitle{\href{https://github.com/uoe-agents/epymarl}{EPyMARL} -- Core Contributor}{}
+\begin{expblock}
+    Core contributor to the EPyMARL codebase, an open-source codebase for multi-agent reinforcement learning research. EPyMARL has been developed as part of a benchmarking effort~\cite{papoudakis2021benchmarking} and has since received \textbf{over 600 stars on Github}.
+\end{expblock}
+
+\exptitle{\href{https://github.com/marl-book/codebase}{MARL Textbook Codebase} -- Core Contributor}{}
+\begin{expblock}
+    Core contributor to the accompanying codebase to our textbook on multi-agent reinforcement learning~\cite{albrecht2024multi}, an open-source codebase designed for ease of use and teaching in multi-agent reinforcement learning research. Within the first year of its release, the codebase has received \textbf{over 550 stars on Github}.
 \end{expblock}
 
 %----------------------------------------------------------------------------------------
@@ -324,62 +408,7 @@ I am a postdoctoral researcher at Microsoft Research, focusing on efficient lear
 %     I designed and implemented an efficient multi-agent robotic warehouse simulator and novel multi-agent reinforcement learning algorithms for scalable robotic warehouse logistics. My internship led to a \textbf{fellowship funded research collaboration}, four further internship projects, and a publication at IROS 2024.\\
 % \end{expblock}
 
-%----------------------------------------------------------------------------------------
-%	AWARDS
-%----------------------------------------------------------------------------------------
-\section{Awards}
-\begin{tabularx}{\linewidth}{@{}l X@{}}
-    Jun 2025 & \textbf{Best reviewer award} at ICML 2025 \\
-    Jun 2024 & \textbf{Best reviewer award} at ICML 2024 \\
-    Jul 2022 & \textbf{Best reviewer award} at ICML 2022 \\
-    Oct 2017 & \textbf{BESTE-award} for special student commitment 2017 of Saarland University
-\end{tabularx}
 
-%----------------------------------------------------------------------------------------
-%	ACADEMIC ENGAGEMENT
-%----------------------------------------------------------------------------------------
-\section{Academic Engagement}
-
-\subsection{Organisation}
-
-\exptitlelong{UK Multi-Agent Systems Symposium 2025}{Jul 2024 - Mar 2025}{Lead Organiser}{London, UK}
-\begin{expblock}
-    Co-lead organiser of the \href{https://www.turing.ac.uk/events/uk-multi-agent-systems-symposium-2025-uk-mas}{\textbf{UK Multi-Agent Systems Symposium 2025}} with 200 participants in collaboration with the Alan Turing Institute and King's College London.
-\end{expblock}
-
-\exptitlelong{University of Edinburgh}{Sep 2020 - Sep 2022}{RL Reading Group Organiser}{Edinburgh, UK}
-\begin{expblock}
-    Organised and hosted RL reading group at University of Edinburgh with speakers from industry (e.g.\ DeepMind, MSR, FAIR) and academia (e.g.\ Oxford University, McGill University, NUS)
-\end{expblock}
-
-\subsection{Invited Talks}
-\begin{tabularx}{\linewidth}{@{}l X@{}}
-    % Dec 2025 & \textbf{ELLIS UnConference, Interactive Learning and Interventional Representations (ILIR) Workshop} \newline Exploiting State and Action Uncertainty for Imitation Learning using Inverse Dynamics Models \\
-    Oct 2025 & \textbf{University of Sheffield, ML Seminar Series} \newline Decision-Making in Modern Video Games: From Human Play to World Models \\
-    Jul 2025 & \textbf{Belgium-Netherlands Workshop on Reinforcement Learning (BeNeRL)} \newline Decision Making in Video Games \\
-    Nov 2024 & \textbf{Gazi University Turkey, AI Research \& Big Data Seminars} \newline An Introduction to the Multi-Agent Reinforcement Learning Textbook \\
-    May 2024 & \textbf{Microsoft Research Cambridge} \newline Efficient and Scalable Decision Making In Complex Environments \\
-    Mar 2024 & \textbf{University of Maryland, MARL Reading Group} \newline An Introduction to MARL Textbook and EPyMARL Codebase \\
-    Feb 2024 & \textbf{Stanford University, Stanford Intelligent Systems Laboratory} \newline Sample-Efficient Multi-Agent Reinforcement Learning \\
-    Jul 2022 & \textbf{Berkeley RL Reading Group} \newline Deep Reinforcement Learning for Multi-Agent Interaction \\
-\end{tabularx}
-\expspace
-
-\subsection{Reviewing}
-\begin{expblock}
-    \begin{explist}
-	\item 3-time \textbf{best reviewer award} for ICML conference (2022, 2024, 2025)
-	\item Journals: Transactions on Machine Learning Research (TMLR, 2024)
-	\item Conferences: NeurIPS (2021, 2022, 2023), ICLR (2026), ICML (2021, 2022, 2023, 2024, 2025), AAMAS (2022, 2023, 2024), RLDM (2025), RLC (2024)
-	\item Workshops: NeurIPS Pre-registration experiment workshop (2020)
-    \end{explist}
-\end{expblock}
-
-\subsection{Other Engagement}
-\exptitlelong{Heidelberg Laureate Forum}{Sep 2022}{Young Researcher Attendee}{Heidelberg, Germany}
-\begin{expblock}
-    Selected as one of 100 international young researchers in computer science to participate in the prestigious Heidelberg Laureate Forum where I had the opportunity to network and discuss research with laureates of the most prestigious awards in mathematics and computer science.% (Abel Prize, ACM A.M. Turing Award, ACM Prize in Computing, Fields Medal, IMU Abacus Medal and Nevanlinna Prize).
-\end{expblock}
 
 % %----------------------------------------------------------------------------------------
 % %	SKILLS

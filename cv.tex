@@ -95,8 +95,37 @@
   sorting=none,
 ]{biblatex}
 \addbibresource{bibliography.bib}
-\defbibfilter{conf_jour}{keyword=conference or keyword=journal or keyword=workshop}
-\setlength\bibitemsep{0.4em}
+\defbibfilter{conf_jour}{keyword=conference or keyword=journal}
+\setlength\bibitemsep{0.5em}
+
+% make name bold
+\def\makenamesetup{%
+  \def\bibnamedelima{~}%
+  \def\bibnamedelimb{ }%
+  \def\bibnamedelimc{ }%
+  \def\bibnamedelimd{ }%
+  \def\bibnamedelimi{ }%
+  \def\bibinitperiod{.}%
+  \def\bibinitdelim{~}%
+  \def\bibinithyphendelim{.-}}    
+\newcommand*{\makename}[2]{\begingroup\makenamesetup\xdef#1{#2}\endgroup}
+
+\newcommand*{\boldname}[3]{%
+  \def\lastname{#1}%
+  \def\firstname{#2}%
+  \def\firstinit{#3}}
+\boldname{}{}{}
+
+% Patch new definitions
+\renewcommand{\mkbibnamegiven}[1]{%
+  \ifboolexpr{ ( test {\ifdefequal{\firstname}{\namepartgiven}} or test {\ifdefequal{\firstinit}{\namepartgiven}} ) and test {\ifdefequal{\lastname}{\namepartfamily}} }
+  {\mkbibbold{#1}}{#1}%
+}
+
+\renewcommand{\mkbibnamefamily}[1]{%
+  \ifboolexpr{ ( test {\ifdefequal{\firstname}{\namepartgiven}} or test {\ifdefequal{\firstinit}{\namepartgiven}} ) and test {\ifdefequal{\lastname}{\namepartfamily}} }
+  {\mkbibbold{#1}}{#1}%
+}
 
 %Setup hyperref package, and colours for links
 \usepackage[unicode, draft=false]{hyperref}
@@ -115,20 +144,6 @@
 %----------------------------------------------------------------------------------------
 %	COMMANDS
 %----------------------------------------------------------------------------------------
-\newcommand{\multiicon}{\faUsers\xspace}  % \FaComments
-\newcommand{\dataicon}{\faDatabase\xspace}
-% \newcommand{\loopicon}{\faRefresh\xspace}
-\newcommand{\loopicon}{\faRetweet\xspace}
-
-% Prepend category icons to each bibliography entry.
-% Category tags (game, marl, data, online) are set via keywords field in .bib entries.
-\AtEveryBibitem{%
-  \mbox{%
-    \ifkeyword{data}{\dataicon}{}%
-    \ifkeyword{online}{\loopicon}{}%
-    \ifkeyword{marl}{\multiicon}{}%
-  }\addnbspace
-}
 
 %----------------------------------------------------------------------------------------
 %	BEGIN DOCUMENT
@@ -154,15 +169,15 @@
 \begin{tabularx}{\linewidth}{@{} C @{}}
 \Huge{Lukas Sch\"afer} \\[7.5pt]
 \homepage{https://www.lukaschaefer.com/}{lukaschaefer.com} \ $|$ \
-% \github{LukasSchaefer} \ $|$ \
-% \linkedin{lukas-schaefer} \ $|$ \
 \scholar{-yp0O\_IAAAAJ}{Google Scholar} \ $|$ \
-\email{lukas.schaefer@microsoft.com} \\
+\email{lukas.schaefer@microsoft.com}
+% \address{https://www.microsoft.com/en-us/research/lab/microsoft-research-cambridge/}{Microsoft Research, 21 Station Road, Cambridge, CB1 2FB, England} \ $|$ \
+% \phone{+44 7925 103212}\\
 \end{tabularx}
 
 %Interests/ Keywords/ Summary
 \section{Research Profile}
-I am a postdoctoral researcher at Microsoft Research, where I study how agents can learn to make decisions efficiently through online reinforcement learning and offline imitation learning. My research has appeared at NeurIPS, AAMAS, and TMLR, and I co-authored the first introductory textbook on multi-agent reinforcement learning (MIT Press, 2024), downloaded over 50,000 times.
+I am a postdoctoral researcher at Microsoft Research, focusing on efficient learning algorithms for decision-making and multi-agent systems. I co-authored the first textbook on multi-agent reinforcement learning, and my research has been published at leading venues such as NeurIPS, ICML, TMLR, and AAMAS. 
 
 %----------------------------------------------------------------------------------------
 % EXPERIENCE SECTIONS
@@ -173,7 +188,7 @@ I am a postdoctoral researcher at Microsoft Research, where I study how agents c
 
 \exptitlelong{Postdoctoral Researcher}{Oct 2024 - Present}{Microsoft Research}{Cambridge, UK}
 \begin{expblock}
-    Researched offline imitation learning algorithms for game-playing AI agents in modern video games~\cite{schaefer2026smartreplay,srblog2026}, and co-developed the \textbf{WHAMM world model}~\cite{whamm2025} for real-time game simulation deployed on Copilot Labs.\\
+    Researched \textbf{data-efficient imitation learning algorithms} for complex environments~\cite{schaefer2026smartreplay,nath2026somjit,srblog2026}, co-developed the \textbf{WHAMM world model}~\cite{whamm2025} for real-time environment simulation deployed on Copilot Labs, and advised product teams on deploying foundation models.\\
     \textbf{Advisors:} Sergio Valcarcel Macua and Katja Hofmann
 \end{expblock}
 
@@ -181,7 +196,7 @@ I am a postdoctoral researcher at Microsoft Research, where I study how agents c
 
 \exptitlelong{Research Intern}{Apr 2023 - Oct 2023}{Microsoft Research}{Cambridge, UK}
 \begin{expblock}
-    Empirical study on visual encoders, including pre-trained foundation models, for \textbf{game-playing agents in modern video games}~\cite{schaefer2025visual}. \textbf{Granted funding for an extension from 3 to 6 months} following a demo to stakeholders in Xbox.\\
+    Empirical study on visual encoders, including pre-trained foundation models, for data-efficient imitation learning in complex environments~\cite{schaefer2025visual}. \textbf{Granted funding for an extension from 3 to 6 months} following a demo to stakeholders.\\
     \textbf{Advisors:} Sam Devlin and Tabish Rashid
  %    \begin{explist}
 	% \item Conducted an empirical study on the effectiveness of various visual encoders, including pre-trained vision foundation models, for imitation learning in modern video games under mentorship of Sam Devlin and Tabish Rashid
@@ -203,7 +218,7 @@ I am a postdoctoral researcher at Microsoft Research, where I study how agents c
 \exptitlelong{Research Intern}{Nov 2020 - Mar 2021}{Dematic - Technology and Innovation}{Remote}
 \begin{expblock}
     % I designed and implemented an efficient multi-agent robotic warehouse simulator and novel multi-agent reinforcement learning algorithms for scalable robotic warehouse logistics.
-    Designed multi-agent warehouse simulator and scalable learning algorithm, leading to a \textbf{fellowship-funded research collaboration}, and publication at \textbf{IROS 2024}~\cite{krnjaic2024scalable}.\\
+    Designed high-performance \textbf{multi-agent warehouse simulator} and scalable learning algorithm, leading to \textbf{fellowship funding}, and a publication at \textbf{IROS 2024}~\cite{krnjaic2024scalable}.\\
     \textbf{Advisors:} Aleksandar Krnjaic and Stefano V. Albrecht
  %    \begin{explist}
 	% \item Applied multi-agent reinforcement learning to automate robotic warehouse logistics and scale to real-world settings
@@ -234,18 +249,21 @@ I am a postdoctoral researcher at Microsoft Research, where I study how agents c
 %----------------------------------------------------------------------------------------
 %	PUBLICATIONS
 %----------------------------------------------------------------------------------------
-\section{Publications\hfill {\large Citations on Google Scholar: 1,500+}}
-\textbf{Legend:} \hspace{1em} \dataicon~Data-Driven Offline Learning \hspace{1em} \loopicon~Online Reinforcement Learning \hspace{1em} \multiicon~Multi-Agent Systems 
+\section{Publications\hfill {\large Citations on Google Scholar: 1,600+}}
 
+\boldname{Schäfer}{Lukas}{L.}
+
+% \subsection{Under Submission / Preprints}
+% \printbibliography[heading=none, keyword=submission, notkeyword=skip, notkeyword=top5]
 
 \subsection{Textbook}
 \printbibliography[heading=none, type=book, notkeyword=skip]
 
-\subsection{Preprints}
-\printbibliography[heading=none, keyword=preprint, notkeyword=skip]
-
-\subsection{Peer-Reviewed Papers (Conferences, Journals, and Workshops)}
+\subsection{Journal and Conference Papers (Peer-Reviewed)}
 \printbibliography[heading=none, filter=conf_jour, notkeyword=skip]
+
+\subsection{Workshops (Peer-Reviewed)}
+\printbibliography[heading=none, keyword=workshop, notkeyword=skip]
 
 \subsection{Technical Blog Posts}
 \printbibliography[heading=none, keyword=blog, notkeyword=skip]
@@ -255,9 +273,7 @@ I am a postdoctoral researcher at Microsoft Research, where I study how agents c
 
 % \subsection{Theses}
 % \printbibliography[heading=none, keyword=thesis, notkeyword=skip]%, env=cvpubs]
-
-
-
+\expspace
 
 
 %----------------------------------------------------------------------------------------
@@ -267,7 +283,7 @@ I am a postdoctoral researcher at Microsoft Research, where I study how agents c
 
 \exptitle{Textbook Author}{Mar 2022 - Dec 2024}
 \begin{expblock}
-    Co-authored an introductory \textbf{textbook on multi-agent reinforcement learning} with Stefano V. Albrecht and Filippos Christianos, including the accompanying \href{https://github.com/marl-book/codebase}{codebase} and \href{https://github.com/marl-book/marl-book-exercises}{exercises} for the Barcelona summer school (2024). \textbf{Downloaded over 50,000 times} since pre-release in April 2023.
+    Co-authored the \textbf{textbook on multi-agent reinforcement learning}~\cite{albrecht2024multi} as an \textbf{equal contributor}, with responsibilities including curriculum design, authoring multiple chapters from start to finish, and co-developing the accompanying \href{https://github.com/marl-book/codebase}{codebase} and \href{https://github.com/marl-book/marl-book-exercises}{exercises}. \textbf{Downloaded over 50,000 times} since pre-release in April 2023. Translated into Chinese.
 \end{expblock}
 
 \exptitlelong{Teaching Assistant}{Oct 2019 - Jun 2022}{University of Edinburgh}{Edinburgh, UK}
@@ -292,17 +308,17 @@ I am a postdoctoral researcher at Microsoft Research, where I study how agents c
 
 \exptitlelong{Consultation \& Mentorship}{Sep 2025 - Present}{Microsoft Research}{Cambridge, UK}
 \begin{expblock}
-    Consulting engineering team to transfer recent research on vision-language models to production systems; closely mentoring a graduate-level software engineer.
+    Consulting team of 15 engineers applying vision-language models for production systems on machine learning practices; closely mentoring a graduate-level software engineer.
 \end{expblock}
 
-\exptitlelong{Supervision of PhD Research Intern}{Apr 2025 - Aug 2025}{Microsoft Research}{Cambridge, UK}
+\exptitlelong{Supervision of PhD Research Interns}{Apr 2025 - Present}{Microsoft Research}{Cambridge, UK}
 \begin{expblock}
-    Supervised PhD research intern Somjit Nath (McGill / Mila) on data augmentations for imitation learning in video games; insights informed research and product teams at Microsoft.
+    Supervising PhD research intern on video models for robot planning. Supervised Somjit Nath (McGill, Canada) on data augmentations for efficient imitation learning; resulted in \textbf{Conference on Games} publication~\cite{nath2026somjit}, and informed research and product teams. %; insights informed research and product teams at Microsoft.
 \end{expblock}
 
 \exptitlelong{Supervision of Visiting PhD Student}{May 2022 - May 2023}{University of Edinburgh}{Edinburgh, UK}
 \begin{expblock}
-    Supervised visiting PhD student Alain Andres Fernandez (Tecnalia, Spain) on imitation learning for pre-training reinforcement learning agents during a 3-month visit; resulted in a \textbf{Neurocomputing Journal} publication \cite{andres2024using}.
+    Supervised visiting PhD student Alain Andres Fernandez (Tecnalia, Spain) on online adaptation of offline pre-trained AI agents during a 3-month visit and subsequent remote collaboration; resulted in a \textbf{Neurocomputing Journal} publication \cite{andres2024using}.
 \end{expblock}
 
 \exptitlelong{Supervision of Master's Students}{Sep 2021 - May 2024}{University of Edinburgh}{Edinburgh, UK}
@@ -317,61 +333,6 @@ I am a postdoctoral researcher at Microsoft Research, where I study how agents c
 \end{expblock}
 
 %----------------------------------------------------------------------------------------
-%	ACADEMIC ENGAGEMENT
-%----------------------------------------------------------------------------------------
-\section{Research Community Engagement}
-
-\subsection{Reviewing}
-\begin{expblock}[\linewidth]
-    \begin{explist}
-	\item 3-time \textbf{best reviewer award} for ICML conference (2022, 2024, 2025)
-	\item Journals: Transactions on Machine Learning Research (TMLR, 2024)
-	\item Conferences: NeurIPS (2021, 2022, 2023), ICLR (2026), ICML (2021, 2022, 2023, 2024, 2025, 2026), AAMAS (2022, 2023, 2024), RLDM (2025), RLC (2024)
-	\item Workshops: NeurIPS Pre-registration experiment workshop (2020)
-    \end{explist}
-\end{expblock}
-
-
-\subsection{Organisation}
-\exptitlelong{Lead Organiser}{Jul 2024 - Mar 2025}{UK Multi-Agent Systems Symposium 2025}{London, UK}
-\begin{expblock}
-    Co-lead organiser of the \href{https://www.turing.ac.uk/events/uk-multi-agent-systems-symposium-2025-uk-mas}{\textbf{UK Multi-Agent Systems Symposium 2025}} with 200 participants in collaboration with the Alan Turing Institute and King's College London.
-\end{expblock}
-
-\exptitlelong{Lead Organiser and Host}{Sep 2020 - Sep 2022}{RL Reading Group, University of Edinburgh}{Edinburgh, UK}
-\begin{expblock}
-    Organised and hosted RL reading group at University of Edinburgh with speakers from leading industry and academic research groups, including Google DeepMind, FAIR, Oxford University, McGill University, and National University of Singapore.
-\end{expblock}
-\expspace
-
-\subsection{Invited Talks}
-\begin{expblock}[\linewidth]
-    \begin{tabularx}{\linewidth}{@{}l X@{}}
-	Mar 2026 & \textbf{University of Edinburgh}, RL \& Agents Reading Group \newline Understanding Predictive Inverse Dynamics Models for Offline Imitation Learning\\
-	Feb 2026 & \textbf{Imperial College}, I-X Seminar \newline Decision-Making in Modern Video GamesGames: From Game-Playing Agents to World Models\\
-	Jan 2026 & \textbf{Cohere Labs Seminar} \newline Decision Making in Modern Video Games: From Human Play to World Models \\
-	Dec 2025 & \textbf{ELLIS UnConference, Interactive Learning and Interventional Representations (ILIR) Workshop} \newline Exploiting State and Action Uncertainty for Imitation Learning using Inverse Dynamics Models \\
-	Oct 2025 & \textbf{University of Sheffield}, ML Seminar Series \newline Decision Making in Modern Video Games: From Human Play to World Models \\
-	Jul 2025 & \textbf{Belgium-Netherlands Workshop on Reinforcement Learning (BeNeRL)} \newline Decision Making in Video Games \\
-	Nov 2024 & \textbf{Gazi University Turkey}, AI Research \& Big Data Seminars \newline An Introduction to the Multi-Agent Reinforcement Learning Textbook \\
-	% May 2024 & \textbf{Microsoft Research Cambridge} \newline Efficient and Scalable Decision Making In Complex Environments \\
-	Mar 2024 & \textbf{University of Maryland}, MARL Reading Group \newline An Introduction to MARL Textbook and EPyMARL Codebase \\
-	Feb 2024 & \textbf{Stanford University}, Stanford Intelligent Systems Laboratory \newline Sample-Efficient Multi-Agent Reinforcement Learning \\
-	Jul 2022 & \textbf{University of California, Berkeley}, RL Reading Group \newline Deep Reinforcement Learning for Multi-Agent Interaction \\
-    \end{tabularx}
-\end{expblock}
-% \expspace
-
-%----------------------------------------------------------------------------------------
-%	SKILLS
-%----------------------------------------------------------------------------------------
-\section{Skills}
-\begin{tabularx}{\linewidth}{@{}l X@{}}
-    \textbf{Natural Languages} & German (native), English (fluent), French (basic), Chinese (basic) \\
-    \textbf{Programming} & Python (primary), C++, C, Bash, Java \\
-\end{tabularx}
-
-%----------------------------------------------------------------------------------------
 %	FUNDING
 %----------------------------------------------------------------------------------------
 \section{Funding}
@@ -379,7 +340,7 @@ I am a postdoctoral researcher at Microsoft Research, where I study how agents c
 \subsection{Awarded Funding}
 \begin{tabularx}{\linewidth}{@{}l l X@{}}
     Dec 2019 - Jun 2024 & \pounds 58,731 & \textbf{Principal's Career Development Scholarship} \newline PhD scholarship from University of Edinburgh \\
-    Apr 2023 - Oct 2023 & \pounds 12,860 & \textbf{Microsoft Research internship extension} \newline funding to extend research internship from 3 to 6 months; granted by Xbox after demo of internship project progress\\
+    Apr 2023 - Oct 2023 & \pounds 12,860 & \textbf{Microsoft Research internship extension} \newline funding to extend research internship from 3 to 6 months; granted after demo of project progress\\
     % Jul 2022 - Dec 2022 & \pounds 4,160 & \textbf{Huawei Noah's Ark Lab internship extension} \newline funding to extend research internship from 4 to 5 months\\
     Sep 2018 - Aug 2019 & 16,500 \euro & \textbf{DAAD graduate scholarship} \newline postgraduate scholarship from German Academic Exchange Service\\
     Sep 2018 - Aug 2019 & \pounds 300 & \textbf{Stevenson Exchange Scholarship} \newline postgraduate scholarship to support studies in Scotland
@@ -399,7 +360,7 @@ I am a postdoctoral researcher at Microsoft Research, where I study how agents c
 \section{Awards}
 \exptitlelong{Young Researcher Attendee}{Sep 2022}{Heidelberg Laureate Forum}{Heidelberg, Germany}
 \begin{expblock}
-    Selected as one of 100 international young researchers in computer science to participate in the prestigious Heidelberg Laureate Forum where I had the opportunity to network and discuss research with laureates of the most prestigious awards in mathematics and computer science.% (Abel Prize, ACM A.M. Turing Award, ACM Prize in Computing, Fields Medal, IMU Abacus Medal and Nevanlinna Prize).
+    Selected as one of 100 international young researchers in computer science to participate in the prestigious Heidelberg Laureate Forum where I had the opportunity to network and discuss research with laureates in mathematics and computer science.% (Abel Prize, ACM A.M. Turing Award, ACM Prize in Computing, Fields Medal, IMU Abacus Medal and Nevanlinna Prize).
 \end{expblock}
 
 %----------------------------------------------------------------------------------------
@@ -408,13 +369,81 @@ I am a postdoctoral researcher at Microsoft Research, where I study how agents c
 \section{Open-Source Software Contributions}
 \exptitle{\href{https://github.com/uoe-agents/epymarl}{EPyMARL} -- Core Contributor}{}
 \begin{expblock}
-    Core contributor to the EPyMARL codebase, an open-source codebase for multi-agent reinforcement learning research. EPyMARL has been developed as part of a benchmarking effort~\cite{papoudakis2021benchmarking} and has since received \textbf{over 700 stars on Github}.
+    Core contributor to EPyMARL codebase for multi-agent reinforcement learning research, developed as part of a benchmarking paper~\cite{papoudakis2021benchmarking}. \textbf{Over 700 stars on Github}.
 \end{expblock}
 
 \exptitle{\href{https://github.com/marl-book/codebase}{MARL Textbook Codebase} -- Core Contributor}{}
 \begin{expblock}
-    Core contributor to the accompanying codebase to our textbook on multi-agent reinforcement learning~\cite{albrecht2024multi}, an open-source codebase designed for ease of use and teaching in multi-agent reinforcement learning research. Within the first year of its release, the codebase has received \textbf{over 600 stars on Github}.
+    Core contributor to the multi-agent reinforcement learning textbook~\cite{albrecht2024multi} codebase designed for use in teaching. \textbf{Over 600 stars on Github}.
 \end{expblock}
+
+% %----------------------------------------------------------------------------------------
+% %	SKILLS
+% %----------------------------------------------------------------------------------------
+\section{Skills}
+\begin{tabularx}{\linewidth}{@{}l X@{}}
+    \textbf{Natural Languages} & German (native), English (fluent), French (basic), Chinese (basic) \\
+    \textbf{Programming} & Python (primary), C++, C, Bash, Java \\
+\end{tabularx}
+
+%----------------------------------------------------------------------------------------
+%	ACADEMIC ENGAGEMENT
+%----------------------------------------------------------------------------------------
+\section{Research Community Engagement}
+
+\subsection{Reviewing}
+\begin{expblock}[\linewidth]
+    \begin{explist}
+	\item 3-time \textbf{best reviewer award} for ICML conference (2022, 2024, 2025)
+	\item Journals: Transactions on Machine Learning Research (TMLR, 2024)
+	\item Conferences: NeurIPS (2021, 2022, 2023), ICLR (2026), ICML (2021, 2022, 2023, 2024, 2025, 2026), AAMAS (2022, 2023, 2024), Conference on Games (CoG, 2026), RLDM (2025), RLC (2024)
+	\item Workshops: NeurIPS Pre-registration experiment workshop (2020)
+    \end{explist}
+\end{expblock}
+
+
+\subsection{Organisation}
+\exptitlelong{Lead Organiser}{Jul 2024 - Mar 2025}{UK Multi-Agent Systems Symposium 2025}{London, UK}
+\begin{expblock}
+    Co-lead organiser of the \href{https://www.turing.ac.uk/events/uk-multi-agent-systems-symposium-2025-uk-mas}{\textbf{UK Multi-Agent Systems Symposium 2025}} with 200 participants in collaboration with the Alan Turing Institute and King's College London.
+\end{expblock}
+
+\exptitlelong{Lead Organiser and Host}{Sep 2020 - Sep 2022}{RL Reading Group, University of Edinburgh}{Edinburgh, UK}
+\begin{expblock}
+    Organised and hosted RL reading group at University of Edinburgh with speakers from leading industry and academic research groups, including Google DeepMind, FAIR, Oxford University, McGill University, and National University of Singapore.
+\end{expblock}
+\expspace
+
+\subsection{Selected Invited Talks}
+\begin{expblock}[\linewidth]
+    \begin{tabularx}{\linewidth}{@{}l X@{}}
+	Mar 2026 & \textbf{University of Edinburgh}, RL \& Agents Reading Group \newline Understanding Predictive Inverse Dynamics Models for Offline Imitation Learning\\
+	Feb 2026 & \textbf{Imperial College}, I-X Seminar \newline Decision-Making in Modern Video Games: From Game-Playing Agents to World Models\\
+	Jan 2026 & \textbf{Cohere Labs Seminar} \newline Decision Making in Modern Video Games: From Human Play to World Models \\
+	Dec 2025 & \textbf{ELLIS UnConference, Interactive Learning and Interventional Representations (ILIR) Workshop} \newline Exploiting State and Action Uncertainty for Imitation Learning using Inverse Dynamics Models \\
+	Oct 2025 & \textbf{University of Sheffield}, ML Seminar Series \newline Decision Making in Modern Video Games: From Human Play to World Models \\
+	Jul 2025 & \textbf{Belgium-Netherlands Workshop on Reinforcement Learning (BeNeRL)} \newline Decision Making in Video Games \\
+	Nov 2024 & \textbf{Gazi University Turkey}, AI Research \& Big Data Seminars \newline An Introduction to the Multi-Agent Reinforcement Learning Textbook \\
+	May 2024 & \textbf{Microsoft Research Cambridge} \newline Efficient and Scalable Decision Making In Complex Environments \\
+	Mar 2024 & \textbf{University of Maryland}, MARL Reading Group \newline An Introduction to MARL Textbook and EPyMARL Codebase \\
+	Feb 2024 & \textbf{Stanford University}, Stanford Intelligent Systems Laboratory \newline Sample-Efficient Multi-Agent Reinforcement Learning \\
+	Jul 2022 & \textbf{University of California, Berkeley}, RL Reading Group \newline Deep Reinforcement Learning for Multi-Agent Interaction \\
+    \end{tabularx}
+\end{expblock}
+% \expspace
+
+%----------------------------------------------------------------------------------------
+%	REFERENCES
+%----------------------------------------------------------------------------------------
+% \section{References}
+% \begin{tabularx}{\linewidth}{@{}l l l X@{}}
+%     \textbf{Stefano V. Albrecht} & Director of AI & DeepFlow & \href{mailto:ste.albre@gmail.com}{ste.albre@gmail.com} \\
+%     & \multicolumn{3}{l}{Primary PhD advisor at University of Edinburgh} \\[4pt]
+%     \textbf{Katja Hofmann} & Partner Research Manager & Microsoft Research & \href{mailto:katja.hofmann@microsoft.com}{katja.hofmann@microsoft.com} \\
+%     & \multicolumn{3}{l}{Research manager during postdoc at Microsoft Research} \\[4pt]
+%     \textbf{Amos Storkey} & Full Professor & University of Edinburgh & \href{mailto:a.storkey@ed.ac.uk}{a.storkey@ed.ac.uk} \\
+%     & \multicolumn{3}{l}{Secondary PhD advisor at University of Edinburgh} \\
+% \end{tabularx}
 
 % \vfill
 % \center{\footnotesize Last updated: \today}

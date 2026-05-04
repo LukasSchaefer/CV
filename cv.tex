@@ -144,6 +144,20 @@
 %----------------------------------------------------------------------------------------
 %	COMMANDS
 %----------------------------------------------------------------------------------------
+\newcommand{\multiicon}{\faUsers\xspace}  % \FaComments
+\newcommand{\dataicon}{\faDatabase\xspace}
+% \newcommand{\loopicon}{\faRefresh\xspace}
+\newcommand{\loopicon}{\faRetweet\xspace}
+
+% Prepend category icons to each bibliography entry.
+% Category tags (game, marl, data, online) are set via keywords field in .bib entries.
+% \AtEveryBibitem{%
+%   \mbox{%
+%     \ifkeyword{data}{\dataicon}{}%
+%     \ifkeyword{online}{\loopicon}{}%
+%     \ifkeyword{marl}{\multiicon}{}%
+%   }\addnbspace
+% }
 
 %----------------------------------------------------------------------------------------
 %	BEGIN DOCUMENT
@@ -250,6 +264,7 @@ I am a postdoctoral researcher at Microsoft Research, focusing on efficient lear
 %	PUBLICATIONS
 %----------------------------------------------------------------------------------------
 \section{Publications\hfill {\large Citations on Google Scholar: 1,600+}}
+% \textbf{Legend:} \hspace{1em} \dataicon~Data-Driven Offline Learning \hspace{1em} \loopicon~Online Reinforcement Learning \hspace{1em} \multiicon~Multi-Agent Systems
 
 \boldname{Schäfer}{Lukas}{L.}
 
